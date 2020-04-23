@@ -1,0 +1,31 @@
+body {
+  font-family: monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper > input {
+  margin-top: 12px;
+}
+
+#random-img {
+  width: 150px;
+  height: 150px;
+}
+
+#prediction {
+  margin-top: 12px;
+}
+
+.github-buttons {
+  margin-top: 12px;
+}
