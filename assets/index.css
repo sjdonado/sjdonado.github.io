@@ -85,3 +85,21 @@ footer {
 footer > h2 {
   margin-bottom: 24px;
 }
+
+.social-nets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.social-nets > a {
+  margin: 0 6px;
+}
+
+.social-nets > a > img {
+  width: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+}
