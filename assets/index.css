@@ -111,9 +111,35 @@ footer > h2 {
   border-radius: 50%;
 }
 
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 340px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin: 12px;
+}
+
+.gallery-item > img {
+  width: 340px;
+}
+
+.gallery-item > span {
+  font-size: smaller;
+  text-align: center;
+}
+
 @media only screen and (max-width: 720px) {
   .wrapper {
     margin: 0;
     transform: translate(0%, -290px);
+  }
+  section {
+    margin: 12px;
   }
 }
