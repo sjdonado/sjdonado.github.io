@@ -17,7 +17,7 @@ header {
 .wrapper {
   display: flex;
   flex-direction: column;
-  transform: translate(0%, -360px);
+  transform: translate(0%, -320px);
   color: white;
   text-shadow: 1px 1px #000;
   max-width: 720px;
@@ -25,7 +25,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid transparent;
   border-radius: 12px;
-  padding: 12px;
+  padding: 0 12px;
 }
 
 .wrapper > p {
@@ -33,7 +33,7 @@ header {
 }
 
 .container {
-  transform: translate(0%, -245px);
+  transform: translate(0%, -221px);
 }
 
 .btn {
@@ -74,6 +74,7 @@ section > h1 {
 .item > img {
   height: 100px;
   width: 100px;
+  min-width: 100px;
   border: 1px solid #333;
   border-radius: 6px;
   margin-right: 12px;
@@ -91,6 +92,7 @@ footer {
 
 footer > h2 {
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .social-nets {
@@ -106,8 +108,9 @@ footer > h2 {
 
 .social-nets > a > img {
   width: 40px;
-  background-color: white;
   border: none;
+  background-color: white;
+  border: 1px solid white;
   border-radius: 50%;
 }
 
@@ -137,7 +140,7 @@ footer > h2 {
 @media only screen and (max-width: 720px) {
   .wrapper {
     margin: 0;
-    transform: translate(0%, -290px);
+    transform: translate(0%, -221px);
   }
   section {
     margin: 12px;
