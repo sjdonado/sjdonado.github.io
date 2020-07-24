@@ -1,3 +1,87 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #333;
+  margin: 0;
+}
+
+.cover {
+  background-size: cover;
+  margin: 0px;
+  width: 100%;
+}
+
+header {
+  max-height: 800px;
+  margin-bottom: 48px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  transform: translate(0%, -360px);
+  color: white;
+  text-shadow: 1px 1px #000;
+  max-width: 720px;
+  margin-left: 48px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.btn {
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin: 12px 0;
+  max-width: 100px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+section {
+  margin: 48px;
+  margin-top: 0;
+  padding-top: 12px;
+}
+
+section > h1 {
+  text-decoration: underline;
+  margin-bottom: 48px;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 48px;
+  margin-top: 24px;
+  text-decoration: none;
+  color: #333;
+}
+
+.item > img {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  padding: 48px 0;
+}
+
+footer > h2 {
+  margin-bottom: 24px;
 }
