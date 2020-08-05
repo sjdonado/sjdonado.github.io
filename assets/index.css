@@ -95,22 +95,22 @@ footer > h2 {
   text-align: center;
 }
 
-.social-nets {
+.social-btns {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 24px;
 }
 
-.social-nets > a {
+.social-btns > a {
   margin: 0 6px;
 }
 
-.social-nets > a > img {
-  width: 40px;
-  border: none;
-  background-color: white;
+.social-btns > a > i {
+  font-size: 1.5rem;
+  color: white;
   border: 1px solid white;
+  padding: 12px;
   border-radius: 50%;
 }
 
