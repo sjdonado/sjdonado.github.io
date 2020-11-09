@@ -15,15 +15,20 @@
 
       gtag('config', 'UA-100587277-5');
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('years').textContent = new Date(new Date() - new Date('11/1/2017')).getFullYear() - 1970;
+    });
+    </script>
   </head>
   <body>
     <header>
       <img class="cover" src="assets/imgs/cover.jpg">
       <div class="wrapper">
         <h1>Juan Rodriguez</h1>
-        <p>Software Engineer with over 2 years of Industry experience in web development.
-          I like being part of learning communities. Data Assimilation and NLP enthusiast.
-          Open Source lover.</p>
+        <p>Software Engineer with over <span id="years"></span> years of experience.</p>
+        <p>MSc student at Universidad del Norte (COL).</p>
+        <p>I love learning, teaching and contributing to open source projects ❤️.</p>
         <a class="btn" href="#what-i-do">What I do</a>
       </div>
     </header>
