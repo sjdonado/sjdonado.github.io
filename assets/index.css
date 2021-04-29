@@ -10,6 +10,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: 6px;
+  text-align: center;
 }
 
 .avatar {
@@ -30,6 +31,11 @@ header {
   margin: 0;
 }
 
+.container {
+  margin: 0 4%;
+  padding-bottom: 24px;
+}
+
 .btn {
   border: 1px solid white;
   color: white;
@@ -45,7 +51,6 @@ h1 {
 }
 
 section {
-  margin: 48px;
   margin-top: 0;
   padding-top: 12px;
 }
@@ -55,9 +60,14 @@ section > h1 {
   margin-bottom: 48px;
 }
 
+section a {
+  color: black;
+}
+
 .item {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   margin-left: 48px;
   margin-top: 24px;
@@ -72,6 +82,10 @@ section > h1 {
   border: 1px solid #333;
   border-radius: 6px;
   margin-right: 12px;
+}
+
+.item > span {
+  max-width: 780px;
 }
 
 footer {
@@ -134,5 +148,14 @@ footer > h2 {
 @media only screen and (max-width: 720px) {
   .item {
     margin-left: 22px;
+  }
+  .item > img {
+    margin-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    margin: 0 12%;
   }
 }
