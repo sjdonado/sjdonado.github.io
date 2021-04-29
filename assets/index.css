@@ -75,7 +75,7 @@ section a {
   color: #333;
 }
 
-.item > img {
+.item > a > img {
   height: 100px;
   width: 100px;
   min-width: 100px;
@@ -138,6 +138,7 @@ footer > h2 {
 
 .gallery-item > img {
   width: 340px;
+  height: 340px;
 }
 
 .gallery-item > span {
