@@ -9,8 +9,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 6px;
+  margin: 12px;
   text-align: center;
+}
+
+a {
+  cursor: pointer;
 }
 
 .avatar {
@@ -130,20 +134,22 @@ footer > h2 {
 }
 
 .gallery-item {
-  width: 340px;
+  width: 316px;
   border: 1px solid #333;
   border-radius: 6px;
   margin: 12px;
+  text-align: center;
 }
 
 .gallery-item > img {
-  width: 340px;
-  height: 340px;
+  width: 316px;
+  height: 316px;
 }
 
 .gallery-item > span {
   font-size: smaller;
   text-align: center;
+  margin: 2px;
 }
 
 @media only screen and (max-width: 720px) {
