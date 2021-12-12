@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListItem: React.FC<Item> = function ListItem({
+const ListItem: React.FC<ListItem> = function ListItem({
   imageURL,
   link,
   name,

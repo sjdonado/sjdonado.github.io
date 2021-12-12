@@ -1,13 +1,13 @@
 import React from 'react';
-import ListItem from './ListItem';
+import GalleryItem from './GalleryItem';
 
 interface Props {
   title: string;
   id: string;
-  items: Item[]
+  items: GalleryItem[]
 }
 
-const List: React.FC<Props> = function List({
+const Gallery: React.FC<Props> = function Gallery({
   title,
   id,
   items,
@@ -15,16 +15,14 @@ const List: React.FC<Props> = function List({
   return (
     <section id={id} className="flex flex-col w-4/6 m-auto">
       <a className="text-2xl my-4 underline" href={`#${id}`}>{title}</a>
-      <div className="divide-y space-y-2">
+      <div className="flex flex-wrap justify-center">
         {items.map(({
           imageURL,
-          link,
           name,
           description,
         }) => (
-          <ListItem
+          <GalleryItem
             imageURL={imageURL}
-            link={link}
             name={name}
             description={description}
           />
@@ -34,4 +32,4 @@ const List: React.FC<Props> = function List({
   );
 };
 
-export default List;
+export default Gallery;

@@ -1,6 +1,12 @@
-declare interface Item {
+declare interface ListItem {
   imageURL: string;
   link: string;
+  name: string;
+  description: string;
+}
+
+declare interface GalleryItem {
+  imageURL: string;
   name: string;
   description: string;
 }
