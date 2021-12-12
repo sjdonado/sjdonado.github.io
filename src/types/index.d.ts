@@ -10,3 +10,14 @@ declare interface GalleryItem {
   name: string;
   description: string;
 }
+
+declare interface GallerySlide {
+  imageURL: string;
+  link: string;
+  name: string;
+}
+
+declare interface SocialItem {
+  icon: string;
+  link: string;
+}

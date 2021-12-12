@@ -1,12 +1,12 @@
 import React from 'react';
 
-type AvatarProps = {
+interface Props {
   profileImageURL: string;
   fullName: string;
   quote: string;
-};
+}
 
-const Avatar: React.FC<AvatarProps> = function Avatar({
+const Avatar: React.FC<Props> = function Avatar({
   profileImageURL,
   fullName,
   quote,
