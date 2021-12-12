@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import Avatar from './components/Avatar';
 import List from './components/list/List';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/Footer';
 
-import data from './data.json';
+import { getDatabaseData } from './services/database';
 
 interface SectionsDictionary {
   [key: string]: (id: string, title: string,
@@ -42,22 +42,55 @@ const SECTIONS: SectionsDictionary = {
 };
 
 const App: React.FC = function App() {
+  const [statusMessage, setstatusMessage] = useState<string>('Loading...');
+  const [data, setData] = useState<DatabaseObject>();
+
+  const fetch = useCallback(async () => {
+    try {
+      const res = await getDatabaseData();
+      if (res) {
+        setData(res);
+        return;
+      }
+      setstatusMessage('Under maintenance, try again later');
+    } catch (err) {
+      setstatusMessage('Unexpected error loading data, try again :(');
+    }
+  }, [setData]);
+
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
+
+  if (data == null) {
+    return <span>{statusMessage}</span>;
+  }
+
+  const {
+    profileImageURL,
+    fullName,
+    quote,
+    sections,
+    footerMessage,
+    social,
+  } = data;
+
   return (
     <>
       <Avatar
-        profileImageURL={data.profileImageURL}
-        fullName={data.fullName}
-        quote={data.quote}
+        profileImageURL={profileImageURL}
+        fullName={fullName}
+        quote={quote}
       />
-      {data.sections.map(({
+      {sections.map(({
         id,
         title,
         type,
         items,
       }) => SECTIONS[type](id, title, items))}
       <Footer
-        footerMessage={data.footerMessage}
-        social={data.social}
+        footerMessage={footerMessage}
+        social={social}
       />
     </>
   );

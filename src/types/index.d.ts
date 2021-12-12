@@ -21,3 +21,19 @@ declare interface SocialItem {
   icon: string;
   link: string;
 }
+
+declare interface Section {
+  title: string;
+  id: string;
+  type: string;
+  items: ListItem[] | GalleryItem[] | GallerySlide[]
+}
+
+declare interface DatabaseObject {
+  profileImageURL: string;
+  fullName: string;
+  quote: string;
+  footerMessage: string;
+  social: SocialItem[];
+  sections: Section[];
+}
