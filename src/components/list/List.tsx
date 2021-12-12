@@ -23,6 +23,7 @@ const List: React.FC<Props> = function List({
           description,
         }) => (
           <ListItem
+            key={name}
             imageURL={imageURL}
             link={link}
             name={name}

@@ -42,7 +42,7 @@ const SECTIONS: SectionsDictionary = {
 };
 
 const App: React.FC = function App() {
-  const [statusMessage, setstatusMessage] = useState<string>('Loading...');
+  const [statusMessage, setstatusMessage] = useState<string>();
   const [data, setData] = useState<DatabaseObject>();
 
   const fetch = useCallback(async () => {
@@ -62,8 +62,18 @@ const App: React.FC = function App() {
     fetch();
   }, [fetch]);
 
+  if (statusMessage != null) {
+    <span>{statusMessage}</span>;
+  }
+
   if (data == null) {
-    return <span>{statusMessage}</span>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div
+          className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-800"
+        />
+      </div>
+    );
   }
 
   const {

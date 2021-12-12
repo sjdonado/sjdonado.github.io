@@ -17,6 +17,7 @@ interface ItemsDictionary {
 const ITEMS: ItemsDictionary = {
   galleryItem: ({ imageURL, name, description }: GalleryItem) => (
     <GalleryItem
+      key={name}
       imageURL={imageURL}
       name={name}
       description={description}
@@ -24,6 +25,7 @@ const ITEMS: ItemsDictionary = {
   ),
   gallerySlide: ({ imageURL, link, name }: GallerySlide) => (
     <GallerySlide
+      key={name}
       imageURL={imageURL}
       link={link}
       name={name}

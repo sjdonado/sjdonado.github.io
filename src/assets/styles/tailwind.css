@@ -367,7 +367,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.divide-y > *, .border, .border-b {
+.divide-y > *, .border, .border-b-2, .border-b {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
@@ -428,6 +428,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.h-screen {
+  height: 100vh;
+}
+.h-32 {
+  height: 8rem;
+}
 .h-64 {
   height: 16rem;
 }
@@ -436,6 +442,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-24 {
   height: 6rem;
+}
+.w-32 {
+  width: 8rem;
 }
 .w-64 {
   width: 16rem;
@@ -454,6 +463,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-none {
   flex: none;
+}
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 .flex-col {
   flex-direction: column;
@@ -503,6 +521,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border {
   border-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 .border-b {
   border-bottom-width: 1px;
