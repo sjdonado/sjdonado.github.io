@@ -26,5 +26,6 @@
       "typescript": {}
     }
   },
+  "ignorePatterns": ["**/*.js"],
   "rules": {}
 }
