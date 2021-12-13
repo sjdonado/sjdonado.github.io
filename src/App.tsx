@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 import Avatar from './components/Avatar';
+import GithubSection from './components/githubSection/GithubSection';
 import List from './components/list/List';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/Footer';
@@ -83,6 +84,7 @@ const App: React.FC = function App() {
     sections,
     footerMessage,
     social,
+    githubStats,
   } = data;
 
   return (
@@ -92,12 +94,15 @@ const App: React.FC = function App() {
         fullName={fullName}
         quote={quote}
       />
-      {sections.map(({
-        id,
-        title,
-        type,
-        items,
-      }) => SECTIONS[type](id, title, items))}
+      <div className="w-5/6 sm:w-4/6 m-auto">
+        <GithubSection githubStats={githubStats} />
+        {sections.map(({
+          id,
+          title,
+          type,
+          items,
+        }) => SECTIONS[type](id, title, items))}
+      </div>
       <Footer
         footerMessage={footerMessage}
         social={social}

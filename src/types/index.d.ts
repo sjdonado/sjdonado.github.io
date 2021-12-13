@@ -29,6 +29,32 @@ declare interface Section {
   items: ListItem[] | GalleryItem[] | GallerySlide[]
 }
 
+declare interface GithubContributions {
+  totalCommitContributions: number;
+  totalIssueContributions: number;
+  totalPullRequestContributions: number;
+  totalPullRequestReviewContributions: number;
+  totalRepositoryContributions: number;
+  joinedGitHubContribution: string;
+}
+
+declare interface GithubLanguage {
+  name: string;
+  count: number;
+  color: string;
+}
+
+declare interface GithubRepositories {
+  totalCount: number;
+  languages: GithubLanguage[];
+}
+
+declare interface GithubStats {
+  contributions: GithubContributions;
+  repositories: GithubRepositories;
+  updatedAt: string;
+}
+
 declare interface DatabaseObject {
   profileImageURL: string;
   fullName: string;
@@ -36,4 +62,10 @@ declare interface DatabaseObject {
   footerMessage: string;
   social: SocialItem[];
   sections: Section[];
+  githubStats: GithubStats;
+}
+
+declare interface ContributionType {
+  icon: string;
+  name: string;
 }

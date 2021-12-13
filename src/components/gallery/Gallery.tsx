@@ -40,7 +40,7 @@ const Gallery: React.FC<Props> = function Gallery({
   items,
 }) {
   return (
-    <section id={id} className="flex flex-col w-4/6 m-auto my-4">
+    <section id={id} className="flex flex-col my-4">
       <a className="text-2xl my-4 underline" href={`#${id}`}>{title}</a>
       <div className="flex flex-wrap justify-center">
         {items.map((item) => ITEMS[itemType](item))}
