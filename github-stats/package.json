@@ -1,0 +1,18 @@
+{
+  "name": "github-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "sjdonado",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.1.0",
+    "graphql-request": "^3.7.0",
+    "jsonfile": "^6.1.0",
+    "moment": "^2.29.1"
+  }
+}
