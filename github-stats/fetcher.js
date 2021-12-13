@@ -1,64 +1,15 @@
-const moment = require('moment');
-const jsonfile = require('jsonfile');
-const { GraphQLClient, gql } = require('graphql-request');
+'use strict';
 
-const ENDPOINT = 'https://api.github.com/graphql';
-const API_KEY = process.env.GITHUB_API_KEY;
+const moment = require('moment');
+
+const {
+  client,
+  contributionsByYearQuery,
+  respositoriesQuery
+} = require('./services/graphql');
+
 const FIRST_COMMIT_DATE = moment('2017-04-15');
 const YEARS = moment().diff(FIRST_COMMIT_DATE, 'years');
-
-const client = new GraphQLClient(ENDPOINT, {
-  headers: {
-    Authorization: `bearer ${API_KEY}`,
-  },
-});
-
-const contributionsByYearQuery = gql`
-  query ContributionsByYear($date: DateTime){
-    viewer {
-      contributionsCollection(
-        from: $date
-      ) {
-        totalCommitContributions
-        totalIssueContributions
-        totalPullRequestContributions
-        totalPullRequestReviewContributions
-        totalRepositoryContributions
-        joinedGitHubContribution {
-          occurredAt
-        }
-      }
-    }
-  }
-`;
-
-const respositoriesQuery = gql`
-  query Repositories($endCursor: String){
-    viewer {
-      repositories(
-        first: 100
-        after: $endCursor
-      ) {
-        totalCount
-        nodes {
-          languages(
-            first: 100
-          ) {
-            nodes {
-              name
-              color
-            }
-          }
-        }
-        pageInfo {
-          startCursor
-          endCursor
-          hasNextPage
-        }
-      }
-    }
-  }
-`;
 
 const fetchContributions = async () => {
   const response = {
@@ -135,17 +86,7 @@ const fetchRepositories = async () => {
   return response;
 }
 
-(async () => {
-  try {
-    const contributions = await fetchContributions();
-    const repositories = await fetchRepositories();
-    const data = {
-      contributions,
-      repositories,
-      updatedAt: new Date(),
-    };
-    jsonfile.writeFileSync('./output/github.json', data, { spaces: 2 });
-  } catch (err) {
-    console.log(err);
-  }
-})();
+module.exports = {
+  fetchContributions,
+  fetchRepositories,
+};

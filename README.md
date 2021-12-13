@@ -6,7 +6,6 @@
 
 # github-stats
 
-- how to run
-```
-GITHUB_API_KEY=$GITHUB_API_KEY yarn --cwd ./github-stats start
-```
+- Serverless + AWS Lambda Function
+- Firebase Admin
+- GraphQL requests
