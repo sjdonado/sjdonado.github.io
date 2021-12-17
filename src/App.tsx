@@ -6,7 +6,9 @@ import List from './components/list/List';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/Footer';
 
-import { getDatabaseData } from './services/database';
+import { getPublicData } from './services/database';
+
+import DEFAULT_DATA from './data.json';
 
 interface SectionsDictionary {
   [key: string]: (id: string, title: string,
@@ -44,16 +46,14 @@ const SECTIONS: SectionsDictionary = {
 
 const App: React.FC = function App() {
   const [statusMessage, setstatusMessage] = useState<string>();
-  const [data, setData] = useState<DatabaseObject>();
+  const [data, setData] = useState<DatabaseObject>(DEFAULT_DATA.public as DatabaseObject);
 
   const fetch = useCallback(async () => {
     try {
-      const res = await getDatabaseData();
+      const res = await getPublicData();
       if (res) {
         setData(res);
-        return;
       }
-      setstatusMessage('Under maintenance, try again later');
     } catch (err) {
       setstatusMessage('Unexpected error loading data, try again :(');
     }
@@ -77,6 +77,7 @@ const App: React.FC = function App() {
     );
   }
 
+  const { githubStats, site } = data;
   const {
     profileImageURL,
     fullName,
@@ -84,11 +85,10 @@ const App: React.FC = function App() {
     sections,
     footerMessage,
     social,
-    githubStats,
-  } = data;
+  } = site;
 
   return (
-    <>
+    <div className="bg-white">
       <Avatar
         profileImageURL={profileImageURL}
         fullName={fullName}
@@ -107,7 +107,7 @@ const App: React.FC = function App() {
         footerMessage={footerMessage}
         social={social}
       />
-    </>
+    </div>
   );
 };
 

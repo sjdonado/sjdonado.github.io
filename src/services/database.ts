@@ -15,8 +15,8 @@ const app = initializeApp(firebaseConfig);
 
 export const database = getDatabase(app);
 
-export const getDatabaseData = async () => {
-  const snapshot = await get(ref(database));
+export const getPublicData = async () => {
+  const snapshot = await get(ref(database, 'public'));
   if (snapshot.exists()) {
     return snapshot.val();
   }

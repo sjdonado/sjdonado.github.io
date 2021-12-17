@@ -55,14 +55,18 @@ declare interface GithubStats {
   updatedAt: string;
 }
 
-declare interface DatabaseObject {
+declare interface Site {
   profileImageURL: string;
   fullName: string;
   quote: string;
   footerMessage: string;
   social: SocialItem[];
   sections: Section[];
+}
+
+declare interface DatabaseObject {
   githubStats: GithubStats;
+  site: Site;
 }
 
 declare interface ContributionType {

@@ -12,9 +12,9 @@ const Avatar: React.FC<Props> = function Avatar({
   quote,
 }) {
   return (
-    <div className="flex flex-col items-center space-y-1 justify-between my-4 mx-2">
+    <div className="flex flex-col items-center space-y-1 justify-between mb-4 mx-2">
       <img
-        className="object-cover w-64 h-64 mb-2 rounded-full"
+        className="object-cover w-64 h-64 my-2 rounded-full"
         src={profileImageURL}
         alt={fullName}
       />

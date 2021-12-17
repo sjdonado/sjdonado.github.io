@@ -1,0 +1,331 @@
+{
+  "public": {
+    "githubStats": {
+      "contributions": {
+        "joinedGitHubContribution": "2017-04-15T20:27:02Z",
+        "totalCommitContributions": 4485,
+        "totalIssueContributions": 416,
+        "totalPullRequestContributions": 276,
+        "totalPullRequestReviewContributions": 218,
+        "totalRepositoryContributions": 115
+      },
+      "repositories": {
+        "languages": [
+          {
+            "color": "#f1e05a",
+            "count": 54,
+            "name": "JavaScript"
+          },
+          {
+            "color": "#e34c26",
+            "count": 35,
+            "name": "HTML"
+          },
+          {
+            "color": "#563d7c",
+            "count": 27,
+            "name": "CSS"
+          },
+          {
+            "color": "#384d54",
+            "count": 27,
+            "name": "Dockerfile"
+          },
+          {
+            "color": "#89e051",
+            "count": 20,
+            "name": "Shell"
+          },
+          {
+            "color": "#3572A5",
+            "count": 16,
+            "name": "Python"
+          },
+          {
+            "color": "#701516",
+            "count": 8,
+            "name": "Ruby"
+          },
+          {
+            "color": "#b07219",
+            "count": 8,
+            "name": "Java"
+          },
+          {
+            "color": "#2b7489",
+            "count": 7,
+            "name": "TypeScript"
+          },
+          {
+            "color": "#c6538c",
+            "count": 7,
+            "name": "SCSS"
+          },
+          {
+            "color": "#DA5B0B",
+            "count": 6,
+            "name": "Jupyter Notebook"
+          },
+          {
+            "color": "#427819",
+            "count": 4,
+            "name": "Makefile"
+          },
+          {
+            "color": "#A97BFF",
+            "count": 3,
+            "name": "Kotlin"
+          },
+          {
+            "color": "#4F5D95",
+            "count": 3,
+            "name": "PHP"
+          },
+          {
+            "color": "#e38c00",
+            "count": 3,
+            "name": "TSQL"
+          },
+          {
+            "color": "#555555",
+            "count": 2,
+            "name": "C"
+          },
+          {
+            "color": "#f34b7d",
+            "count": 2,
+            "name": "C++"
+          },
+          {
+            "color": "#00ADD8",
+            "count": 2,
+            "name": "Go"
+          },
+          {
+            "color": "#f7931e",
+            "count": 1,
+            "name": "Handlebars"
+          },
+          {
+            "color": "#40d47e",
+            "count": 1,
+            "name": "JSONiq"
+          },
+          {
+            "color": "#012456",
+            "count": 1,
+            "name": "PowerShell"
+          },
+          {
+            "count": 1,
+            "name": "HCL"
+          },
+          {
+            "color": "#4d41b1",
+            "count": 1,
+            "name": "Fortran"
+          },
+          {
+            "color": "#0298c3",
+            "count": 1,
+            "name": "Perl"
+          },
+          {
+            "color": "#00a6a6",
+            "count": 1,
+            "name": "MAXScript"
+          },
+          {
+            "color": "#adb2cb",
+            "count": 1,
+            "name": "VHDL"
+          },
+          {
+            "color": "#dc566d",
+            "count": 1,
+            "name": "Standard ML"
+          },
+          {
+            "color": "#dd1100",
+            "count": 1,
+            "name": "Mathematica"
+          },
+          {
+            "color": "#1e4aec",
+            "count": 1,
+            "name": "Scheme"
+          },
+          {
+            "color": "#b2b7f8",
+            "count": 1,
+            "name": "Verilog"
+          }
+        ],
+        "totalCount": 154
+      },
+      "updatedAt": "2021-12-16T20:04:17.176Z"
+    },
+    "site": {
+      "footerMessage": "Drop me a line 🙂",
+      "fullName": "Juan Rodriguez Donado",
+      "profileImageURL": "https://avatars.githubusercontent.com/u/27580836",
+      "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs.",
+      "sections": [
+        {
+          "id": "what-i-do",
+          "items": [
+            {
+              "description": "Researcher member of AML-CS, the applied math and computer science lab of Universidad del Norte, Colombia.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/AML-CS.jpg?alt=media",
+              "link": "https://aml-cs.github.io/",
+              "name": "AML-CS. Universidad del Norte, CO"
+            },
+            {
+              "description": "Full Stack Developer. GapFish GmbH, Germany.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/gapfish.png?alt=media",
+              "link": "https://gapfish.com/",
+              "name": "GapFish GmbH"
+            },
+            {
+              "description": "M.Sc. Student in Computer Science. Data Assimilation Method for Air Quality Estimation. Universidad del Norte, Colombia.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/uninorte.svg?alt=media",
+              "link": "https://www.uninorte.edu.co/",
+              "name": "Universidad del Norte"
+            },
+            {
+              "description": "Maintainer of 'Monocuco', an open source dictionary for slang words and phrases from the Caribbean Region of Colombia.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/monocuco.jpg?alt=media",
+              "link": "https://monocuco.info/",
+              "name": "Monocuco"
+            },
+            {
+              "description": "Maintainer of 'Mi horario UN', an open source web application for students of Universidad del Norte, which facilitates the import of class schedules to Google Calendar.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/mihorario.jpg?alt=media",
+              "link": "https://mihorarioun.web.app/",
+              "name": "Mi horario UN"
+            }
+          ],
+          "title": "What I do",
+          "type": "list"
+        },
+        {
+          "id": "recent-projects",
+          "items": [
+            {
+              "description": "Developed the course of 'DLLO. APLICACIONES WEB BACKEND', aimed to build a RESTFul API in Node.js, attended by senior year students of Systems & Computing Engineering at Universidad del Norte, 2021-30.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/uninorte.svg?alt=media",
+              "link": "https://slides.com/sjdonado/backend-un",
+              "name": "Teacher of 'DLLO. APLICACIONES WEB BACKEND'"
+            },
+            {
+              "description": "Contributed to 'Cronun', a web application that simplifies the process of building the class schedule for students at Universidad del Norte.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/cronun.png?alt=media",
+              "link": "https://cronun.co",
+              "name": "Contributor to 'Cronun'"
+            },
+            {
+              "description": "Developed a web application for recognizing numbers drawn on HTML5 canvas using CNN, 2020.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.jpg?alt=media",
+              "link": "https://sjdonado.github.io/handwritten-digits-recognition/",
+              "name": "Handwritten digits recognition"
+            }
+          ],
+          "title": "Recent projects",
+          "type": "list"
+        },
+        {
+          "id": "hackathons-talks",
+          "items": [
+            {
+              "description": "First place out of 8 participants in Hackathon - Backend category.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/koombea-hackathon.jpg?alt=media",
+              "name": "Koombea Hackathon, 2019"
+            },
+            {
+              "description": "First place out of 7 participants in Hackathon - Android category.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/lya-hackathon.jpg?alt=media",
+              "name": "Lya Electronic Hackathon, 2019"
+            },
+            {
+              "description": "Speaker of 'Systems Engineering'.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/inca-innovation-fair.jpg?alt=media",
+              "name": "Inca School Technology and Innovation Fair, 2019"
+            },
+            {
+              "description": "Conducted a workshop 'Tic-tac-toe AI using DP-Method'.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/ieee-week.jpg?alt=media",
+              "name": "Uninorte IEEE Week, 2019"
+            },
+            {
+              "description": "Second place out of 12 participants in Hackathon - Backend category.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/ideaware-hackathon.jpg?alt=media",
+              "name": "Ideaware Hackathon, 2018"
+            },
+            {
+              "description": "First place out of 8 teams in Hackathon - Android category.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/nativapps-hackathon.jpg?alt=media",
+              "name": "NativApps Hackathon, 2018"
+            }
+          ],
+          "title": "Hackathons & Talks",
+          "type": "gallery"
+        },
+        {
+          "id": "presentations",
+          "items": [
+            {
+              "imageURL": "https://media.slid.es/thumbnails/172b31892aa0ce642e7460d9e51ef7ea/thumb.jpg",
+              "link": "https://slides.com/sjdonado/generic-types-traits-and-lifetimes",
+              "name": "Generic Types, Traits, and Lifetimes"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/19f0c7eccafee08d9d9270f3c9729bd8/thumb.jpg",
+              "link": "https://slides.com/sjdonado/how-to-develop-inside-a-container-using-vscode",
+              "name": "How to develop inside a container using VSCode"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/f83d3ecc5d593b9deb03c77ba3551722/thumb.jpg",
+              "link": "https://slides.com/sjdonado/docker",
+              "name": "Docker"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/505cf6a69fbe76798ee32cb5b984df4c/thumb.jpg",
+              "link": "https://slides.com/sjdonado/deploy-to-heroku-with-github-actions",
+              "name": "Deploy to heroku with Github actions"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/9d595751f9c001767468a20517b59cc8/thumb.jpg",
+              "link": "https://slides.com/sjdonado/xp-kanban",
+              "name": "XP, Kanban, TDD"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/36d87d66ca3895b4b66b156655a247c1/thumb.jpg",
+              "link": "https://slides.com/sjdonado/web-scraping",
+              "name": "Web scraping"
+            }
+          ],
+          "title": "Presentations",
+          "type": "slides"
+        }
+      ],
+      "social": [
+        {
+          "icon": "fa fa-envelope",
+          "link": "mailto:sjdonado@uninorte.edu.co"
+        },
+        {
+          "icon": "fab fa-github",
+          "link": "https://github.com/sjdonado"
+        },
+        {
+          "icon": "fab fa-linkedin-in",
+          "link": "https://linkedin.com/in/sjdonado"
+        },
+        {
+          "icon": "fab fa-twitter",
+          "link": "https://twitter.com/sjdonado_"
+        }
+      ]
+    }
+  }
+}

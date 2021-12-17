@@ -7,12 +7,12 @@ module.exports.run = async (event, context) => {
   try {
     const contributions = await fetchContributions();
     const repositories = await fetchRepositories();
-    const data = {
+    const githubStats = {
       contributions,
       repositories,
       updatedAt: new Date().toISOString(),
     };
-    await writeData('githubStats', data);
+    await writeData('public/githubStats', githubStats);
   } catch (err) {
     console.log(err);
   }
