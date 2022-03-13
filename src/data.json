@@ -3,17 +3,17 @@
     "githubStats": {
       "contributions": {
         "joinedGitHubContribution": "2017-04-15T20:27:02Z",
-        "totalCommitContributions": 4485,
-        "totalIssueContributions": 416,
-        "totalPullRequestContributions": 276,
-        "totalPullRequestReviewContributions": 218,
-        "totalRepositoryContributions": 115
+        "totalCommitContributions": 4573,
+        "totalIssueContributions": 418,
+        "totalPullRequestContributions": 296,
+        "totalPullRequestReviewContributions": 227,
+        "totalRepositoryContributions": 117
       },
       "repositories": {
         "languages": [
           {
             "color": "#f1e05a",
-            "count": 54,
+            "count": 56,
             "name": "JavaScript"
           },
           {
@@ -22,24 +22,29 @@
             "name": "HTML"
           },
           {
+            "color": "#384d54",
+            "count": 29,
+            "name": "Dockerfile"
+          },
+          {
             "color": "#563d7c",
             "count": 27,
             "name": "CSS"
           },
           {
-            "color": "#384d54",
-            "count": 27,
-            "name": "Dockerfile"
-          },
-          {
             "color": "#89e051",
-            "count": 20,
+            "count": 22,
             "name": "Shell"
           },
           {
             "color": "#3572A5",
             "count": 16,
             "name": "Python"
+          },
+          {
+            "color": "#2b7489",
+            "count": 10,
+            "name": "TypeScript"
           },
           {
             "color": "#701516",
@@ -50,11 +55,6 @@
             "color": "#b07219",
             "count": 8,
             "name": "Java"
-          },
-          {
-            "color": "#2b7489",
-            "count": 7,
-            "name": "TypeScript"
           },
           {
             "color": "#c6538c",
@@ -161,9 +161,9 @@
             "name": "Verilog"
           }
         ],
-        "totalCount": 154
+        "totalCount": 157
       },
-      "updatedAt": "2021-12-16T20:04:17.176Z"
+      "updatedAt": "2022-03-01T08:00:11.720Z"
     },
     "site": {
       "footerMessage": "Drop me a line 🙂",
@@ -181,10 +181,10 @@
               "name": "AML-CS. Universidad del Norte, CO"
             },
             {
-              "description": "Full Stack Developer. GapFish GmbH, Germany.",
-              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/gapfish.png?alt=media",
-              "link": "https://gapfish.com/",
-              "name": "GapFish GmbH"
+              "description": "Backend Engineer. Getir, Germany.",
+              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/getir-logo.png?alt=media",
+              "link": "https://getir.com/us/",
+              "name": "Getir"
             },
             {
               "description": "M.Sc. Student in Computer Science. Data Assimilation Method for Air Quality Estimation. Universidad del Norte, Colombia.",
@@ -302,6 +302,21 @@
               "imageURL": "https://media.slid.es/thumbnails/36d87d66ca3895b4b66b156655a247c1/thumb.jpg",
               "link": "https://slides.com/sjdonado/web-scraping",
               "name": "Web scraping"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/ab738ee0ef16b2616c0967ee9d152302/thumb.jpg",
+              "link": "https://slides.com/sjdonado/bellman-ford",
+              "name": "Bellman-Ford"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/5337e52f769cd8e4346139f397ed0f3a/thumb.jpg",
+              "link": "https://slides.com/sjdonado/backend-un",
+              "name": "DLLO. APLICACIONES WEB BACKEND"
+            },
+            {
+              "imageURL": "https://media.slid.es/thumbnails/4baded295d59f8bd81bc388661a134b6/thumb.jpg",
+              "link": "https://slides.com/sjdonado/adr",
+              "name": "ADR"
             }
           ],
           "title": "Presentations",
@@ -322,8 +337,8 @@
           "link": "https://linkedin.com/in/sjdonado"
         },
         {
-          "icon": "fab fa-twitter",
-          "link": "https://twitter.com/sjdonado_"
+          "icon": "fab fa-stack-overflow",
+          "link": "https://stackoverflow.com/users/8108856/juan-rodriguez"
         }
       ]
     }
