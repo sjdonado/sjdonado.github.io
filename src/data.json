@@ -1,196 +1,19 @@
 {
   "public": {
-    "githubStats": {
-      "contributions": {
-        "joinedGitHubContribution": "2017-04-15T20:27:02Z",
-        "totalCommitContributions": 4573,
-        "totalIssueContributions": 418,
-        "totalPullRequestContributions": 296,
-        "totalPullRequestReviewContributions": 227,
-        "totalRepositoryContributions": 117
-      },
-      "repositories": {
-        "languages": [
-          {
-            "color": "#f1e05a",
-            "count": 56,
-            "name": "JavaScript"
-          },
-          {
-            "color": "#e34c26",
-            "count": 35,
-            "name": "HTML"
-          },
-          {
-            "color": "#384d54",
-            "count": 29,
-            "name": "Dockerfile"
-          },
-          {
-            "color": "#563d7c",
-            "count": 27,
-            "name": "CSS"
-          },
-          {
-            "color": "#89e051",
-            "count": 22,
-            "name": "Shell"
-          },
-          {
-            "color": "#3572A5",
-            "count": 16,
-            "name": "Python"
-          },
-          {
-            "color": "#2b7489",
-            "count": 10,
-            "name": "TypeScript"
-          },
-          {
-            "color": "#701516",
-            "count": 8,
-            "name": "Ruby"
-          },
-          {
-            "color": "#b07219",
-            "count": 8,
-            "name": "Java"
-          },
-          {
-            "color": "#c6538c",
-            "count": 7,
-            "name": "SCSS"
-          },
-          {
-            "color": "#DA5B0B",
-            "count": 6,
-            "name": "Jupyter Notebook"
-          },
-          {
-            "color": "#427819",
-            "count": 4,
-            "name": "Makefile"
-          },
-          {
-            "color": "#A97BFF",
-            "count": 3,
-            "name": "Kotlin"
-          },
-          {
-            "color": "#4F5D95",
-            "count": 3,
-            "name": "PHP"
-          },
-          {
-            "color": "#e38c00",
-            "count": 3,
-            "name": "TSQL"
-          },
-          {
-            "color": "#555555",
-            "count": 2,
-            "name": "C"
-          },
-          {
-            "color": "#f34b7d",
-            "count": 2,
-            "name": "C++"
-          },
-          {
-            "color": "#00ADD8",
-            "count": 2,
-            "name": "Go"
-          },
-          {
-            "color": "#f7931e",
-            "count": 1,
-            "name": "Handlebars"
-          },
-          {
-            "color": "#40d47e",
-            "count": 1,
-            "name": "JSONiq"
-          },
-          {
-            "color": "#012456",
-            "count": 1,
-            "name": "PowerShell"
-          },
-          {
-            "count": 1,
-            "name": "HCL"
-          },
-          {
-            "color": "#4d41b1",
-            "count": 1,
-            "name": "Fortran"
-          },
-          {
-            "color": "#0298c3",
-            "count": 1,
-            "name": "Perl"
-          },
-          {
-            "color": "#00a6a6",
-            "count": 1,
-            "name": "MAXScript"
-          },
-          {
-            "color": "#adb2cb",
-            "count": 1,
-            "name": "VHDL"
-          },
-          {
-            "color": "#dc566d",
-            "count": 1,
-            "name": "Standard ML"
-          },
-          {
-            "color": "#dd1100",
-            "count": 1,
-            "name": "Mathematica"
-          },
-          {
-            "color": "#1e4aec",
-            "count": 1,
-            "name": "Scheme"
-          },
-          {
-            "color": "#b2b7f8",
-            "count": 1,
-            "name": "Verilog"
-          }
-        ],
-        "totalCount": 157
-      },
-      "updatedAt": "2022-03-01T08:00:11.720Z"
-    },
     "site": {
       "footerMessage": "Drop me a line 🙂",
       "fullName": "Juan Rodriguez Donado",
       "profileImageURL": "https://avatars.githubusercontent.com/u/27580836",
-      "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs.",
+      "quote": "M.Sc CS - Software Engineer",
       "sections": [
         {
           "id": "what-i-do",
           "items": [
             {
-              "description": "Researcher member of AML-CS, the applied math and computer science lab of Universidad del Norte, Colombia.",
-              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/AML-CS.jpg?alt=media",
-              "link": "https://aml-cs.github.io/",
-              "name": "AML-CS. Universidad del Norte, CO"
-            },
-            {
               "description": "Backend Engineer. Getir, Germany.",
               "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/getir-logo.png?alt=media",
               "link": "https://getir.com/us/",
               "name": "Getir"
-            },
-            {
-              "description": "M.Sc. Student in Computer Science. Data Assimilation Method for Air Quality Estimation. Universidad del Norte, Colombia.",
-              "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/uninorte.svg?alt=media",
-              "link": "https://www.uninorte.edu.co/",
-              "name": "Universidad del Norte"
             },
             {
               "description": "Maintainer of 'Monocuco', an open source dictionary for slang words and phrases from the Caribbean Region of Colombia.",
@@ -212,7 +35,7 @@
           "id": "recent-projects",
           "items": [
             {
-              "description": "Developed the course of 'DLLO. APLICACIONES WEB BACKEND', aimed to build a RESTFul API in Node.js, attended by senior year students of Systems & Computing Engineering at Universidad del Norte, 2021-30.",
+              "description": "Taught the course of 'DLLO. APLICACIONES WEB BACKEND', aimed to build a RESTFul API in Node.js, attended by senior year students of Systems & Computing Engineering at Universidad del Norte, 2021-30.",
               "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/uninorte.svg?alt=media",
               "link": "https://slides.com/sjdonado/backend-un",
               "name": "Teacher of 'DLLO. APLICACIONES WEB BACKEND'"

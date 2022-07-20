@@ -1,6 +1,8 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
 
+import DEFAULT_DATA from '../data.json';
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: `${process.env.REACT_APP_FIREBASE_PROJECTID}.firebaseapp.com`,
@@ -17,8 +19,9 @@ export const database = getDatabase(app);
 
 export const getPublicData = async () => {
   const snapshot = await get(ref(database, 'public'));
-  if (snapshot.exists()) {
-    return snapshot.val();
+  if (process.env.REACT_APP_ENV === 'development' || !snapshot.exists()) {
+    return DEFAULT_DATA.public;
   }
-  return null;
+
+  return snapshot.val();
 };

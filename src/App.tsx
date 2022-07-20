@@ -1,14 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 import Avatar from './components/Avatar';
-import GithubSection from './components/githubSection/GithubSection';
 import List from './components/list/List';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/Footer';
 
 import { getPublicData } from './services/database';
-
-import DEFAULT_DATA from './data.json';
 
 interface SectionsDictionary {
   [key: string]: (id: string, title: string,
@@ -46,14 +43,12 @@ const SECTIONS: SectionsDictionary = {
 
 const App: React.FC = function App() {
   const [statusMessage, setstatusMessage] = useState<string>();
-  const [data, setData] = useState<DatabaseObject>(DEFAULT_DATA.public as DatabaseObject);
+  const [data, setData] = useState<DatabaseObject>();
 
   const fetch = useCallback(async () => {
     try {
       const res = await getPublicData();
-      if (res) {
-        setData(res);
-      }
+      setData(res);
     } catch (err) {
       setstatusMessage('Unexpected error loading data, try again :(');
     }
@@ -77,7 +72,6 @@ const App: React.FC = function App() {
     );
   }
 
-  const { githubStats, site } = data;
   const {
     profileImageURL,
     fullName,
@@ -85,7 +79,7 @@ const App: React.FC = function App() {
     sections,
     footerMessage,
     social,
-  } = site;
+  } = data.site;
 
   return (
     <div className="bg-white">
@@ -95,7 +89,6 @@ const App: React.FC = function App() {
         quote={quote}
       />
       <div className="w-5/6 sm:w-4/6 m-auto">
-        <GithubSection githubStats={githubStats} />
         {sections.map(({
           id,
           title,
