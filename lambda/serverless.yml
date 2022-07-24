@@ -1,0 +1,31 @@
+org: sjdonado
+app: sjdonado-github-web-scraper
+service: sjdonado-github-web-scraper
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  timeout: 10
+
+package:
+  patterns:
+    - '!node_modules/puppeteer/.local-chromium/**'
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+custom:
+  serverlessPluginTypescript:
+    tsConfigFileLocation: './tsconfig.build.json'
+
+functions:
+  cronHandler:
+    handler: handler.run
+    events:
+      # Invoke Lambda function at 8:00 am (UTC) every 1st day of the month
+      - schedule: cron(0 8 1 * ? *)
+  dev:
+    handler: handler.run
