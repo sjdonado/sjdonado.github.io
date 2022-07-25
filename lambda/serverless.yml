@@ -25,7 +25,7 @@ functions:
   cronHandler:
     handler: handler.run
     events:
-      # Invoke Lambda function at 8:00 am (UTC) every 1st day of the month
-      - schedule: cron(0 8 1 * ? *)
+      # Every week at 00:00 on Monday
+      - schedule: cron(0 0 ? * MON *)
   dev:
     handler: handler.run

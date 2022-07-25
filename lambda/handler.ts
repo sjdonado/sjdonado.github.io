@@ -1,21 +1,41 @@
 import { getData, writeData } from './services/firebase';
-import { Scraper } from './scraper';
+import { LinkedinPost, Scraper, VscoPicture } from './scraper';
 
-// eslint-disable-next-line import/prefer-default-export
+export interface Section {
+  id: string;
+  title: string;
+  type: string;
+  items: LinkedinPost[] | VscoPicture[];
+}
+
 export const run = async () => {
   try {
-    const { sitesUsername, sessionCookieValue } = await getData('public/config');
+    const {
+      config: { sitesUsername, sessionCookieValue },
+      site: { sections },
+    } = await getData('public');
 
     const scraper = new Scraper({
       sitesUsername,
       sessionCookieValue,
     });
 
+    const linkedinSection = sections.find((section: Section) => section.id === 'linkedin-posts');
+    const vscoSection = sections.find((section: Section) => section.id === 'vsco-pictures');
+
+    await scraper.openBrowser();
+
     const linkedinPosts = await scraper.fetchLinkedinPosts();
+    const vscoPictures = await scraper.fetchVscoPictures();
 
-    console.log(linkedinPosts);
+    await scraper.closeBrowser();
 
-    await writeData('public/linkedinPosts', linkedinPosts);
+    Object.assign(linkedinSection, { ...linkedinSection, items: linkedinPosts });
+    Object.assign(vscoSection, { ...vscoSection, items: vscoPictures });
+
+    console.log(sections);
+
+    await writeData('public/site/sections', sections);
   } catch (err) {
     console.log(err);
   }

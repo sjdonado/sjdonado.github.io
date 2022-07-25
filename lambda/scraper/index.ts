@@ -1,7 +1,9 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 
 import { getChrome } from '../chrome-script';
-import { getPosts, getIframeImage } from './pages/linkedin';
+
+import { getPosts } from './pages/linkedin';
+import { getPictures } from './pages/vsco';
 
 export interface ScraperUserDefinedOptions {
   sitesUsername: string;
@@ -21,15 +23,23 @@ interface LinkedinPostMedia {
   data: string;
 }
 
-interface LinkedinPost {
+export interface LinkedinPost {
   date: string;
   content: string;
-  media: LinkedinPostMedia
+  media: LinkedinPostMedia;
   link: string;
 }
 
+export interface VscoPicture {
+  url: string;
+  date: number;
+  share: string;
+}
+
 export class Scraper {
-  private browser: Browser | null = null;
+  private browser: Browser | null;
+
+  private page: Page | null;
 
   readonly options: ScraperOptions = {
     sitesUsername: '',
@@ -42,7 +52,7 @@ export class Scraper {
     this.options = Object.assign(this.options, userDefinedOptions);
   }
 
-  private async openBrowser() {
+  public async openBrowser() {
     const { endpoint } = await getChrome();
 
     this.browser = await puppeteer.connect({
@@ -50,7 +60,7 @@ export class Scraper {
     });
   }
 
-  private async closeBrowser() {
+  public async closeBrowser() {
     this.browser?.close();
   }
 
@@ -59,16 +69,20 @@ export class Scraper {
       throw new Error('Browser not set');
     }
 
-    const page = await this.browser.newPage();
+    if (this.page) {
+      return this.page;
+    }
+
+    this.page = await this.browser.newPage();
 
     const firstPage = (await this.browser.pages())[0];
     await firstPage.close();
 
-    const blockedResources = ['image', 'media', 'font', 'texttrack', 'object', 'beacon', 'csp_report', 'imageset'];
+    const blockedResources = ['media', 'font', 'texttrack', 'object', 'beacon', 'csp_report', 'imageset'];
 
-    await page.setRequestInterception(true);
+    await this.page.setRequestInterception(true);
 
-    page.on('request', (req) => {
+    this.page.on('request', (req) => {
       if (blockedResources.includes(req.resourceType())) {
         return req.abort();
       }
@@ -76,14 +90,12 @@ export class Scraper {
       return req.continue();
     });
 
-    await page.setUserAgent(this.options.userAgent);
+    await this.page.setUserAgent(this.options.userAgent);
 
-    return page;
+    return this.page;
   }
 
   public async fetchLinkedinPosts() {
-    await this.openBrowser();
-
     const URL = `https://www.linkedin.com/in/${this.options.sitesUsername}/recent-activity/shares/`;
 
     const page = await this.createPage();
@@ -98,16 +110,20 @@ export class Scraper {
 
     const linkedinPosts = await getPosts(page) as LinkedinPost[];
 
-    await Promise.all(linkedinPosts.filter(({ media }) => media.type === 'document').map(async (post) => {
-      const iframe = page.frames()[post.media.data + 1];
-
-      const img = await getIframeImage(iframe);
-
-      Object.assign(post.media, { type: post.media.type, data: img });
-    }));
-
-    await this.closeBrowser();
-
     return linkedinPosts;
+  }
+
+  public async fetchVscoPictures() {
+    const URL = `https://vsco.co/${this.options.sitesUsername}/gallery`;
+
+    const page = await this.createPage();
+
+    await page.goto(URL);
+
+    await page.setViewport({ width: 1920, height: 1080 });
+
+    const vscoPictures = await getPictures(page) as VscoPicture[];
+
+    return vscoPictures;
   }
 }

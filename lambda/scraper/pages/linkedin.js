@@ -1,10 +1,10 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
+/* eslint-disable import/prefer-default-export */
 
 export const getPosts = async (page) => {
   const linkedinPosts = await page.evaluate(async () => {
     const posts = Array.from(document.querySelectorAll('.feed-shared-update-v2'));
-    let iframes = 0;
 
     const waitForElm = (selector) => new Promise((resolve) => {
       if (document.querySelector(selector)) {
@@ -24,13 +24,34 @@ export const getPosts = async (page) => {
       });
     });
 
-    const getMedia = (post) => {
+    const toDataURL = (url) => new Promise((res) => {
+      const xhr = new XMLHttpRequest();
+      xhr.onload = () => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          res(reader.result);
+        };
+        reader.readAsDataURL(xhr.response);
+      };
+      xhr.open('GET', url);
+      xhr.responseType = 'blob';
+      xhr.send();
+    });
+
+    const getMedia = async (post) => {
+      const imageSelector = post.querySelector('.feed-shared-image img');
+      const celebrationSelector = post.querySelector('.feed-shared-celebration img');
+      const articleSelector = post.querySelector('.feed-shared-article a');
+      const videoSelector = post.querySelector('.feed-shared-linkedin-video__container video');
+      const documentSelector = post.querySelector('.feed-shared-document__container iframe');
+
       const media = {
-        image: post.querySelector('.feed-shared-image img')?.src,
-        celebration: post.querySelector('.feed-shared-celebration img')?.src,
-        article: post.querySelector('.feed-shared-article a')?.href,
-        video: post.querySelector('.feed-shared-linkedin-video__container video')?.src,
-        document: post.querySelector('.feed-shared-document__container iframe')?.contentWindow ? iframes++ : null,
+        image: imageSelector ? await toDataURL(imageSelector.src) : null,
+        celebration: celebrationSelector ? await toDataURL(celebrationSelector.src) : null,
+        article: articleSelector?.href,
+        video: videoSelector ? await toDataURL(videoSelector.src) : null,
+        // TODO: get real preview (iframe context bloqued)
+        document: documentSelector?.contentWindow ? await toDataURL('https://media-exp1.licdn.com/dms/image/C4E1FAQFmXkichpJwMQ/feedshare-document-images_800/1/1656343931321?e=1659571200&v=beta&t=sWw3ZuqLQNtdQdTyVZUHw9PpNVqz6RJC02T3viCVziU') : null,
       };
 
       return Object.entries(media).map(([type, data]) => ({
@@ -51,7 +72,7 @@ export const getPosts = async (page) => {
     const data = await Promise.all(posts.map(async (post) => ({
       date: post.querySelector('span > span.visually-hidden').textContent,
       content: post.querySelector('.break-words')?.textContent.trim(),
-      media: getMedia(post),
+      media: await getMedia(post),
       link: await getLinkPost(post),
     })));
 
@@ -59,10 +80,4 @@ export const getPosts = async (page) => {
   });
 
   return linkedinPosts;
-};
-
-export const getIframeImage = async (iframe) => {
-  const img = await iframe.evaluate(() => document.querySelector('img')?.src);
-
-  return img;
 };

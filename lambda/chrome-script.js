@@ -51,6 +51,7 @@ module.exports.getChrome = async () => {
       '--use-mock-keychain',
       '--disable-web-security',
       '--disable-features=site-per-process',
+      '--window-size=1920,1080',
       '--headless',
     ],
   });
