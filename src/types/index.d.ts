@@ -1,3 +1,15 @@
+declare interface PostItemMedia {
+  type: string;
+  data: string;
+}
+
+declare interface PostItem {
+  content: string;
+  date: string;
+  link: string;
+  media: PostItemMedia;
+}
+
 declare interface ListItem {
   imageURL: string;
   link: string;
@@ -15,6 +27,11 @@ declare interface GallerySlide {
   imageURL: string;
   link: string;
   name: string;
+}
+
+declare interface GalleryPicture {
+  data: string;
+  shareURL: string;
 }
 
 declare interface SocialItem {

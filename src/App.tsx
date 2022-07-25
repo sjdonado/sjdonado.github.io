@@ -7,17 +7,29 @@ import Footer from './components/Footer';
 
 import { getPublicData } from './services/database';
 
-interface SectionsDictionary {
+interface Sections {
   [key: string]: (id: string, title: string,
-    items: ListItem[] | GalleryItem[] | GallerySlide[]) => JSX.Element;
+    items: PostItem[] | ListItem[] | GalleryItem[] | GallerySlide[]
+    | GalleryPicture[]) => JSX.Element;
 }
 
-const SECTIONS: SectionsDictionary = {
+const SECTIONS: Sections = {
+  posts: (id, title, items) => (
+    <List
+      key={id}
+      id={id}
+      title={title}
+      itemType="postItem"
+      items={items as PostItem[]}
+      isPaginated
+    />
+  ),
   list: (id, title, items) => (
     <List
       key={id}
       id={id}
       title={title}
+      itemType="listItem"
       items={items as ListItem[]}
     />
   ),
@@ -37,6 +49,15 @@ const SECTIONS: SectionsDictionary = {
       title={title}
       itemType="gallerySlide"
       items={items as GallerySlide[]}
+    />
+  ),
+  pictures: (id, title, items) => (
+    <Gallery
+      key={id}
+      id={id}
+      title={title}
+      itemType="galleryPicture"
+      items={items as GalleryPicture[]}
     />
   ),
 };

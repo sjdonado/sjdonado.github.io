@@ -1,20 +1,21 @@
 import React from 'react';
 
 import GalleryItem from './GalleryItem';
+import GalleryPicture from './GalleryPicture';
 import GallerySlide from './GallerySlide';
 
 interface Props {
   title: string;
   id: string;
   itemType: string;
-  items: GalleryItem[] | GallerySlide[];
+  items: GalleryItem[] | GallerySlide[] | GalleryPicture[];
 }
 
-interface ItemsDictionary {
+interface Items {
   [key: string]: (item: any) => JSX.Element;
 }
 
-const ITEMS: ItemsDictionary = {
+const ITEMS: Items = {
   galleryItem: ({ imageURL, name, description }: GalleryItem) => (
     <GalleryItem
       key={name}
@@ -31,6 +32,13 @@ const ITEMS: ItemsDictionary = {
       name={name}
     />
   ),
+  galleryPicture: ({ data, shareURL }: GalleryPicture) => (
+    <GalleryPicture
+      key={shareURL}
+      data={data}
+      shareURL={shareURL}
+    />
+  ),
 };
 
 const Gallery: React.FC<Props> = function Gallery({
@@ -39,8 +47,9 @@ const Gallery: React.FC<Props> = function Gallery({
   itemType,
   items,
 }) {
+  // TODO: https://css-tricks.com/seamless-responsive-photo-grid/
   return (
-    <section id={id} className="flex flex-col my-4">
+    <section id={id} className="flex flex-col flex-wrap my-4">
       <a className="text-2xl my-4 underline" href={`#${id}`}>{title}</a>
       <div className="flex flex-wrap justify-center">
         {items.map((item) => ITEMS[itemType](item))}
