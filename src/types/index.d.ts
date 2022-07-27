@@ -90,3 +90,10 @@ declare interface ContributionType {
   icon: string;
   name: string;
 }
+
+declare interface LinkPreview {
+  url: string;
+  title: string;
+  image: string;
+  description: string;
+}

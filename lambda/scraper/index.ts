@@ -1,9 +1,16 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
+import { getLinkPreview } from 'link-preview-js';
 
 import { getChrome } from '../chrome-script';
 
 import { getPosts } from './pages/linkedin';
 import { getPictures } from './pages/vsco';
+
+interface LinkPreview {
+  title: string;
+  description: string;
+  images: string[];
+}
 
 export interface ScraperUserDefinedOptions {
   sitesUsername: string;
@@ -37,9 +44,9 @@ export interface VscoPicture {
 }
 
 export class Scraper {
-  private browser: Browser | null;
+  private browser: Browser | null = null;
 
-  private page: Page | null;
+  private page: Page | null = null;
 
   readonly options: ScraperOptions = {
     sitesUsername: '',
@@ -92,6 +99,8 @@ export class Scraper {
 
     await this.page.setUserAgent(this.options.userAgent);
 
+    await this.page.setViewport({ width: 1920, height: 1080 });
+
     return this.page;
   }
 
@@ -110,6 +119,31 @@ export class Scraper {
 
     const linkedinPosts = await getPosts(page) as LinkedinPost[];
 
+    const articlePostsIndexes = linkedinPosts.reduce((acc: number[], obj: LinkedinPost, idx) => {
+      if (obj.media.type === 'article') {
+        acc.push(idx);
+      }
+      return acc;
+    }, []);
+
+    await Promise.all(articlePostsIndexes.map(async (postIdx) => {
+      const { data: url } = linkedinPosts[postIdx].media;
+
+      const { title, description, images: [image] } = (
+        await getLinkPreview(url, { followRedirects: 'follow' })
+      ) as LinkPreview;
+
+      Object.assign(linkedinPosts[postIdx].media, {
+        type: 'article',
+        data: {
+          title,
+          description,
+          image,
+          url,
+        },
+      });
+    }));
+
     return linkedinPosts;
   }
 
@@ -119,8 +153,6 @@ export class Scraper {
     const page = await this.createPage();
 
     await page.goto(URL);
-
-    await page.setViewport({ width: 1920, height: 1080 });
 
     const vscoPictures = await getPictures(page) as VscoPicture[];
 

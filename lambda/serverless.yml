@@ -6,16 +6,22 @@ frameworkVersion: '3'
 
 provider:
   name: aws
+  region: us-east-1
+  versionFunctions: false
+  layers:
+   - arn:aws:lambda:${self:provider.region}:764866452798:layer:chrome-aws-lambda:10
   runtime: nodejs14.x
   timeout: 10
-
-package:
-  patterns:
-    - '!node_modules/puppeteer/.local-chromium/**'
+  # timeout: 30
+  # memorySize: 2048
 
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
+
+package:
+  patterns:
+    - '!node_modules/puppeteer/.local-chromium/**'
 
 custom:
   serverlessPluginTypescript:
