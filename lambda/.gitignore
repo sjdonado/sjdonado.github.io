@@ -1,4 +1,6 @@
 .vscode
 .build
+.serverless
+
 node_modules
 serviceAccountKey.json

@@ -1,27 +1,28 @@
 {
-  "name": "github-stats",
+  "name": "sjdonado-github-web-scraper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "serverless invoke local --function dev",
+    "deploy": "serverless deploy",
     "lint": "eslint --fix"
   },
   "author": "sjdonado",
   "license": "ISC",
   "dependencies": {
     "@serverless-chrome/lambda": "^1.0.0-57.2",
-    "@serverless/utils": "^6.7.0",
-    "chrome-launcher": "^0.15.1",
-    "firebase": "^9.9.0",
     "firebase-admin": "^10.0.0",
+    "link-preview-js": "^3.0.0",
     "puppeteer": "^15.5.0",
     "superagent": "^8.0.0"
   },
   "devDependencies": {
+    "@serverless/utils": "^6.7.0",
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "chrome-launcher": "^0.15.1",
     "eslint": "^8.20.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",

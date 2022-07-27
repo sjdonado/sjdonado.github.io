@@ -4,8 +4,8 @@
 - Firebase Database + Storage
 - ESLint airbnb-typescript
 
-# github-stats
+# lambda
 
 - Serverless + AWS Lambda Function
 - Firebase Admin
-- GraphQL requests
+- Puppeteer
