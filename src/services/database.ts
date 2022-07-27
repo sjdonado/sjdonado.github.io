@@ -19,7 +19,7 @@ export const database = getDatabase(app);
 
 export const getPublicData = async () => {
   const snapshot = await get(ref(database, 'public'));
-  if (process.env.REACT_APP_ENV === 'development' || !snapshot.exists()) {
+  if (!snapshot.exists()) {
     return DEFAULT_DATA.public;
   }
 

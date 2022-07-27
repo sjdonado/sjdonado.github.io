@@ -3,7 +3,7 @@ import React from 'react';
 
 import LinkPreview from '../common/LinkPreview';
 
-const URL_REGEX = /(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*))[.,]/;
+const URL_REGEX = /[.,]?(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*))[.,]?/;
 
 interface MediaTypes {
   [key: string]: (item: any) => JSX.Element;

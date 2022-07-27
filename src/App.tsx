@@ -58,6 +58,7 @@ const SECTIONS: Sections = {
       title={title}
       itemType="galleryPicture"
       items={items as GalleryPicture[]}
+      seeMore="https://vsco.co/sjdonado"
     />
   ),
 };

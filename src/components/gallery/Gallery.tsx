@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 
 import GalleryItem from './GalleryItem';
@@ -9,6 +10,7 @@ interface Props {
   id: string;
   itemType: string;
   items: GalleryItem[] | GallerySlide[] | GalleryPicture[];
+  seeMore?: string;
 }
 
 interface Items {
@@ -46,6 +48,7 @@ const Gallery: React.FC<Props> = function Gallery({
   id,
   itemType,
   items,
+  seeMore = null,
 }) {
   // TODO: https://css-tricks.com/seamless-responsive-photo-grid/
   return (
@@ -54,6 +57,16 @@ const Gallery: React.FC<Props> = function Gallery({
       <div className="flex flex-wrap justify-center">
         {items.map((item) => ITEMS[itemType](item))}
       </div>
+      {seeMore && (
+        <a
+          href={seeMore}
+          className="text-center hover:text-gray-800 hover:border-gray-800 font-semibold text-gray-500 py-1 m-4 border rounded"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See more
+        </a>
+      )}
     </section>
   );
 };

@@ -1,5 +1,4 @@
 /* eslint-disable react/require-default-props */
-
 import React, { useState } from 'react';
 import ListItem from './ListItem';
 import PostItem from './PostItem';
@@ -77,7 +76,7 @@ const List: React.FC<Props> = function List({
       {(isPaginated && cursor < items.length) && (
         <button
           type="button"
-          className="bg-transparent hover:text-gray-900 hover:border-gray-900 font-semibold text-gray-500 py-1 border rounded"
+          className="bg-transparent hover:text-gray-800 hover:border-gray-800 font-semibold text-gray-500 py-1 border rounded"
           onClick={loadMore}
         >
           Load more

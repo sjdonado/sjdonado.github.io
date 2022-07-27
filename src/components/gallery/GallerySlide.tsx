@@ -6,7 +6,7 @@ const GallerySlide: React.FC<GallerySlide> = function GallerySlide({
   link,
 }) {
   return (
-    <div className="flex flex-col items-start w-72 m-1 rounded-lg border border-gray-800">
+    <div className="flex flex-col items-start w-72 m-1 rounded-lg border border-grey-600">
       <a href={link} target="_blank" rel="noreferrer">
         <img className="object-cover w-72 rounded-lg" src={imageURL} alt={name} />
       </a>
