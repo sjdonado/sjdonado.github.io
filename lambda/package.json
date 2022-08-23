@@ -1,8 +1,11 @@
 {
   "name": "sjdonado-github-web-scraper",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
   "main": "index.js",
+  "engines": {
+    "node": "14.20.0",
+    "npm": "8.16.0"
+  },
   "scripts": {
     "dev": "serverless invoke local --function dev",
     "deploy": "serverless deploy",

@@ -16,7 +16,9 @@ export const getPictures = async (page) => {
       return dataURL;
     };
 
-    const images = Array.from(document.querySelectorAll('figure')).slice(0, 12).map((fig) => ({
+    const figureSelector = document.querySelectorAll('figure');
+
+    const images = Array.from(figureSelector).slice(0, 16).map((fig) => ({
       img: fig.querySelector('img'),
       shareURL: fig.querySelector('a').href,
     }));
