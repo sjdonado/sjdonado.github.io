@@ -1,7 +1,7 @@
-import puppeteer, { Browser, Page } from 'puppeteer';
 import { getLinkPreview } from 'link-preview-js';
+import { Browser, Page } from 'puppeteer-core';
 
-import { getChrome } from '../chrome-script';
+import { launch } from '../chromium';
 
 import { getPosts } from './pages/linkedin';
 import { getPictures } from './pages/vsco';
@@ -21,7 +21,6 @@ export interface ScraperUserDefinedOptions {
 interface ScraperOptions {
   sitesUsername: string;
   sessionCookieValue: string;
-  userAgent: string;
   timeout: number;
 }
 
@@ -52,7 +51,6 @@ export class Scraper {
     sitesUsername: '',
     sessionCookieValue: '',
     timeout: 10000,
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
   };
 
   constructor(userDefinedOptions: ScraperUserDefinedOptions) {
@@ -60,11 +58,7 @@ export class Scraper {
   }
 
   public async openBrowser() {
-    const { endpoint } = await getChrome();
-
-    this.browser = await puppeteer.connect({
-      browserWSEndpoint: endpoint,
-    });
+    this.browser = await launch() as unknown as Browser;
   }
 
   public async closeBrowser() {
@@ -96,8 +90,6 @@ export class Scraper {
 
       return req.continue();
     });
-
-    await this.page.setUserAgent(this.options.userAgent);
 
     await this.page.setViewport({ width: 1920, height: 1080 });
 

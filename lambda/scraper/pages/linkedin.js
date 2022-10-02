@@ -51,7 +51,7 @@ export const getPosts = async (page) => {
         article: articleSelector?.href,
         video: videoSelector ? await toDataURL(videoSelector.src) : null,
         // TODO: get real preview (iframe context bloqued)
-        document: documentSelector?.contentWindow ? await toDataURL('https://media-exp1.licdn.com/dms/image/C4E1FAQFmXkichpJwMQ/feedshare-document-images_480/1/1656343930800?e=1661990400&v=beta&t=fc1DZimW_QPc4yyuwQdUGuTbbeMaGg-1kmsAcwZaJqc') : null,
+        document: documentSelector?.contentWindow ? await toDataURL('https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png') : null,
       };
 
       return Object.entries(media).map(([type, data]) => ({

@@ -7,18 +7,20 @@
     "npm": "8.16.0"
   },
   "scripts": {
-    "dev": "serverless invoke local --function dev",
+    "debug:invoke": "serverless invoke local --function cronHandler",
+    "debug" : "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
     "deploy": "serverless deploy",
     "lint": "eslint --fix"
   },
   "author": "sjdonado",
   "license": "ISC",
   "dependencies": {
-    "@serverless-chrome/lambda": "^1.0.0-57.2",
+    "chrome-aws-lambda": "^8.0.2",
     "firebase-admin": "^10.0.0",
     "link-preview-js": "^3.0.0",
-    "puppeteer": "^15.5.0",
-    "superagent": "^8.0.0"
+    "puppeteer-core": "^8.0.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.6"
   },
   "devDependencies": {
     "@serverless/utils": "^6.7.0",

@@ -33,10 +33,8 @@ export const run = async () => {
     Object.assign(linkedinSection, { ...linkedinSection, items: linkedinPosts });
     Object.assign(vscoSection, { ...vscoSection, items: vscoPictures });
 
-    console.log(sections);
-
     await writeData('public/site/sections', sections);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };

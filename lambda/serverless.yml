@@ -8,12 +8,7 @@ provider:
   name: aws
   region: us-east-1
   versionFunctions: false
-  layers:
-   - arn:aws:lambda:${self:provider.region}:764866452798:layer:chrome-aws-lambda:10
   runtime: nodejs14.x
-  timeout: 10
-  # timeout: 30
-  # memorySize: 2048
 
 plugins:
   - serverless-plugin-typescript
@@ -21,6 +16,8 @@ plugins:
 
 package:
   patterns:
+    - '!build-chrome-layer.sh'
+    - '!node_modules/chrome-aws-lambda/**'
     - '!node_modules/puppeteer/.local-chromium/**'
 
 custom:
@@ -30,8 +27,9 @@ custom:
 functions:
   cronHandler:
     handler: handler.run
+    memorySize: 1024
+    timeout: 30
     events:
-      # Every week at 00:00 on Monday
-      - schedule: cron(0 0 ? * MON *)
-  dev:
-    handler: handler.run
+      - schedule: cron(0 0 1 * ? *)
+    layers:
+      - arn:aws:lambda:us-east-1:358981175787:layer:ChromeLambdaLayer:1

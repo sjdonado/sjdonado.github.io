@@ -17,4 +17,7 @@ export const getData = async (path: string) => {
   return snapshot.val();
 };
 
-export const writeData = async (path: string, value: any) => db.ref(path).set(value);
+export const writeData = async (path: string, value: any) => {
+  await db.ref(path).set(value);
+  console.log(`Updated ${path}`, value);
+};
