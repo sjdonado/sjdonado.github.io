@@ -8,13 +8,14 @@
   },
   "scripts": {
     "debug:invoke": "serverless invoke local --function cronHandler",
-    "debug" : "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
+    "debug": "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
     "deploy": "serverless deploy",
     "lint": "eslint --fix"
   },
   "author": "sjdonado",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "chrome-aws-lambda": "^8.0.2",
     "firebase-admin": "^10.0.0",
     "link-preview-js": "^3.0.0",

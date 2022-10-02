@@ -2,10 +2,30 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/prefer-default-export */
 
-export const getPosts = async (page) => {
-  const linkedinPosts = await page.evaluate(async () => {
-    const posts = Array.from(document.querySelectorAll('.feed-shared-update-v2'));
+import * as cheerio from 'cheerio';
 
+const fetchPreviewsFromIframes = async (page) => {
+  const iframes = await page.$$('iframe');
+
+  await Promise.all(iframes.map(async (iframe) => {
+    const frame = await iframe.contentFrame();
+    if (!frame) return;
+
+    const context = await frame.executionContext();
+    const outerHTML = await context.evaluate(() => document.querySelector('*')?.outerHTML);
+    if (!outerHTML) return;
+
+    const $ = cheerio.load(outerHTML);
+    const imgSrc = $('.carousel-track img').attr('data-src');
+
+    await iframe.evaluate((el, preview) => { el.setAttribute('data-preview', preview); }, imgSrc);
+  }));
+};
+
+export const getPosts = async (page) => {
+  await fetchPreviewsFromIframes(page);
+
+  const linkedinPosts = await page.evaluate(async () => {
     const waitForElm = (selector) => new Promise((resolve) => {
       if (document.querySelector(selector)) {
         resolve();
@@ -39,25 +59,23 @@ export const getPosts = async (page) => {
     });
 
     const getMedia = async (post) => {
-      const imageSelector = post.querySelector('.feed-shared-image img');
-      const celebrationSelector = post.querySelector('.feed-shared-celebration img');
-      const articleSelector = post.querySelector('.feed-shared-article a');
-      const videoSelector = post.querySelector('.feed-shared-linkedin-video__container video');
-      const documentSelector = post.querySelector('.feed-shared-document__container iframe');
-
       const media = {
-        image: imageSelector ? await toDataURL(imageSelector.src) : null,
-        celebration: celebrationSelector ? await toDataURL(celebrationSelector.src) : null,
-        article: articleSelector?.href,
-        video: videoSelector ? await toDataURL(videoSelector.src) : null,
-        // TODO: get real preview (iframe context bloqued)
-        document: documentSelector?.contentWindow ? await toDataURL('https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png') : null,
+        image: (selector) => toDataURL(selector.src),
+        celebration: (selector) => toDataURL(selector.src),
+        article: (selector) => selector.href,
+        video: (selector) => toDataURL(selector.src),
+        document: (selector) => toDataURL(selector.dataset.preview),
       };
 
-      return Object.entries(media).map(([type, data]) => ({
-        type,
-        data,
-      })).find((obj) => obj.data != null);
+      const { type, selector } = [
+        { type: 'image', selector: post.querySelector('.feed-shared-image img') },
+        { type: 'celebration', selector: post.querySelector('.feed-shared-celebration img') },
+        { type: 'article', selector: post.querySelector('.feed-shared-article a') },
+        { type: 'video', selector: post.querySelector('.feed-shared-linkedin-video__container video') },
+        { type: 'document', selector: post.querySelector('.feed-shared-document__container iframe') },
+      ].find((elem) => elem.selector !== null);
+
+      return { type, data: await media[type](selector) };
     };
 
     const getLinkPost = async (post) => {
@@ -68,6 +86,8 @@ export const getPosts = async (page) => {
 
       return document.querySelector('.artdeco-toasts_toasts a')?.href;
     };
+
+    const posts = Array.from(document.querySelectorAll('.feed-shared-update-v2'));
 
     const data = await Promise.all(posts.map(async (post) => ({
       date: post.querySelector('span > span.visually-hidden').textContent,
