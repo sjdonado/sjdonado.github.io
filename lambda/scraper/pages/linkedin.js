@@ -68,10 +68,10 @@ export const getPosts = async (page) => {
       };
 
       const { type, selector } = [
-        { type: 'image', selector: post.querySelector('.feed-shared-image img') },
+        { type: 'image', selector: post.querySelector('.update-components-image img') },
         { type: 'celebration', selector: post.querySelector('.feed-shared-celebration img') },
         { type: 'article', selector: post.querySelector('.feed-shared-article a') },
-        { type: 'video', selector: post.querySelector('.feed-shared-linkedin-video__container video') },
+        { type: 'video', selector: post.querySelector('.update-components-linkedin-video video') },
         { type: 'document', selector: post.querySelector('.feed-shared-document__container iframe') },
       ].find((elem) => elem.selector !== null);
 
@@ -89,12 +89,22 @@ export const getPosts = async (page) => {
 
     const posts = Array.from(document.querySelectorAll('.feed-shared-update-v2'));
 
-    const data = await Promise.all(posts.map(async (post) => ({
-      date: post.querySelector('span > span.visually-hidden').textContent,
-      content: post.querySelector('.break-words')?.textContent.trim(),
-      media: await getMedia(post),
-      link: await getLinkPost(post),
-    })));
+    const output = await Promise
+      .allSettled(posts.map(async (post) => ({
+        date: post.querySelector('span > span.visually-hidden').textContent,
+        content: post.querySelector('.break-words')?.textContent.trim(),
+        media: await getMedia(post),
+        link: await getLinkPost(post),
+      })));
+
+    const data = output
+      .filter(({ status, reason }) => {
+        if (reason) {
+          console.error(reason);
+        }
+        return status === 'fulfilled';
+      })
+      .map(({ value }) => value);
 
     return data;
   });

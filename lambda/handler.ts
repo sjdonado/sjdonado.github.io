@@ -30,8 +30,13 @@ export const run = async () => {
 
     await scraper.closeBrowser();
 
-    Object.assign(linkedinSection, { ...linkedinSection, items: linkedinPosts });
-    Object.assign(vscoSection, { ...vscoSection, items: vscoPictures });
+    if (linkedinPosts.length > 0) {
+      Object.assign(linkedinSection, { ...linkedinSection, items: linkedinPosts });
+    }
+
+    if (vscoPictures.length > 0) {
+      Object.assign(vscoSection, { ...vscoSection, items: vscoPictures });
+    }
 
     await writeData('public/site/sections', sections);
   } catch (err) {

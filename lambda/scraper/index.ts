@@ -121,9 +121,11 @@ export class Scraper {
     await Promise.all(articlePostsIndexes.map(async (postIdx) => {
       const { data: url } = linkedinPosts[postIdx].media;
 
-      const { title, description, images: [image] } = (
-        await getLinkPreview(url, { followRedirects: 'follow' })
-      ) as LinkPreview;
+      const {
+        title,
+        description,
+        images: [image],
+      } = (await getLinkPreview(url, { followRedirects: 'follow' })) as LinkPreview;
 
       Object.assign(linkedinPosts[postIdx].media, {
         type: 'article',
