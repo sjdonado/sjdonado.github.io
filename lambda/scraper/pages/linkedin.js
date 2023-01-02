@@ -70,7 +70,7 @@ export const getPosts = async (page) => {
       const { type, selector } = [
         { type: 'image', selector: post.querySelector('.update-components-image img') },
         { type: 'celebration', selector: post.querySelector('.feed-shared-celebration img') },
-        { type: 'article', selector: post.querySelector('.feed-shared-article a') },
+        { type: 'article', selector: post.querySelector('.update-components-article a') },
         { type: 'video', selector: post.querySelector('.update-components-linkedin-video video') },
         { type: 'document', selector: post.querySelector('.feed-shared-document__container iframe') },
       ].find((elem) => elem.selector !== null);
@@ -91,8 +91,8 @@ export const getPosts = async (page) => {
 
     const output = await Promise
       .allSettled(posts.map(async (post) => ({
-        date: post.querySelector('span > span.visually-hidden').textContent,
-        content: post.querySelector('.break-words')?.textContent.trim(),
+        date: post.querySelector('.update-components-actor__sub-description span.visually-hidden').textContent,
+        content: post.querySelector('.feed-shared-update-v2__description-wrapper .break-words')?.textContent.trim(),
         media: await getMedia(post),
         link: await getLinkPost(post),
       })));

@@ -3,7 +3,7 @@
   "private": true,
   "main": "index.js",
   "engines": {
-    "node": "14.20.0",
+    "node": "14.20.1",
     "npm": "8.16.0"
   },
   "scripts": {

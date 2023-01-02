@@ -3,7 +3,7 @@
   "private": true,
   "homepage": "http://sjdonado.github.io",
   "engines": {
-    "node": "14.20.0",
+    "node": "14.20.1",
     "npm": "8.16.0"
   },
   "scripts": {
