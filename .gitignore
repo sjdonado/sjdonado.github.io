@@ -26,3 +26,5 @@ yarn-error.log*
 tailwind.css
 
 .vscode
+
+node_modules.nosync

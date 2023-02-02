@@ -1,7 +1,12 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
 import LinkPreview from '../common/LinkPreview';
+
+dayjs.extend(relativeTime);
 
 const URL_REGEX = /[.,]?(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*))[.,]?/;
 
@@ -63,13 +68,15 @@ const PostItem: React.FC<PostItem> = function PostItem({
     '<a href="$1" target="_blank" rel="noreferrer" class="underline">$1</a>',
   );
 
+  const dateFromNow = dayjs(date).fromNow();
+
   return (
     <div className="flex items-start flex-wrap justify-start space-x-2 p-4">
       <div className="m-w-72 m-h-72 w-72 m-4">
         {MEDIA_TYPES[media.type](media.data)}
       </div>
       <div className="flex-1 flex flex-col w-full">
-        <span className="text-sm text-gray-500 mb-2">{date}</span>
+        <span className="text-sm text-gray-500 mb-2">{dateFromNow}</span>
         <p className="text-justify m-w-64" dangerouslySetInnerHTML={{ __html: linkifyContent }} />
         <a className="underline text-right" href={link} target="_blank" rel="noreferrer">See more</a>
       </div>

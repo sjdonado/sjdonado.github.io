@@ -1,6 +1,13 @@
+declare interface PostItemMediaArticle {
+  description: string;
+  image: string;
+  title: string;
+  url: string
+}
+
 declare interface PostItemMedia {
   type: string;
-  data: string;
+  data: string | PostItemMediaArticle;
 }
 
 declare interface PostItem {

@@ -3,8 +3,7 @@
   "private": true,
   "homepage": "http://sjdonado.github.io",
   "engines": {
-    "node": "14.20.1",
-    "npm": "8.16.0"
+    "node": "18.13.*"
   },
   "scripts": {
     "start": "npm run build:css && react-scripts start",
@@ -25,7 +24,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "chart.js": "^3.6.2",
-    "firebase": "^9.6.1",
+    "dayjs": "^1.11.7",
     "moment": "^2.29.4",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",

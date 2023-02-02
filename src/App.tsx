@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
+
+import data from './data.json';
 
 import Avatar from './components/Avatar';
 import List from './components/list/List';
 import Gallery from './components/gallery/Gallery';
 import Footer from './components/Footer';
-
-import { getPublicData } from './services/database';
 
 interface Sections {
   [key: string]: (id: string, title: string,
@@ -64,26 +64,6 @@ const SECTIONS: Sections = {
 };
 
 const App: React.FC = function App() {
-  const [statusMessage, setstatusMessage] = useState<string>();
-  const [data, setData] = useState<DatabaseObject>();
-
-  const fetch = useCallback(async () => {
-    try {
-      const res = await getPublicData();
-      setData(res);
-    } catch (err) {
-      setstatusMessage('Unexpected error loading data, try again :(');
-    }
-  }, [setData]);
-
-  useEffect(() => {
-    fetch();
-  }, [fetch]);
-
-  if (statusMessage != null) {
-    <span>{statusMessage}</span>;
-  }
-
   if (data == null) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -101,7 +81,7 @@ const App: React.FC = function App() {
     sections,
     footerMessage,
     social,
-  } = data.site;
+  } = data;
 
   return (
     <div className="bg-white">
