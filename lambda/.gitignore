@@ -1,8 +1,0 @@
-.vscode
-.build
-.serverless
-
-node_modules
-serviceAccountKey.json
-layer
-node_modules.nosync
