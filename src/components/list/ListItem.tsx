@@ -1,17 +1,25 @@
-import React from 'react';
+import type { Component } from 'solid-js';
 
-const ListItem: React.FC<ListItem> = function ListItem({
-  imageURL,
-  link,
-  name,
-  description,
-}) {
+import Img from '../Img';
+
+interface ListItemProps {
+  imageURL: string;
+  link: string;
+  name: string;
+  description: string;
+}
+
+const ListItem: Component<ListItemProps> = function ListItem(props) {
   return (
-    <div className="flex items-center justify-start space-x-2 p-2">
-      <a className="flex-none" href={link} target="_blank" rel="noreferrer">
-        <img className="object-contain w-24 h-24 border rounded-lg border-grey-600" src={imageURL} alt={name} />
+    <div class="flex items-center justify-start space-x-2 p-2">
+      <a class="flex-none" href={props.link} target="_blank" rel="noreferrer">
+        <Img
+          class="object-contain w-24 h-24 border rounded-lg border-grey-600"
+          src={props.imageURL}
+          alt={props.name}
+        />
       </a>
-      <span>{description}</span>
+      <span>{props.description}</span>
     </div>
   );
 };

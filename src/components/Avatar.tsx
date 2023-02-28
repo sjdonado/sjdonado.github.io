@@ -1,27 +1,23 @@
-import React from 'react';
+import type { Component } from 'solid-js';
 
-interface Props {
+import Img from './Img';
+
+interface AvatarProps {
   profileImageURL: string;
   fullName: string;
   quote: string;
 }
 
-const Avatar: React.FC<Props> = function Avatar({
-  profileImageURL,
-  fullName,
-  quote,
-}) {
-  return (
-    <div className="flex flex-col items-center space-y-1 justify-between mb-4 mx-2">
-      <img
-        className="object-cover w-64 h-64 my-2 rounded-full"
-        src={profileImageURL}
-        alt={fullName}
-      />
-      <h1 className="text-3xl text-center">{fullName}</h1>
-      <p className="italic text-center">{quote}</p>
-    </div>
-  );
-};
+const Avatar: Component<AvatarProps> = (props) => (
+  <div class="flex flex-col items-center space-y-1 justify-between mb-4 mx-2">
+    <Img
+      class="object-cover w-64 h-64 my-2 rounded-full"
+      src={props.profileImageURL}
+      alt={props.fullName}
+    />
+    <h1 class="text-3xl text-center">{props.fullName}</h1>
+    <p class="italic text-center">{props.quote}</p>
+  </div>
+);
 
 export default Avatar;

@@ -1,17 +1,19 @@
-import React from 'react';
+import type { Component } from 'solid-js';
 
-const GallerySlide: React.FC<GallerySlide> = function GallerySlide({
-  imageURL,
-  name,
-  link,
-}) {
-  return (
-    <div className="flex flex-col items-start w-72 m-1 rounded-lg border border-grey-600">
-      <a href={link} target="_blank" rel="noreferrer">
-        <img className="object-cover w-72 rounded-lg" src={imageURL} alt={name} />
-      </a>
-    </div>
-  );
-};
+import Img from '../Img';
+
+interface GallerySlideProps {
+  imageURL: string;
+  name: string;
+  link: string;
+}
+
+const GallerySlide: Component<GallerySlideProps> = (props) => (
+  <div class="flex flex-col items-start w-72 m-1 rounded-lg border border-grey-600">
+    <a href={props.link} target="_blank" rel="noreferrer">
+      <Img class="object-cover w-72 rounded-lg" src={props.imageURL} alt={props.name} />
+    </a>
+  </div>
+);
 
 export default GallerySlide;

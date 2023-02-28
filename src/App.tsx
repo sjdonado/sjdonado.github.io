@@ -1,79 +1,81 @@
-import React from 'react';
+import { For } from 'solid-js';
+import type { Component, JSX } from 'solid-js';
 
 import data from './data.json';
 
 import Avatar from './components/Avatar';
-import List from './components/list/List';
-import Gallery from './components/gallery/Gallery';
-import Footer from './components/Footer';
+import List, { IListItem } from './components/list/List';
+import Footer, { ISocialItem } from './components/Footer';
+import Gallery, {
+  IGalleryItem,
+  IGallerySlide,
+  IGalleryPicture,
+  IGalleryLinkPreview,
+} from './components/gallery/Gallery';
 
-interface Sections {
-  [key: string]: (id: string, title: string,
-    items: PostItem[] | ListItem[] | GalleryItem[] | GallerySlide[]
-    | GalleryPicture[]) => JSX.Element;
+declare interface Section {
+  title: string;
+  id: string;
+  type: string;
+  items: Item[]
 }
 
-const SECTIONS: Sections = {
-  posts: (id, title, items) => (
-    <List
-      key={id}
-      id={id}
-      title={title}
-      itemType="postItem"
-      items={items as PostItem[]}
-      isPaginated
-    />
-  ),
+declare interface Site {
+  profileImageURL: string;
+  fullName: string;
+  quote: string;
+  footerMessage: string;
+  social: ISocialItem[];
+  sections: Section[];
+}
+
+type Item = IListItem & IGalleryItem & IGallerySlide & IGalleryPicture & IGalleryLinkPreview;
+
+const SECTIONS: Record<string, (id: string, title: string, items: Item[]) => JSX.Element> = {
   list: (id, title, items) => (
     <List
-      key={id}
       id={id}
       title={title}
       itemType="listItem"
-      items={items as ListItem[]}
+      items={items}
+    />
+  ),
+  links: (id, title, items) => (
+    <Gallery
+      id={id}
+      title={title}
+      itemType="galleryLinkPreview"
+      items={items}
     />
   ),
   gallery: (id, title, items) => (
     <Gallery
-      key={id}
       id={id}
       title={title}
       itemType="galleryItem"
-      items={items as GalleryItem[]}
+      items={items}
     />
   ),
   slides: (id, title, items) => (
     <Gallery
-      key={id}
       id={id}
       title={title}
       itemType="gallerySlide"
-      items={items as GallerySlide[]}
+      items={items}
     />
   ),
   pictures: (id, title, items) => (
     <Gallery
-      key={id}
       id={id}
       title={title}
       itemType="galleryPicture"
-      items={items as GalleryPicture[]}
+      items={items}
       seeMore="https://vsco.co/sjdonado"
     />
   ),
 };
 
-const App: React.FC = function App() {
-  if (data == null) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <div
-          className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-800"
-        />
-      </div>
-    );
-  }
-
+const App: Component = () => {
   const {
     profileImageURL,
     fullName,
@@ -81,22 +83,22 @@ const App: React.FC = function App() {
     sections,
     footerMessage,
     social,
-  } = data;
+  } = data as Site;
 
   return (
-    <div className="bg-white">
+    <div class="bg-white">
       <Avatar
         profileImageURL={profileImageURL}
         fullName={fullName}
         quote={quote}
       />
-      <div className="w-5/6 sm:w-4/6 m-auto">
-        {sections.map(({
+      <div class="w-5/6 sm:w-4/6 m-auto">
+        <For each={sections}>{({
           id,
           title,
           type,
           items,
-        }) => SECTIONS[type](id, title, items))}
+        }) => SECTIONS[type](id, title, items)}</For>
       </div>
       <Footer
         footerMessage={footerMessage}

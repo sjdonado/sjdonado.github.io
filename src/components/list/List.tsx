@@ -1,82 +1,63 @@
-/* eslint-disable react/require-default-props */
-import React, { useState } from 'react';
+import { For, createSignal, createEffect } from 'solid-js';
+import type { Component, JSX } from 'solid-js';
+
 import ListItem from './ListItem';
-import PostItem from './PostItem';
 
-interface Props {
-  title: string;
-  id: string;
-  itemType: string;
-  items: ListItem[] | PostItem[];
-  isPaginated?: boolean;
-}
-
-interface Items {
-  [key: string]: (item: any) => JSX.Element;
+export interface IListItem {
+  name: string;
+  imageURL: string;
+  link: string;
+  description: string;
 }
 
 const PAGINATION_ITEMS = 3;
 
-const ITEMS: Items = {
-  postItem: ({
-    link,
-    content,
-    date,
-    media,
-  }: PostItem) => (
-    <PostItem
-      key={link}
-      content={content}
-      date={date}
-      link={link}
-      media={media}
-    />
-  ),
-  listItem: ({
-    imageURL,
-    link,
-    name,
-    description,
-  }: ListItem) => (
+const ITEMS: Record<string, (item: IListItem) => JSX.Element> = {
+  listItem: (item: IListItem) => (
     <ListItem
-      key={name}
-      imageURL={imageURL}
-      link={link}
-      name={name}
-      description={description}
+      imageURL={item.imageURL}
+      link={item.link}
+      name={item.name}
+      description={item.description}
     />
   ),
 };
 
-const List: React.FC<Props> = function List({
-  title,
-  id,
-  itemType,
-  items,
-  isPaginated = false,
-}: Props) {
-  const [cursor, setCursor] = useState(isPaginated ? PAGINATION_ITEMS : items.length);
+interface ListProps {
+  title: string;
+  id: string;
+  itemType: string;
+  items: IListItem[];
+  isPaginated?: boolean;
+}
+
+const List: Component<ListProps> = (props) => {
+  const [cursor, setCursor] = createSignal(0);
 
   const loadMore = () => {
-    let newCursor = cursor + PAGINATION_ITEMS;
+    let newCursor = cursor() + PAGINATION_ITEMS;
 
-    if (newCursor >= items.length) {
-      newCursor = items.length;
+    if (newCursor >= props.items.length) {
+      newCursor = props.items.length;
     }
 
     setCursor(newCursor);
   };
 
+  createEffect(() => {
+    setCursor(props.isPaginated ? PAGINATION_ITEMS : props.items.length);
+  });
+
   return (
-    <section id={id} className="flex flex-col my-4">
-      <a className="text-2xl my-4 underline" href={`#${id}`}>{title}</a>
-      <div className="divide-y space-y-2">
-        {items.slice(0, cursor).map((item) => ITEMS[itemType](item))}
+    <section id={props.id} class="flex flex-col my-4">
+      <a class="text-2xl my-4 underline" href={`#${props.id}`}>{props.title}</a>
+      <div class="divide-y space-y-2">
+        <For each={props.items.slice(0, cursor())}>{(item) => ITEMS[props.itemType](item)}</For>
       </div>
-      {(isPaginated && cursor < items.length) && (
+      {(props.isPaginated && cursor() < props.items.length) && (
         <button
           type="button"
-          className="bg-transparent hover:text-gray-800 hover:border-gray-800 font-semibold text-gray-500 py-1 border rounded"
+          class="bg-transparent hover:text-gray-800 hover:border-gray-800 font-semibold text-gray-500 py-1 border rounded"
           onClick={loadMore}
         >
           Load more
