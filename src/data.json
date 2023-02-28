@@ -10,7 +10,7 @@
         {
           "description": "Backend Engineer. Getir, Germany.",
           "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/getir-logo.png?alt=media",
-          "link": "https://getir.com/us/",
+          "link": "https://getir.com/",
           "name": "Getir"
         },
         {
@@ -20,7 +20,7 @@
           "name": "Monocuco"
         },
         {
-          "description": "Maintainer of 'Mi horario UN', an open source web application for students of Universidad del Norte, which facilitates the import of class schedules to Google Calendar.",
+          "description": "Maintainer of 'Mi horario UN', an open source web app for students of the Universidad del Norte, manage your schedule and import it into Google Calendar.",
           "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/mihorario.jpg?alt=media",
           "link": "https://mihorarioun.web.app/",
           "name": "Mi horario UN"
