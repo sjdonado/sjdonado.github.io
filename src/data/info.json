@@ -1,0 +1,24 @@
+{
+  "footerMessage": "Drop me a line 🙂",
+  "fullName": "Juan Rodriguez Donado",
+  "profileImageURL": "https://avatars.githubusercontent.com/u/27580836",
+  "quote": "M.Sc CS - Software Engineer",
+  "social": [
+    {
+      "icon": "fa fa-envelope",
+      "link": "mailto:jsrd98@gmail.com"
+    },
+    {
+      "icon": "fab fa-github",
+      "link": "https://github.com/sjdonado"
+    },
+    {
+      "icon": "fab fa-linkedin-in",
+      "link": "https://linkedin.com/in/sjdonado"
+    },
+    {
+      "icon": "fab fa-stack-overflow",
+      "link": "https://stackoverflow.com/users/8108856/juan-rodriguez"
+    }
+  ]
+}

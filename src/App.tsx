@@ -1,7 +1,13 @@
 import { For } from 'solid-js';
 import type { Component, JSX } from 'solid-js';
 
-import data from './data.json';
+import info from './data/info.json';
+
+import whatIDoSection from './data/sections/what-i-do.json';
+import coolProjectsSection from './data/sections/cool-projects.json';
+import eventsSection from './data/sections/events.json';
+import slidesSection from './data/sections/slides.json';
+import vscoPictureSection from './data/sections/vsco-pictures.json';
 
 import Avatar from './components/Avatar';
 import List, { IListItem } from './components/list/List';
@@ -20,13 +26,12 @@ declare interface Section {
   items: Item[]
 }
 
-declare interface Site {
+declare interface Info {
   profileImageURL: string;
   fullName: string;
   quote: string;
   footerMessage: string;
   social: ISocialItem[];
-  sections: Section[];
 }
 
 type Item = IListItem & IGalleryItem & IGallerySlide & IGalleryPicture & IGalleryLinkPreview;
@@ -80,10 +85,17 @@ const App: Component = () => {
     profileImageURL,
     fullName,
     quote,
-    sections,
     footerMessage,
     social,
-  } = data as Site;
+  } = info as Info;
+
+  const sections = [
+    whatIDoSection,
+    coolProjectsSection,
+    eventsSection,
+    slidesSection,
+    vscoPictureSection,
+  ] as Section[];
 
   return (
     <div class="bg-white">
@@ -93,12 +105,14 @@ const App: Component = () => {
         quote={quote}
       />
       <div class="w-5/6 sm:w-4/6 m-auto">
-        <For each={sections}>{({
-          id,
-          title,
-          type,
-          items,
-        }) => SECTIONS[type](id, title, items)}</For>
+        <For
+          fallback={<div>Loading...</div>}
+          each={sections}>{({
+            id,
+            title,
+            type,
+            items,
+          }) => SECTIONS[type](id, title, items)}</For>
       </div>
       <Footer
         footerMessage={footerMessage}
