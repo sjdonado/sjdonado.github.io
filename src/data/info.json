@@ -5,18 +5,22 @@
   "quote": "M.Sc CS - Software Engineer",
   "social": [
     {
+      "aria-label": "email",
       "icon": "fa fa-envelope",
       "link": "mailto:jsrd98@gmail.com"
     },
     {
+      "aria-label": "github",
       "icon": "fab fa-github",
       "link": "https://github.com/sjdonado"
     },
     {
+      "aria-label": "linkedin",
       "icon": "fab fa-linkedin-in",
       "link": "https://linkedin.com/in/sjdonado"
     },
     {
+      "aria-label": "stackoverflow",
       "icon": "fab fa-stack-overflow",
       "link": "https://stackoverflow.com/users/8108856/juan-rodriguez"
     }

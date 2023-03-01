@@ -75,7 +75,8 @@ const SECTIONS: Record<string, (id: string, title: string, items: Item[]) => JSX
       title={title}
       itemType="galleryPicture"
       items={items}
-      seeMore="https://vsco.co/sjdonado"
+      sourceUrl="https://vsco.co/sjdonado"
+      sourceTitle="See on VSCO"
     />
   ),
 };

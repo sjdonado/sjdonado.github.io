@@ -7,26 +7,26 @@ import GallerySlide from './GallerySlide';
 import GalleryLinkPreview from './GalleryLinkPreview';
 
 export interface IGalleryItem {
-  imageURL: string;
   name: string;
+  imageURL: string;
   description: string;
 }
 
 export interface IGallerySlide {
+  name: string;
   imageURL: string;
   link: string;
-  name: string;
 }
 
 export interface IGalleryPicture {
-  data: string;
+  imageURL: string;
   shareURL: string;
 }
 
 export interface IGalleryLinkPreview {
   title: string;
+  imageURL: string;
   url: string;
-  image: string;
   description: string;
 }
 
@@ -49,15 +49,15 @@ const ITEMS: Record<string, (item: Item) => JSX.Element> = {
   ),
   galleryPicture: (item: Item) => (
     <GalleryPicture
-      data={item.data}
+      data={item.imageURL}
       shareURL={item.shareURL}
     />
   ),
   galleryLinkPreview: (item: Item) => (
     <GalleryLinkPreview
       title={item.title}
+      imageURL={item.imageURL}
       url={item.url}
-      image={item.image}
       description={item.description}
     />
   ),
@@ -68,7 +68,8 @@ interface GalleryProps {
   id: string;
   itemType: string;
   items: Item[];
-  seeMore?: string;
+  sourceUrl?: string;
+  sourceTitle?: string;
 }
 
 const Gallery: Component<GalleryProps> = (props) => (
@@ -77,14 +78,14 @@ const Gallery: Component<GalleryProps> = (props) => (
     <div class="flex flex-wrap justify-center">
       <For each={props.items}>{(item) => ITEMS[props.itemType](item)}</For>
     </div>
-    {props.seeMore && (
+    {props.sourceUrl && (
       <a
-        href={props.seeMore}
+        href={props.sourceUrl}
         class="text-center hover:text-gray-800 hover:border-gray-800 font-semibold text-gray-500 py-1 m-4 border rounded"
         target="_blank"
         rel="noreferrer"
       >
-        See more
+        {props.sourceTitle}
       </a>
     )}
   </section>

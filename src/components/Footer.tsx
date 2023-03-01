@@ -2,6 +2,7 @@ import { For } from 'solid-js';
 import type { Component } from 'solid-js';
 
 export interface ISocialItem {
+  'aria-label': string;
   icon: string;
   link: string;
 }
@@ -16,7 +17,13 @@ const Footer: Component<FooterProps> = (props) => (
     <h2 class="text-2xl">{props.footerMessage}</h2>
     <div class="flex">
       <For each={props.social}>{(socialItem) => (
-        <a class="text-2xl mx-2" href={socialItem.link} target="_blank" rel="noreferrer">
+        <a
+          class="text-2xl mx-2"
+          href={socialItem.link}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={socialItem['aria-label']}
+        >
           <i class={socialItem.icon} />
         </a>
       )}</For>
