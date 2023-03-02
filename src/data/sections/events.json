@@ -11,12 +11,17 @@
     {
       "description": "Towards an Operational Data Assimilation System: A Detailed Web-Based Framework for Weather Forecast.",
       "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/master.PNG?alt=media",
-      "name": "Master thesis dissertation, 2022"
+      "name": "Master's Thesis dissertation, 2022"
+    },
+    {
+      "description": "Backend course (Node.js + Docker + Postgres) for the Systems and Computers Engineering program.",
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/dsllo-applicaciones-web-backend.png?alt=media",
+      "name": "Adjunct Professor, 2021"
     },
     {
       "description": "Real-time sentiment analysis of tweets by Colombian region.",
       "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/sentime.png?alt=media",
-      "name": "Undergrad thesis dissertation, 2020"
+      "name": "Bachelor's Degree Thesis dissertation, 2020"
     },
     {
       "description": "Deploy to heroku with Github Actions.",
