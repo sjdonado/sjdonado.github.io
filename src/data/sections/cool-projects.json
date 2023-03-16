@@ -4,10 +4,10 @@
   "type": "links",
   "items": [
     {
-      "title": "Donkey Kong: Jumpman",
-      "url": "https://donkeygame.sjdonado.de",
-      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
-      "description": "Phaser game with multiplayer (socket.IO)"
+      "title": "CS Games",
+      "url": "https://cs-games.sjdonado.de",
+      "imageURL": "https://user-images.githubusercontent.com/27580836/225695100-6bbfdbcf-c671-48b0-8510-5da629985d61.png",
+      "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS"
     },
     {
       "title": "Url shortener",
@@ -16,8 +16,14 @@
       "description": "Tailwind + Stimulus + Rails 5 app"
     },
     {
+      "title": "Donkey Kong: Jumpman",
+      "url": "https://donkeygame.sjdonado.de",
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
+      "description": "Phaser game with multiplayer (socket.IO)"
+    },
+    {
       "title": "Handwritten digits recognition",
-      "url": "https://handwritten-digits-recognition.web.app/",
+      "url": "https://handwritten-digits-recognition.sjdonado.de",
       "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
       "description": "Recognize numbers drawn on HTML5 canvas using CNN"
     }
