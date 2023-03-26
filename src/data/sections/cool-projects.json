@@ -4,9 +4,15 @@
   "type": "links",
   "items": [
     {
+      "title": "I don't have Spotify",
+      "url": "http://idonthavespotify.sjdonado.de",
+      "imageURL": "https://user-images.githubusercontent.com/27580836/227728799-8123c22e-7714-45e7-95b3-56f666d7ebcc.png",
+      "description": "Find Spotify content on YouTube, Apple Music, Tidal, Soundcloud and more"
+    },
+    {
       "title": "CS Games",
       "url": "https://cs-games.sjdonado.de",
-      "imageURL": "https://user-images.githubusercontent.com/27580836/225695100-6bbfdbcf-c671-48b0-8510-5da629985d61.png",
+      "imageURL": "https://user-images.githubusercontent.com/27580836/225850771-377dd850-cdc4-4a65-860a-b9ef025c0fb9.png",
       "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS"
     },
     {
