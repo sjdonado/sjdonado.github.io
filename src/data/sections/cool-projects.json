@@ -16,9 +16,9 @@
       "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS"
     },
     {
-      "title": "Url shortener",
+      "title": "URL Shortener",
       "url": "https://url-shortener.sjdonado.de",
-      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/url-shortener.png?alt=media",
+      "imageURL": "https://user-images.githubusercontent.com/27580836/227800665-4ff7e2ae-8189-4593-8961-496b7c9ac861.png",
       "description": "Tailwind + Stimulus + Rails 5 app"
     },
     {
