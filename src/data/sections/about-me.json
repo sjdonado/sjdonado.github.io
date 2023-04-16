@@ -1,6 +1,6 @@
 {
-  "id": "what-i-do",
-  "title": "What I do",
+  "id": "about-me",
+  "title": "About me",
   "type": "list",
   "items": [
     {
@@ -8,6 +8,12 @@
       "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/getir-logo.png?alt=media",
       "link": "https://getir.com/",
       "name": "Getir"
+    },
+    {
+      "description": "Former member of AML-CS, the Applied Math and Computer Science Lab at Universidad del Norte, Colombia.",
+      "imageURL": "https://avatars.githubusercontent.com/u/68883029?s=200",
+      "link": "https://aml-cs.github.io/",
+      "name": "AML-CS"
     },
     {
       "description": "Maintainer of 'Monocuco', an open source dictionary for slang words and phrases from the Caribbean Region of Colombia.",

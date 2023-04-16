@@ -3,7 +3,7 @@ import type { Component, JSX } from 'solid-js';
 
 import info from './data/info.json';
 
-import whatIDoSection from './data/sections/what-i-do.json';
+import aboutMeSection from './data/sections/about-me.json';
 import coolProjectsSection from './data/sections/cool-projects.json';
 import eventsSection from './data/sections/events.json';
 import slidesSection from './data/sections/slides.json';
@@ -91,7 +91,7 @@ const App: Component = () => {
   } = info as Info;
 
   const sections = [
-    whatIDoSection,
+    aboutMeSection,
     coolProjectsSection,
     eventsSection,
     slidesSection,
