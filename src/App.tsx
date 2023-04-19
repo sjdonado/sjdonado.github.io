@@ -4,7 +4,7 @@ import type { Component, JSX } from 'solid-js';
 import info from './data/info.json';
 
 import aboutMeSection from './data/sections/about-me.json';
-import coolProjectsSection from './data/sections/cool-projects.json';
+import ossAppsSection from './data/sections/oss-apps.json';
 import eventsSection from './data/sections/events.json';
 import slidesSection from './data/sections/slides.json';
 import vscoPictureSection from './data/sections/vsco-pictures.json';
@@ -76,7 +76,7 @@ const SECTIONS: Record<string, (id: string, title: string, items: Item[]) => JSX
       itemType="galleryPicture"
       items={items}
       sourceUrl="https://vsco.co/sjdonado"
-      sourceTitle="See on VSCO"
+      sourceTitle="See more on VSCO"
     />
   ),
 };
@@ -92,7 +92,7 @@ const App: Component = () => {
 
   const sections = [
     aboutMeSection,
-    coolProjectsSection,
+    ossAppsSection,
     eventsSection,
     slidesSection,
     vscoPictureSection,

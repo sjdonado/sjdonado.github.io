@@ -14,18 +14,6 @@
       "imageURL": "https://avatars.githubusercontent.com/u/68883029?s=200",
       "link": "https://aml-cs.github.io/",
       "name": "AML-CS"
-    },
-    {
-      "description": "Maintainer of 'Monocuco', an open source dictionary for slang words and phrases from the Caribbean Region of Colombia.",
-      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/monocuco.jpg?alt=media",
-      "link": "https://monocuco.info/",
-      "name": "Monocuco"
-    },
-    {
-      "description": "Maintainer of 'Mi horario UN', an open source web app for students of the Universidad del Norte, manage your schedule and import it into Google Calendar.",
-      "imageURL": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/mihorario.jpg?alt=media",
-      "link": "https://mihorarioun.web.app/",
-      "name": "Mi horario UN"
     }
   ]
 }
