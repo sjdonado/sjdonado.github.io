@@ -15,8 +15,8 @@ const LinkPreview: Component<LinkPreviewProps> = (props) => (
       <Img class="object-cover object-center rounded-t-lg w-full h-32" src={props.imageURL} alt={props.title} />
       <div class="w-full p-2">
         <p class="font-semibold m-b-4">{props.title}</p>
-        <p class="text-xs text-gray-500 m-b-2">{props.description}</p>
-        <span class="text-xs text-gray-500">{props.url.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')}</span>
+        <p class="text-xs text-gray-500 min-h-[3rem] m-b-2">{props.description}</p>
+        <span class="text-xs text-gray-500 underline">{props.url.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')}</span>
       </div>
     </a>
   </div>
