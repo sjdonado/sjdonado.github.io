@@ -8,9 +8,10 @@ import ossAppsSection from './data/sections/oss-apps.json';
 import eventsSection from './data/sections/events.json';
 import slidesSection from './data/sections/slides.json';
 import vscoPictureSection from './data/sections/vsco-pictures.json';
+import mySoundtrackSection from './data/sections/my-soundtrack.json';
 
 import Avatar from './components/Avatar';
-import List, { IListItem } from './components/list/List';
+import List from './components/list/List';
 import Footer, { ISocialItem } from './components/Footer';
 import Gallery, {
   IGalleryItem,
@@ -18,6 +19,10 @@ import Gallery, {
   IGalleryPicture,
   IGalleryLinkPreview,
 } from './components/gallery/Gallery';
+import Spotify, { ISpotifyItem } from './components/Spotify';
+
+type GalleryItem = IGalleryItem & IGallerySlide & IGalleryPicture & IGalleryLinkPreview;
+type Item = GalleryItem & ISpotifyItem;
 
 declare interface Section {
   title: string;
@@ -33,8 +38,6 @@ declare interface Info {
   footerMessage: string;
   social: ISocialItem[];
 }
-
-type Item = IListItem & IGalleryItem & IGallerySlide & IGalleryPicture & IGalleryLinkPreview;
 
 const SECTIONS: Record<string, (id: string, title: string, items: Item[]) => JSX.Element> = {
   list: (id, title, items) => (
@@ -79,6 +82,13 @@ const SECTIONS: Record<string, (id: string, title: string, items: Item[]) => JSX
       sourceTitle="See more on VSCO"
     />
   ),
+  spotify: (id, title, items) => (
+    <Spotify
+      id={id}
+      title={title}
+      items={items}
+    />
+  ),
 };
 
 const App: Component = () => {
@@ -96,6 +106,7 @@ const App: Component = () => {
     eventsSection,
     slidesSection,
     vscoPictureSection,
+    mySoundtrackSection,
   ] as Section[];
 
   return (
