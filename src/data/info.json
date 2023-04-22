@@ -15,6 +15,11 @@
       "link": "https://github.com/sjdonado"
     },
     {
+      "aria-label": "dev.to",
+      "icon": "fab fa-dev",
+      "link": "https://dev.to/sjdonado"
+    },
+    {
       "aria-label": "linkedin",
       "icon": "fab fa-linkedin-in",
       "link": "https://linkedin.com/in/sjdonado"

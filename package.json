@@ -3,7 +3,7 @@
   "private": true,
   "homepage": "http://sjdonado.github.io",
   "engines": {
-    "node": "19"
+    "node": "18"
   },
   "scripts": {
     "dev": "vite",
