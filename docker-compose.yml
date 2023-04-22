@@ -1,0 +1,12 @@
+version: "3"
+services:
+  functions:
+    restart: always
+    build: .
+    volumes:
+      - ./functions:/go/src/app
+    command: go run devto.go
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
