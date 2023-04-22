@@ -1,0 +1,12 @@
+{
+  "id": "devto-articles",
+  "title": "DEV Community Articles 🤓",
+  "type": "slides",
+  "items": [
+    {
+      "title": "Self-Hosted Password Manager with Dokku",
+      "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg",
+      "imageURL": "https://dev.to/social_previews/article/1440584.png"
+    }
+  ]
+}

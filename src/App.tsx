@@ -9,6 +9,7 @@ import eventsSection from './data/sections/events.json';
 import slidesSection from './data/sections/slides.json';
 import vscoPictureSection from './data/sections/vsco-pictures.json';
 import mySoundtrackSection from './data/sections/my-soundtrack.json';
+import devtoArticlesSection from './data/sections/devto-articles.json';
 
 import Avatar from './components/Avatar';
 import List from './components/list/List';
@@ -102,6 +103,7 @@ const App: Component = () => {
 
   const sections = [
     aboutMeSection,
+    devtoArticlesSection,
     ossAppsSection,
     eventsSection,
     slidesSection,
