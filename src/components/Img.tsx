@@ -11,7 +11,7 @@ const Img: Component<ImgProps> = (props) => {
   const [isLoading, setIsLoading] = createSignal(true);
 
   const handleImageLoad = () => {
-    setTimeout(() => setIsLoading(false), 300);
+    setIsLoading(false);
   };
 
   return (
