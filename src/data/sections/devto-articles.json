@@ -4,6 +4,11 @@
   "type": "slides",
   "items": [
     {
+      "title": "Tower of Hanoi in P5.js + WASM",
+      "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0",
+      "imageURL": "https://dev.to/social_previews/article/1460056.png"
+    },
+    {
       "title": "Self-Hosted Password Manager with Dokku",
       "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg",
       "imageURL": "https://dev.to/social_previews/article/1440584.png"
