@@ -2,6 +2,6 @@ FROM golang:1.19.5-alpine
 
 WORKDIR /go/src/app
 
-COPY ./functions/* .
+COPY . .
 
 RUN go mod download
