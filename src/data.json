@@ -1,5 +1,5 @@
 {
-  "aboutMe": {
+  "me": {
     "title": "> About me",
     "items": [
       {
@@ -149,67 +149,54 @@
     "title": "> Slides",
     "items": [
       {
-        "image": "https://media.slid.es/thumbnails/ecdc18143e3053ca994eab0cfba80a5e/thumb.jpg",
         "link": "https://slides.com/sjdonado/software-engineering-in-a-nutshel",
         "name": "Software Engineering in a Nutshell"
       },
       {
-        "image": "https://media.slid.es/thumbnails/c0b0a221f998abe456427dae604d016a/thumb.jpg",
         "link": "https://slides.com/sjdonado/swe-abroad",
         "name": "Software Engineering abroad"
       },
       {
-        "image": "https://media.slid.es/thumbnails/15aab23ab38de545d13c1a86f4f6352d/thumb.jpg",
         "link": "https://slides.com/sjdonado/wrf-baq-05km",
         "name": "WRF BAQ 0.5km Forecast"
       },
       {
-        "image": "https://media.slid.es/thumbnails/4baded295d59f8bd81bc388661a134b6/thumb.jpg",
         "link": "https://slides.com/sjdonado/adr",
         "name": "ADR"
       },
       {
-        "image": "https://media.slid.es/thumbnails/ab738ee0ef16b2616c0967ee9d152302/thumb.jpg",
         "link": "https://slides.com/sjdonado/bellman-ford",
         "name": "Bellman-Ford"
       },
       {
-        "image": "https://media.slid.es/thumbnails/5337e52f769cd8e4346139f397ed0f3a/thumb.jpg",
         "link": "https://slides.com/sjdonado/backend-un",
         "name": "DLLO. APLICACIONES WEB BACKEND"
       },
       {
-        "image": "https://media.slid.es/thumbnails/0ba2ca733f1277e9c1f12c84d9109b70/thumb.jpg",
         "link": "https://slides.com/sjdonado/energy-balanced-optimum-path-determination-based-on-graph-theory-for-wsns",
         "name": "Energy balanced optimum path determination based on graph theory for WSNs"
       },
       {
-        "image": "https://media.slid.es/thumbnails/172b31892aa0ce642e7460d9e51ef7ea/thumb.jpg",
         "link": "https://slides.com/sjdonado/generic-types-traits-and-lifetimes",
         "name": "Generic Types, Traits, and Lifetimes"
       },
       {
-        "image": "https://media.slid.es/thumbnails/19f0c7eccafee08d9d9270f3c9729bd8/thumb.jpg",
         "link": "https://slides.com/sjdonado/how-to-develop-inside-a-container-using-vscode",
         "name": "How to develop inside a container using VSCode"
       },
       {
-        "image": "https://media.slid.es/thumbnails/f83d3ecc5d593b9deb03c77ba3551722/thumb.jpg",
         "link": "https://slides.com/sjdonado/docker",
         "name": "Docker"
       },
       {
-        "image": "https://media.slid.es/thumbnails/505cf6a69fbe76798ee32cb5b984df4c/thumb.jpg",
         "link": "https://slides.com/sjdonado/deploy-to-heroku-with-github-actions",
         "name": "Deploy to heroku with Github actions"
       },
       {
-        "image": "https://media.slid.es/thumbnails/9d595751f9c001767468a20517b59cc8/thumb.jpg",
         "link": "https://slides.com/sjdonado/xp-kanban",
         "name": "XP, Kanban, TDD"
       },
       {
-        "image": "https://media.slid.es/thumbnails/36d87d66ca3895b4b66b156655a247c1/thumb.jpg",
         "link": "https://slides.com/sjdonado/web-scraping",
         "name": "Web scraping"
       }

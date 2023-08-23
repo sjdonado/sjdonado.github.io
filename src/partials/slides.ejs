@@ -2,25 +2,18 @@
   <a class="text-2xl my-4" href="#slides">
     <%= slides.title %>
   </a>
-  <div class="divide-y space-y-2">
+  <ul class="divide-y space-y-2 list-disc list-inside">
     <% slides.items.forEach(function(item, index) { %>
-      <div class="flex items-center justify-start space-x-2 p-2">
+      <li class="text-left p-2">
         <a
-          class="flex justify-center items-center underline space-x-2"
+          class="underline"
           target="_blank"
           rel="noreferrer"
           href="<%= item.link %>"
         >
-          <div class="relative">
-            <img
-              class="object-contain w-12 h-12 border rounded-lg border-grey-600"
-              src="<%= item.image %>"
-              alt="<%= item.name %>"
-            />
-          </div>
           <span><%= item.name %></span>
         </a>
-      </div>
+      </li>
     <% }); %>
-  </div>
+  </ul>
 </section>
