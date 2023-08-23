@@ -1,0 +1,26 @@
+<section class="flex flex-col flex-wrap my-4" id="slides">
+  <a class="text-2xl my-4" href="#slides">
+    <%= slides.title %>
+  </a>
+  <div class="divide-y space-y-2">
+    <% slides.items.forEach(function(item, index) { %>
+      <div class="flex items-center justify-start space-x-2 p-2">
+        <a
+          class="flex justify-center items-center underline space-x-2"
+          target="_blank"
+          rel="noreferrer"
+          href="<%= item.link %>"
+        >
+          <div class="relative">
+            <img
+              class="object-contain w-12 h-12 border rounded-lg border-grey-600"
+              src="<%= item.image %>"
+              alt="<%= item.name %>"
+            />
+          </div>
+          <span><%= item.name %></span>
+        </a>
+      </div>
+    <% }); %>
+  </div>
+</section>

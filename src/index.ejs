@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e293b" />
+
+    <meta name="description" content="M.Sc CS - Software Engineer" />
+    <meta
+      name="keywords"
+      content="sjdonado, Github, Software Engineer, Computer Science"
+    />
+
+    <meta property="og:title" content="sjdonado | Juan Rodriguez Donado" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://sjdonado.github.io" />
+    <meta property="og:site_name" content="sjdonado | Juan Rodriguez Donado" />
+    <meta property="og:description" content="M.Sc CS - Software Engineer" />
+
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/27580836"
+    />
+    <meta property="og:image:alt" content="sjdonado's profile picture" />
+
+    <title>sjdonado | Juan Rodriguez Donado</title>
+
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="https://avatars.githubusercontent.com/u/27580836"
+    />
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/f559975e2f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bg-white">
+      <div class="flex flex-col items-center space-y-1 justify-between mb-4 mx-2">
+        <div class="relative">
+          <img
+            class="object-cover w-64 h-64 my-2 rounded-full"
+            src="https://avatars.githubusercontent.com/u/27580836"
+            alt="Juan Rodriguez Donado"
+          />
+        </div>
+        <h1 class="text-3xl text-center">Juan Rodriguez Donado</h1>
+        <p class="italic text-center">M.Sc CS - Software Engineer</p>
+      </div>
+      <div class="w-5/6 sm:w-4/6 m-auto">
+        <%- include('partials/about-me', { aboutMe: aboutMe }); %>
+        <%- include('partials/devto', { devto: devto }); %>
+        <%- include('partials/oss', { oss: oss }); %>
+        <%- include('partials/events', { events: events }); %>
+        <%- include('partials/slides', { slides: slides }); %>
+        <%- include('partials/spotify', { spotify: spotify }); %>
+      </div>
+      <footer class="flex flex-col bg-gray-800 items-center w-full text-white space-y-8 py-16">
+        <h2 class="text-2xl">Find me on 👇🏽</h2>
+        <div class="flex">
+          <a
+            class="text-2xl mx-2"
+            target="_blank"
+            rel="noreferrer"
+            href="mailto:cedar.onyxes0q@icloud.com"
+            aria-label="email"
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a
+            class="text-2xl mx-2"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/sjdonado"
+            aria-label="github"
+          >
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            class="text-2xl mx-2"
+            target="_blank"
+            rel="noreferrer"
+            href="https://dev.to/sjdonado"
+            aria-label="dev.to"
+          >
+            <i class="fab fa-dev" aria-hidden="true"></i>
+          </a>
+          <a
+            class="text-2xl mx-2"
+            target="_blank"
+            rel="noreferrer"
+            href="https://linkedin.com/in/sjdonado"
+            aria-label="linkedin"
+          >
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a
+            class="text-2xl mx-2"
+            target="_blank"
+            rel="noreferrer"
+            href="https://stackoverflow.com/users/8108856/juan-rodriguez"
+            aria-label="stackoverflow"
+          >
+            <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
