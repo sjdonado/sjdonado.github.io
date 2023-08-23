@@ -1,0 +1,232 @@
+{
+  "aboutMe": {
+    "title": "> About me",
+    "items": [
+      {
+        "description": "Backend Engineer, Germany.",
+        "link": "https://getir.com/",
+        "name": "Getir"
+      },
+      {
+        "description": "Former member of AML-CS, the Applied Math and Computer Science Lab at Universidad del Norte, Colombia.",
+        "link": "https://aml-cs.github.io/",
+        "name": "AML-CS"
+      }
+    ]
+  },
+  "devto": {
+    "title": "> Last Articles on Dev.to",
+    "items": [
+      {
+        "title": "Tower of Hanoi in P5.js + WASM",
+        "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0"
+      },
+      {
+        "title": "Self-Hosted Password Manager with Dokku",
+        "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg"
+      }
+    ]
+  },
+  "oss": {
+    "title": "> Open Source Projects",
+    "items": [
+      {
+        "title": "I Don't Have Spotify",
+        "link": "http://idonthavespotify.sjdonado.de",
+        "image": "https://user-images.githubusercontent.com/27580836/227728799-8123c22e-7714-45e7-95b3-56f666d7ebcc.png",
+        "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more."
+      },
+      {
+        "title": "CS Games",
+        "link": "https://cs-games.sjdonado.de",
+        "image": "https://user-images.githubusercontent.com/27580836/225850771-377dd850-cdc4-4a65-860a-b9ef025c0fb9.png",
+        "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS."
+      },
+      {
+        "title": "URL Shortener",
+        "link": "https://link-shortener.sjdonado.de",
+        "image": "https://user-images.githubusercontent.com/27580836/227800665-4ff7e2ae-8189-4593-8961-496b7c9ac861.png",
+        "description": "Tailwind + Stimulus + Rails 5 app."
+      },
+      {
+        "title": "WRF BAQ 0.5km Forecast",
+        "link": "https://aml-cs.github.io/wrf-baq-0.5km/",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/wrf-baq-0.5km.png?alt=media",
+        "description": "Fetches data from NOAA (GFS) and OGIMET (METAR). Surface level observations are interpolated into the GRIB files."
+      },
+      {
+        "title": "Monocuco",
+        "link": "https://monocuco.sjdonado.de/",
+        "image": "https://user-images.githubusercontent.com/27580836/233056568-b9985fb4-27ae-47e5-a663-48d9c1619411.png",
+        "description": "Dictionary of slang words and phrases from the Caribbean Region of Colombia."
+      },
+      {
+        "title": "Mi Horario UN",
+        "link": "https://mihorarioun.web.app/",
+        "image": "https://user-images.githubusercontent.com/27580836/233056842-b706ca7f-fd7d-46bc-bf75-725ced66937d.png",
+        "description": "Web app for students of the Universidad del Norte, manage and import your schedule into Google Calendar."
+      },
+      {
+        "title": "Donkey Kong: Jumpman",
+        "link": "https://donkeygame.sjdonado.de",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
+        "description": "Phaser game with multiplayer (socket.IO)."
+      },
+      {
+        "title": "Handwritten Digits Recognition",
+        "link": "https://handwritten-digits-recognition.sjdonado.de",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
+        "description": "Recognize numbers drawn on HTML5 canvas using CNN."
+      }
+    ]
+  },
+  "events": {
+    "title": "> Events",
+    "items": [
+      {
+        "description": "Software Engineering Abroad. Lessons learned from Canada and Germany.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/amlcs.png?alt=media",
+        "name": "ACM Uninorte Talk, 2022"
+      },
+      {
+        "description": "Towards an Operational Data Assimilation System: A Detailed Web-Based Framework for Weather Forecast.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/master.PNG?alt=media",
+        "name": "Master's Thesis dissertation, 2022"
+      },
+      {
+        "description": "Backend course (Node.js + Docker + Postgres) for the Systems and Computers Engineering program.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/dsllo-applicaciones-web-backend.png?alt=media",
+        "name": "Adjunct Professor, 2021"
+      },
+      {
+        "description": "Real-time sentiment analysis of tweets by Colombian region.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/sentime.png?alt=media",
+        "name": "Bachelor's Degree Thesis dissertation, 2020"
+      },
+      {
+        "description": "Deploy to heroku with Github Actions.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/deploy-to-heroku-from-github-actions.png?alt=media",
+        "name": "Python Barranquilla Meetup, 2020"
+      },
+      {
+        "description": "First place out of 8 participants in Hackathon - Backend category.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/koombea-hackathon.jpg?alt=media",
+        "name": "Koombea Hackathon, 2019"
+      },
+      {
+        "description": "Talk on software engineering and best practices.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/talk-software-engineering.jpeg?alt=media",
+        "name": "Universidad del Norte, 2019"
+      },
+      {
+        "description": "First place out of 7 participants in Hackathon - Android category.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/lya-hackathon.jpg?alt=media",
+        "name": "Lya Electronic Hackathon, 2019"
+      },
+      {
+        "description": "Speaker of 'Systems Engineering'.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/inca-innovation-fair.jpg?alt=media",
+        "name": "Inca School Technology and Innovation Fair, 2019"
+      },
+      {
+        "description": "Conducted a workshop 'Tic-tac-toe AI using DP-Method'.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/ieee-week.jpg?alt=media",
+        "name": "Uninorte IEEE Week, 2019"
+      },
+      {
+        "description": "Second place out of 12 participants in Hackathon - Backend category.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/ideaware-hackathon.jpg?alt=media",
+        "name": "Ideaware Hackathon, 2018"
+      },
+      {
+        "description": "First place out of 8 teams in Hackathon - Android category.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/nativapps-hackathon.jpg?alt=media",
+        "name": "NativApps Hackathon, 2018"
+      }
+    ]
+  },
+  "slides": {
+    "title": "> Slides",
+    "items": [
+      {
+        "image": "https://media.slid.es/thumbnails/ecdc18143e3053ca994eab0cfba80a5e/thumb.jpg",
+        "link": "https://slides.com/sjdonado/software-engineering-in-a-nutshel",
+        "name": "Software Engineering in a Nutshell"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/c0b0a221f998abe456427dae604d016a/thumb.jpg",
+        "link": "https://slides.com/sjdonado/swe-abroad",
+        "name": "Software Engineering abroad"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/15aab23ab38de545d13c1a86f4f6352d/thumb.jpg",
+        "link": "https://slides.com/sjdonado/wrf-baq-05km",
+        "name": "WRF BAQ 0.5km Forecast"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/4baded295d59f8bd81bc388661a134b6/thumb.jpg",
+        "link": "https://slides.com/sjdonado/adr",
+        "name": "ADR"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/ab738ee0ef16b2616c0967ee9d152302/thumb.jpg",
+        "link": "https://slides.com/sjdonado/bellman-ford",
+        "name": "Bellman-Ford"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/5337e52f769cd8e4346139f397ed0f3a/thumb.jpg",
+        "link": "https://slides.com/sjdonado/backend-un",
+        "name": "DLLO. APLICACIONES WEB BACKEND"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/0ba2ca733f1277e9c1f12c84d9109b70/thumb.jpg",
+        "link": "https://slides.com/sjdonado/energy-balanced-optimum-path-determination-based-on-graph-theory-for-wsns",
+        "name": "Energy balanced optimum path determination based on graph theory for WSNs"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/172b31892aa0ce642e7460d9e51ef7ea/thumb.jpg",
+        "link": "https://slides.com/sjdonado/generic-types-traits-and-lifetimes",
+        "name": "Generic Types, Traits, and Lifetimes"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/19f0c7eccafee08d9d9270f3c9729bd8/thumb.jpg",
+        "link": "https://slides.com/sjdonado/how-to-develop-inside-a-container-using-vscode",
+        "name": "How to develop inside a container using VSCode"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/f83d3ecc5d593b9deb03c77ba3551722/thumb.jpg",
+        "link": "https://slides.com/sjdonado/docker",
+        "name": "Docker"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/505cf6a69fbe76798ee32cb5b984df4c/thumb.jpg",
+        "link": "https://slides.com/sjdonado/deploy-to-heroku-with-github-actions",
+        "name": "Deploy to heroku with Github actions"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/9d595751f9c001767468a20517b59cc8/thumb.jpg",
+        "link": "https://slides.com/sjdonado/xp-kanban",
+        "name": "XP, Kanban, TDD"
+      },
+      {
+        "image": "https://media.slid.es/thumbnails/36d87d66ca3895b4b66b156655a247c1/thumb.jpg",
+        "link": "https://slides.com/sjdonado/web-scraping",
+        "name": "Web scraping"
+      }
+    ]
+  },
+  "spotify": {
+    "title": "> Spotify Jams",
+    "items": [
+      {
+        "link": "https://open.spotify.com/embed/playlist/6OSGhOXsCwlX4dZgJu1kkE?utm_source=generator&theme=0"
+      },
+      {
+        "link": "https://open.spotify.com/embed/playlist/4zY2wzcR9Yd79M1dXAcOX0?utm_source=generator"
+      },
+      {
+        "link": "https://open.spotify.com/embed/playlist/7xd4MQfv9wRFbEIKxp50h5?utm_source=generator"
+      }
+    ]
+  }
+}
