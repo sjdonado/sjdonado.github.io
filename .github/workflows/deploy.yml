@@ -1,5 +1,5 @@
 ---
-name: "deploy"
+name: 'deploy'
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         run: git remote add dokku ssh://dokku@sjdonado.de:22/sjdonado.de
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - name: Install dependencies
         run: yarn install
       - name: Build
@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add ./dist
+          git add -f ./public
           git commit -m "[auto] dokku new build"
       - name: Push to dokku
-        run: git push dokku `git subtree split --prefix dist master`:master --force
+        run: git push dokku `git subtree split --prefix public master`:master --force
