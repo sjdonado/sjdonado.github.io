@@ -36,12 +36,6 @@
       as="image"
       href="https://avatars.githubusercontent.com/u/27580836"
     />
-
-    <script
-      defer
-      src="https://kit.fontawesome.com/f559975e2f.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="bg-white">
@@ -57,7 +51,7 @@
         <p class="italic text-center">M.Sc CS - Software Engineer</p>
       </div>
       <div class="w-5/6 sm:w-4/6 m-auto">
-        <%- include('partials/about-me', { aboutMe: aboutMe }); %>
+        <%- include('partials/about-me', { me: me }); %>
         <%- include('partials/devto', { devto: devto }); %>
         <%- include('partials/oss', { oss: oss }); %>
         <%- include('partials/events', { events: events }); %>
@@ -68,49 +62,58 @@
         <h2 class="text-2xl">Find me on 👇🏽</h2>
         <div class="flex">
           <a
-            class="text-2xl mx-2"
+            class="mx-2 underline"
             target="_blank"
             rel="noreferrer"
             href="mailto:cedar.onyxes0q@icloud.com"
             aria-label="email"
           >
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            email
           </a>
           <a
-            class="text-2xl mx-2"
+            class="mx-2 underline"
             target="_blank"
             rel="noreferrer"
             href="https://github.com/sjdonado"
             aria-label="github"
           >
-            <i class="fab fa-github" aria-hidden="true"></i>
+            github
           </a>
           <a
-            class="text-2xl mx-2"
+            class="mx-2 underline"
             target="_blank"
             rel="noreferrer"
             href="https://dev.to/sjdonado"
             aria-label="dev.to"
           >
-            <i class="fab fa-dev" aria-hidden="true"></i>
+            dev.to
           </a>
           <a
-            class="text-2xl mx-2"
+            class="mx-2 underline"
             target="_blank"
             rel="noreferrer"
             href="https://linkedin.com/in/sjdonado"
             aria-label="linkedin"
           >
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            linkedin
           </a>
           <a
-            class="text-2xl mx-2"
+            class="mx-2 underline"
             target="_blank"
             rel="noreferrer"
             href="https://stackoverflow.com/users/8108856/juan-rodriguez"
             aria-label="stackoverflow"
           >
-            <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+            stackoverflow
+          </a>
+          <a
+            class="mx-2 underline"
+            target="_blank"
+            rel="noreferrer"
+            href="https://vsco.co/sjdonado/gallery"
+            aria-label="vsco"
+          >
+            vsco
           </a>
         </div>
       </footer>
