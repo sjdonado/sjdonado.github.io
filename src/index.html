@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e293b" />
+
+    <meta name="description" content="M.Sc CS - Software Engineer" />
+    <meta
+      name="keywords"
+      content="sjdonado, Github, Software Engineer, Computer Science"
+    />
+
+    <meta property="og:title" content="sjdonado | Juan Rodriguez Donado" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://sjdonado.github.io" />
+    <meta property="og:site_name" content="sjdonado | Juan Rodriguez Donado" />
+    <meta property="og:description" content="M.Sc CS - Software Engineer" />
+
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/27580836"
+    />
+    <meta property="og:image:alt" content="sjdonado's profile picture" />
+
+    <title>sjdonado | Juan Rodriguez Donado</title>
+
+    <meta name="htmx-config" content='{"defaultSwapStyle":"outerHTML"}' />
+
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="https://avatars.githubusercontent.com/u/27580836"
+    />
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/f559975e2f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bg-white">
+      <div class="flex flex-col items-center space-y-1 justify-between mb-4 mx-2">
+        <div class="relative">
+          <img
+            class="object-cover w-64 h-64 my-2 rounded-full"
+            src="https://avatars.githubusercontent.com/u/27580836"
+            alt="Juan Rodriguez Donado"
+          />
+        </div>
+        <h1 class="text-3xl text-center">Juan Rodriguez Donado</h1>
+        <p class="italic text-center">M.Sc CS - Software Engineer</p>
+      </div>
+      <%- include('partials/about-me', { aboutMe: aboutMe }); %>
+    </div>
+  </body>
+</html>
