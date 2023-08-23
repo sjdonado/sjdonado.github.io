@@ -51,16 +51,16 @@
         <p class="italic text-center">M.Sc CS - Software Engineer</p>
       </div>
       <div class="w-5/6 sm:w-4/6 m-auto">
-        <%- include('partials/about-me', { me: me }); %>
-        <%- include('partials/devto', { devto: devto }); %>
-        <%- include('partials/oss', { oss: oss }); %>
-        <%- include('partials/events', { events: events }); %>
-        <%- include('partials/slides', { slides: slides }); %>
-        <%- include('partials/spotify', { spotify: spotify }); %>
+        <%- include('sections/about-me', { me: me }); %>
+        <%- include('sections/devto', { devto: devto }); %>
+        <%- include('sections/oss', { oss: oss }); %>
+        <%- include('sections/events', { events: events }); %>
+        <%- include('sections/slides', { slides: slides }); %>
+        <%- include('sections/spotify', { spotify: spotify }); %>
       </div>
-      <footer class="flex flex-col bg-gray-800 items-center w-full text-white space-y-8 py-16">
+      <footer class="flex flex-col bg-gray-800 items-center w-full text-white space-y-4 py-24">
         <h2 class="text-2xl">Find me on 👇🏽</h2>
-        <div class="flex">
+        <div class="flex flex-wrap justify-center items-center">
           <a
             class="mx-2 underline"
             target="_blank"
