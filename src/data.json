@@ -31,9 +31,15 @@
     "title": "> Open Source Projects",
     "items": [
       {
+        "title": "Users CRUD with htmx",
+        "link": "https://nestjs-htmx-users-crud.sjdonado.de",
+        "image": "https://user-images.githubusercontent.com/27580836/262184192-4bb26b07-7ea0-41c7-a6ad-04479a6ce5b0.png",
+        "description": "Users CRUD with nest.js + htmx + hbs + swc + sqlite3 WAL."
+      },
+      {
         "title": "I Don't Have Spotify",
         "link": "http://idonthavespotify.sjdonado.de",
-        "image": "https://user-images.githubusercontent.com/27580836/227728799-8123c22e-7714-45e7-95b3-56f666d7ebcc.png",
+        "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
         "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more."
       },
       {
