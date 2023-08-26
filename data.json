@@ -3,14 +3,10 @@
     "title": "> About me",
     "items": [
       {
-        "description": "Backend Engineer, Germany.",
-        "link": "https://getir.com/",
-        "name": "Getir"
+        "description": "Software Engineer at Getir, Germany."
       },
       {
-        "description": "Former member of AML-CS, the Applied Math and Computer Science Lab at Universidad del Norte, Colombia.",
-        "link": "https://aml-cs.github.io/",
-        "name": "AML-CS"
+        "description": "M.Sc in Computer Science from Universidad del Norte, Colombia."
       }
     ]
   },
@@ -34,7 +30,7 @@
         "title": "Users CRUD with htmx",
         "link": "https://nestjs-htmx-users-crud.sjdonado.de",
         "image": "https://user-images.githubusercontent.com/27580836/262184192-4bb26b07-7ea0-41c7-a6ad-04479a6ce5b0.png",
-        "description": "Users CRUD with nest.js + htmx + hbs + swc + sqlite3 WAL."
+        "description": "Users CRUD with NestJS + htmx + hbs + swc + sqlite3 WAL."
       },
       {
         "title": "I Don't Have Spotify",

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "build": "ejs src/index.ejs -o public/index.html -f src/data.json",
+    "build": "ejs src/index.ejs -o public/index.html -f data.json",
     "predeploy": "npm run build",
     "deploy": "git subtree push --prefix public dokku master"
   },
