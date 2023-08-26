@@ -3,10 +3,7 @@
   <div class="divide-y space-y-2">
     <% me.items.forEach(function(item) { %>
     <div class="p-2">
-      <a class="underline" target="_blank" rel="noreferrer" href="<%= item.link %>">
-        <span class="font-semibold"><%= item.name %>:</span>
-        <span><%= item.description %></span>
-      </a>
+      <span><%= item.description %></span>
     </div>
     <% }); %>
   </div>
