@@ -3,10 +3,10 @@
     "title": "> About me",
     "items": [
       {
-        "description": "Software Engineer at Getir, Germany."
+        "description": "Senior Software Engineer at https://memtime.com - Berlin, Germany."
       },
       {
-        "description": "M.Sc in Computer Science from Universidad del Norte, Colombia."
+        "description": "M.Sc in Computer Science from https://uninorte.edu.co - Barranquilla, Colombia."
       }
     ]
   },
@@ -27,16 +27,16 @@
     "title": "> Open Source Projects",
     "items": [
       {
-        "title": "Users CRUD with htmx",
-        "link": "https://github.com/sjdonado/htmx-users-crud-bun-vs-node",
-        "image": "https://user-images.githubusercontent.com/27580836/262184192-4bb26b07-7ea0-41c7-a6ad-04479a6ce5b0.png",
-        "description": "HTMX users CRUD hono-bun-jsx vs nest-swc-handlebars."
+        "title": "Remix Dashboard",
+        "link": "remix-dashboard.sjdonado.de",
+        "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
+        "description": "Prod ready app with remix + vite + drizzle + tailwindcss + daisyui."
       },
       {
         "title": "I Don't Have Spotify",
         "link": "https://idonthavespotify.sjdonado.de",
         "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
-        "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more."
+        "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more. (buit with HTMX)"
       },
       {
         "title": "CS Games",

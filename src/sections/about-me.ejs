@@ -2,9 +2,19 @@
   <a class="text-xl my-4" href="#about-me"><%= me.title %></a>
   <div class="divide-y space-y-2">
     <% me.items.forEach(function(item) { %>
-    <div class="p-2">
-      <span><%= item.description %></span>
-    </div>
+      <div class="p-2">
+        <% const regex = /(https?:\/\/\S+)/g; %>
+        <% const segments = item.description.split(regex); %>
+        <% for(let i = 0; i < segments.length; i++) { %>
+          <% const segment = segments[i]; %>
+          <% if (regex.test(segment)) { %>
+            <a class="underline" href="<%= segment %>" target="_blank"><%= segment %></a>
+          <% } else { %>
+            <span><%= segment %></span>
+          <% } %>
+        <% } %>
+      </div>
     <% }); %>
   </div>
 </section>
+
