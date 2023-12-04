@@ -28,7 +28,7 @@
     "items": [
       {
         "title": "Remix Dashboard",
-        "link": "remix-dashboard.sjdonado.de",
+        "link": "https://remix-dashboard.sjdonado.de",
         "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
         "description": "Prod ready app with remix + vite + drizzle + tailwindcss + daisyui."
       },
