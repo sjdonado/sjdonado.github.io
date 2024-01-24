@@ -9,10 +9,11 @@
     "dev": "nodemon",
     "build": "ejs src/index.ejs -o public/index.html -f data.json",
     "predeploy": "npm run build",
-    "deploy": "git subtree push --prefix public dokku master"
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "ejs": "^3.1.9",
+    "gh-pages": "^6.1.1",
     "http-server": "^14.1.1",
     "nodemon": "^3.0.1"
   },
