@@ -28,25 +28,25 @@
     "items": [
       {
         "title": "Remix Dashboard",
-        "link": "https://remix-dashboard.sjdonado.de",
+        "link": "https://remix-dashboard.donado.co",
         "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
         "description": "Prod ready app with remix + vite + drizzle + tailwindcss + daisyui."
       },
       {
         "title": "I Don't Have Spotify",
-        "link": "https://idonthavespotify.sjdonado.de",
+        "link": "https://idonthavespotify.donado.co",
         "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
         "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more. (buit with HTMX)"
       },
       {
         "title": "CS Games",
-        "link": "https://cs-games.sjdonado.de",
+        "link": "https://cs-games.donado.co",
         "image": "https://user-images.githubusercontent.com/27580836/225850771-377dd850-cdc4-4a65-860a-b9ef025c0fb9.png",
         "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS."
       },
       {
         "title": "URL Shortener",
-        "link": "https://url-shortener.sjdonado.de",
+        "link": "https://url-shortener.donado.co",
         "image": "https://user-images.githubusercontent.com/27580836/227800665-4ff7e2ae-8189-4593-8961-496b7c9ac861.png",
         "description": "Tailwind + Stimulus + Rails 5 app."
       },
@@ -58,7 +58,7 @@
       },
       {
         "title": "Monocuco",
-        "link": "https://monocuco.sjdonado.de",
+        "link": "https://monocuco.donado.co",
         "image": "https://user-images.githubusercontent.com/27580836/233056568-b9985fb4-27ae-47e5-a663-48d9c1619411.png",
         "description": "Dictionary of slang words and phrases from the Caribbean Region of Colombia."
       },
@@ -70,13 +70,13 @@
       },
       {
         "title": "Donkey Kong: Jumpman",
-        "link": "https://donkeygame.sjdonado.de",
+        "link": "https://donkeygame.donado.co",
         "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
         "description": "Phaser game with multiplayer (socket.IO)."
       },
       {
         "title": "Handwritten Digits Recognition",
-        "link": "handwritten-digits-recognition.sjdonado.de",
+        "link": "https://handwritten-digits-recognition.donado.co",
         "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
         "description": "Recognize numbers drawn on HTML5 canvas using CNN."
       }
@@ -191,7 +191,7 @@
         "name": "Docker"
       },
       {
-        "link": "https://slides.com/sjdonado/deploy-to-heroku-with-github-actions",
+        "link": "https://slides.com/donado.coploy-to-heroku-with-github-actions",
         "name": "Deploy to heroku with Github actions"
       },
       {
