@@ -1,14 +1,9 @@
 {
-  "me": {
-    "title": "> About me",
-    "items": [
-      {
-        "description": "Senior Software Engineer at https://memtime.com - Berlin, Germany."
-      },
-      {
-        "description": "M.Sc in Computer Science from https://uninorte.edu.co - Barranquilla, Colombia."
-      }
-    ]
+  "header": {
+    "title": "Juan Rodriguez Donado",
+    "subtitle": "Hello 👋🏽 I'm",
+    "username": "@sjdonado",
+    "description": "Senior Software Engineer with 6+ years of experience, M.Sc in Computer Science, ocasionally publishing on Dev.to and working on open source projects."
   },
   "devto": {
     "title": "> Last Articles on Dev.to",
