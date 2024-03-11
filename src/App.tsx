@@ -3,6 +3,7 @@ import type { Component } from 'solid-js';
 import Header from './sections/Header';
 import Articles from './sections/Articles';
 import Projects from './sections/Projects';
+import Events from './sections/Events';
 
 const App: Component = () => {
   return (
@@ -10,6 +11,7 @@ const App: Component = () => {
       <Header />
       <Articles />
       <Projects />
+      <Events />
     </div>
   );
 };
