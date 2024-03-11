@@ -5,25 +5,34 @@
     "username": "@sjdonado",
     "description": "Senior Software Engineer with 6+ years of experience, M.Sc in Computer Science, ocasionally publishing on Dev.to and working on open source projects."
   },
-  "devto": {
-    "title": "> Last Articles on Dev.to",
+  "articles": {
+    "title": "Last Articles",
     "items": [
       {
         "title": "HTMX with Bun: A Real World App",
+        "date": "March 5, 2024",
+        "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
+        "summary": "Showcases the development of a real-world application using HTMX, Tailwind CSS, and Bun, focusing on creating a service that converts Spotify links into playable previews for users without Spotify, demonstrating the integration of various web technologies for enhancing user experience.",
         "link": "https://dev.to/sjdonado/htmx-bun-a-real-world-app-2c3a"
       },
       {
         "title": "Tower of Hanoi in P5.js + WASM",
+        "date": "May 8, 2023",
+        "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
+        "summary": "Explores the implementation of the Tower of Hanoi problem using P5.js for animation and Rust compiled to WebAssembly (WASM) to improve the efficiency of the recursive solution, demonstrating significant performance gains over a Vanilla JavaScript implementation.",
         "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0"
       },
       {
         "title": "Self-Hosted Password Manager with Dokku",
+        "date": "Apr 19, 2023",
+        "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
+        "summary": "Details the process of setting up a self-hosted password manager using Dokku and Vaultwarden, an unofficial Bitwarden-compatible server, to enhance privacy and security while managing passwords efficiently.",
         "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg"
       }
     ]
   },
-  "oss": {
-    "title": "> Open Source Projects",
+  "projects": {
+    "title": "Open Source Projects",
     "items": [
       {
         "title": "Remix Dashboard",
@@ -82,7 +91,7 @@
     ]
   },
   "events": {
-    "title": "> Events",
+    "title": "Events",
     "items": [
       {
         "description": "Software Engineering Abroad. Lessons learned from Canada and Germany.",
@@ -147,7 +156,7 @@
     ]
   },
   "slides": {
-    "title": "> Slides",
+    "title": "Slides",
     "items": [
       {
         "link": "https://slides.com/sjdonado/software-engineering-in-a-nutshel",

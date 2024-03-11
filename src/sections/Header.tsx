@@ -2,7 +2,7 @@ import type { Component } from 'solid-js';
 
 import { header } from '../data.json';
 
-const Profile: Component = () => {
+const Header: Component = () => {
   return (
     <section class="flex flex-row flex-wrap justify-center gap-4 md:gap-12">
       <div class="avatar">
@@ -13,7 +13,7 @@ const Profile: Component = () => {
           />
         </div>
       </div>
-      <div class="flex max-w-md flex-col justify-start md:justify-center">
+      <div class="flex max-w-xl flex-col justify-start md:justify-center">
         <div class="badge badge-outline">{header.subtitle}</div>
         <h1 class="text-5xl font-bold">{header.title}</h1>
         <h4 class="mt-2 text-gray-500">{header.username}</h4>
@@ -34,4 +34,4 @@ const Profile: Component = () => {
   );
 };
 
-export default Profile;
+export default Header;

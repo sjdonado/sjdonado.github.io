@@ -1,11 +1,13 @@
 import type { Component } from 'solid-js';
 
-import Profile from './sections/Header';
+import Header from './sections/Header';
+import Articles from './sections/Articles';
 
 const App: Component = () => {
   return (
-    <div class="m-8 flex h-dvh flex-col">
-      <Profile />
+    <div class="mx-auto my-12 flex h-dvh max-w-5xl flex-col gap-16 px-6">
+      <Header />
+      <Articles />
     </div>
   );
 };
