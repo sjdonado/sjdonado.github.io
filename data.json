@@ -203,19 +203,5 @@
         "name": "Web scraping"
       }
     ]
-  },
-  "spotify": {
-    "title": "> Spotify Jams",
-    "items": [
-      {
-        "link": "https://open.spotify.com/embed/playlist/6OSGhOXsCwlX4dZgJu1kkE?utm_source=generator&theme=0"
-      },
-      {
-        "link": "https://open.spotify.com/embed/playlist/4zY2wzcR9Yd79M1dXAcOX0?utm_source=generator"
-      },
-      {
-        "link": "https://open.spotify.com/embed/playlist/7xd4MQfv9wRFbEIKxp50h5?utm_source=generator"
-      }
-    ]
   }
 }

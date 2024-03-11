@@ -1,7 +1,5 @@
 {
-  "name": "sjdonado.de",
   "private": true,
-  "homepage": "https://sjdonado.de",
   "engines": {
     "node": "20"
   },
