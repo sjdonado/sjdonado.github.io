@@ -14,6 +14,10 @@
     "title": "> Last Articles on Dev.to",
     "items": [
       {
+        "title": "HTMX with Bun: A Real World App",
+        "link": "https://dev.to/sjdonado/htmx-bun-a-real-world-app-2c3a"
+      },
+      {
         "title": "Tower of Hanoi in P5.js + WASM",
         "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0"
       },
