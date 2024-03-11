@@ -2,10 +2,9 @@
   <a class="text-xl my-4" href="#devto">
     <%= devto.title %>
   </a>
-  <ul class="divide-y space-y-2">
+  <ul class="divide-y space-y-2 list-disc list-inside">
     <% devto.items.forEach(function(item, index) { %>
-      <li class="flex items-center justify-start space-x-2 p-2">
-        <span><%= devto.items.length - index %>.</span>
+      <li class="text-left p-2">
         <a 
           class="underline"
           target="_blank"
