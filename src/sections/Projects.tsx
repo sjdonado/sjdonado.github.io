@@ -5,7 +5,6 @@ import { projects } from '../data.json';
 const Projects: Component = () => {
   return (
     <section class="flex flex-col gap-8">
-      <h2 class="text-3xl font-semibold">{projects.title}</h2>
       <div class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
         {projects.items.map(project => (
           <div class="flex flex-row flex-wrap justify-center gap-4 rounded-lg border p-4">

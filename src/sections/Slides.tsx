@@ -5,7 +5,6 @@ import { slides } from '../data.json';
 const Slides: Component = () => {
   return (
     <section class="flex flex-col gap-8">
-      <h2 class="text-3xl font-semibold">{slides.title}</h2>
       <ul class="list-inside">
         {slides.items.map(slide => (
           <li class="flex flex-col justify-center gap-1 p-4">
