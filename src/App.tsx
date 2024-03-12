@@ -1,32 +1,25 @@
-import { For, type Component } from 'solid-js';
+import { For, lazy, type Component } from 'solid-js';
 import { HashRouter, Navigate, Route } from '@solidjs/router';
 
-import {
-  ArticleItem,
-  EventItem,
-  ProjectItem,
-  SectionItem,
-  SectionType,
-  SlideItem,
-} from './@types';
+import { SectionItem, SectionType } from './@types';
 
 import Header from './sections/Header';
 import Footer from './sections/Footer';
 
-import Articles from './sections/Articles';
-import Projects from './sections/Projects';
-import Events from './sections/Events';
-import Slides from './sections/Slides';
+const Articles = lazy(() => import('./sections/Articles'));
+const Projects = lazy(() => import('./sections/Projects'));
+const Events = lazy(() => import('./sections/Events'));
+const Slides = lazy(() => import('./sections/Slides'));
 
 import Tabs from './components/Tabs';
 
 import { sections } from './data.json';
 
 const componentsBySectionType = {
-  articles: (items: ArticleItem[]) => <Articles items={items} />,
-  projects: (items: ProjectItem[]) => <Projects items={items} />,
-  events: (items: EventItem[]) => <Events items={items} />,
-  slides: (items: SlideItem[]) => <Slides items={items} />,
+  articles: Articles,
+  projects: Projects,
+  events: Events,
+  slides: Slides,
 };
 
 const routes = sections.map(section => ({
@@ -53,10 +46,10 @@ const App: Component = () => {
           {route => (
             <Route
               path={route.path}
-              component={
-                componentsBySectionType[route.type as SectionType](
-                  route.items as SectionItem[]
-                ) as object as Component
+              component={() =>
+                componentsBySectionType[route.type as SectionType]({
+                  items: route.items as SectionItem[],
+                })
               }
             />
           )}
