@@ -1,26 +1,13 @@
-import { For, type Component } from 'solid-js';
-
-import {
-  CameraIcon,
-  GithubIcon,
-  LayersIcon,
-  LinkedinIcon,
-  MailIcon,
-  RssIcon,
-} from 'lucide-solid';
+import { For, createEffect, type Component } from 'solid-js';
+import { createIcons, icons } from 'lucide';
 
 import { header } from '../data.json';
 
-const socialMedia = [
-  { link: 'mailto:cedar.onyxes0q@icloud.com', icon: MailIcon },
-  { link: 'https://github.com/sjdonado', icon: GithubIcon },
-  { link: 'https://dev.to/sjdonado', icon: RssIcon },
-  { link: 'https://linkedin.com/in/sjdonado', icon: LinkedinIcon },
-  { link: 'https://stackoverflow.com/users/8108856/juan-rodriguez', icon: LayersIcon },
-  { link: 'https://vsco.co/sjdonado/gallery', icon: CameraIcon },
-];
-
 const Header: Component = () => {
+  createEffect(() => {
+    createIcons({ icons });
+  });
+
   return (
     <section class="flex flex-row flex-wrap justify-center gap-4 md:gap-12">
       <div class="avatar">
@@ -55,10 +42,15 @@ const Header: Component = () => {
           })}
         </p>
         <div class="flex flex-row gap-4">
-          <For each={socialMedia}>
-            {({ link, icon: Icon }) => (
-              <a class="link" href={link} target="_blank" rel="noopener noreferrer">
-                <Icon class="size-6" />
+          <For each={header.socialMedia}>
+            {socialMedia => (
+              <a
+                class="link"
+                href={socialMedia.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i data-lucide={socialMedia.icon} class="size-6" />
               </a>
             )}
           </For>

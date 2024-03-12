@@ -29,7 +29,7 @@ const App: Component = () => {
           </>
         )}
       >
-        <Route path="/" component={() => <Navigate href="/articles" />} />
+        <Route path="/" component={() => <Navigate href={ROUTES[0].href} />} />
         <For each={ROUTES}>
           {route => <Route path={route.href} component={route.component} />}
         </For>

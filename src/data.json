@@ -3,7 +3,33 @@
     "title": "Juan Rodriguez Donado",
     "subtitle": "Hello 👋🏽 I'm",
     "username": "@sjdonado",
-    "description": "Senior Software Engineer with 6+ years of experience, M.Sc in Computer Science, regular contributor to Dev.to and actively engaged in various open-source projects."
+    "description": "Senior Software Engineer with 6+ years of experience, M.Sc in Computer Science and Teacher. Publishing tech content on Dev.to, active contributor to the open-source community.",
+    "socialMedia": [
+      {
+        "link": "mailto:cedar.onyxes0q@icloud.com",
+        "icon": "mail"
+      },
+      {
+        "link": "https://github.com/sjdonado",
+        "icon": "github"
+      },
+      {
+        "link": "https://dev.to/sjdonado",
+        "icon": "rss"
+      },
+      {
+        "link": "https://linkedin.com/in/sjdonado",
+        "icon": "linkedin"
+      },
+      {
+        "link": "https://stackoverflow.com/users/8108856/juan-rodriguez",
+        "icon": "layers"
+      },
+      {
+        "link": "https://vsco.co/sjdonado/gallery",
+        "icon": "camera"
+      }
+    ]
   },
   "articles": {
     "title": "Last Articles",
