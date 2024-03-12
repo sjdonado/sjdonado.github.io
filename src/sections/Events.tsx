@@ -30,7 +30,7 @@ const Events = () => {
       {allImagesLoaded() ? (
         <Mason as="div" items={source()} columns={breakpoints()}>
           {event => (
-            <div class="relative m-2 max-w-xs overflow-hidden rounded-lg bg-no-repeat">
+            <div class="relative mx-auto my-2 max-w-xs overflow-hidden rounded-lg bg-no-repeat">
               <img class="max-w-xs" src={event.image} alt={event.name} />
               <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gray-900/80 p-2 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
                 <span class="px-2 text-center">{event.name}</span>

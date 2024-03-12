@@ -10,11 +10,11 @@ const Projects: Component = () => {
           {project => (
             <div class="flex flex-row flex-wrap justify-center gap-4 rounded-lg border p-4">
               <div class="avatar m-auto">
-                <div class="h-20 w-32 rounded-lg border">
+                <div class="h-32 w-64 rounded-lg border sm:h-20 sm:w-32">
                   <img src={project.image} alt={project.title} />
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center gap-2 sm:max-w-[300px]">
                 <h3 class="text-xl font-semibold">
                   <a
                     href={project.link}
