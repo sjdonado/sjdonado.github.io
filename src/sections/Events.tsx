@@ -1,10 +1,10 @@
-import { createEffect, createSignal } from 'solid-js';
-
-import { events } from '../data.json';
+import { Component, createEffect, createSignal } from 'solid-js';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
 
-const Events = () => {
-  const [source] = createSignal(events.items);
+import type { EventItem } from '../@types';
+
+const Events: Component<{ items: EventItem[] }> = ({ items }) => {
+  const [source] = createSignal(items);
   const [loadedImages, setLoadedImages] = createSignal(0);
 
   const [allImagesLoaded, setAllImagesLoaded] = createSignal(false);
@@ -31,10 +31,10 @@ const Events = () => {
         <Mason as="div" items={source()} columns={breakpoints()}>
           {event => (
             <div class="relative mx-auto my-2 max-w-xs overflow-hidden rounded-lg bg-no-repeat">
-              <img class="max-w-xs" src={event.image} alt={event.name} />
+              <img class="max-w-xs" src={event.image} alt={event.title} />
               <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gray-900/80 p-2 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-                <span class="px-2 text-center">{event.name}</span>
-                <span class="text-center text-xs">{event.year}</span>
+                <span class="px-2 text-center">{event.title}</span>
+                <span class="text-center text-xs">{event.date}</span>
                 <p class="text-center text-sm">{event.description}</p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const Events = () => {
               <img
                 class="hidden"
                 src={event.image}
-                alt={event.name}
+                alt={event.title}
                 onLoad={handleImageLoad}
               />
             </div>

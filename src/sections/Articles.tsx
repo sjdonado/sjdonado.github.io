@@ -1,12 +1,12 @@
 import { For, type Component } from 'solid-js';
 
-import { articles } from '../data.json';
+import type { ArticleItem } from '../@types';
 
-const Articles: Component = () => {
+const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
   return (
     <section class="flex flex-col gap-8 lg:min-h-[29rem]">
       <div class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
-        <For each={articles.items}>
+        <For each={items}>
           {article => (
             <div class="flex flex-col flex-wrap justify-center rounded-lg border p-4">
               <span class="text-xs text-gray-500">{article.date}</span>
@@ -18,7 +18,7 @@ const Articles: Component = () => {
                   </div>
                 </div>
                 <div class="flex max-w-[340px] flex-col justify-center gap-1">
-                  <p class="line-clamp-4 text-sm text-gray-500">{article.summary}</p>
+                  <p class="line-clamp-4 text-sm text-gray-500">{article.description}</p>
                   <a
                     class="link text-sm"
                     href={article.link}

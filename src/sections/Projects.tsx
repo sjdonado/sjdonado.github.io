@@ -1,12 +1,12 @@
 import { For, type Component } from 'solid-js';
 
-import { projects } from '../data.json';
+import { ProjectItem } from '../@types';
 
-const Projects: Component = () => {
+const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
   return (
     <section class="flex flex-col gap-8">
       <div class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
-        <For each={projects.items}>
+        <For each={items}>
           {project => (
             <div class="flex flex-row flex-wrap justify-center gap-4 rounded-lg border p-4">
               <div class="avatar m-auto">

@@ -1,12 +1,12 @@
 import { For, type Component } from 'solid-js';
 
-import { slides } from '../data.json';
+import { SlideItem } from '../@types';
 
-const Slides: Component = () => {
+const Slides: Component<{ items: SlideItem[] }> = ({ items }) => {
   return (
     <section class="flex flex-col gap-8">
       <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">
-        <For each={slides.items}>
+        <For each={items}>
           {slide => (
             <li>
               <hr />
@@ -36,7 +36,7 @@ const Slides: Component = () => {
                     {slide.title}
                   </a>
                 </h3>
-                <p class="line-clamp-4 text-sm">{slide.summary}</p>
+                <p class="line-clamp-4 text-sm">{slide.description}</p>
               </div>
               <hr />
             </li>
