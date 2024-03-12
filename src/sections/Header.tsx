@@ -1,6 +1,24 @@
 import type { Component } from 'solid-js';
 
+import {
+  CameraIcon,
+  GithubIcon,
+  LayersIcon,
+  LinkedinIcon,
+  MailIcon,
+  RssIcon,
+} from 'lucide-solid';
+
 import { header } from '../data.json';
+
+const socialMedia = [
+  { link: 'mailto:cedar.onyxes0q@icloud.com', icon: MailIcon },
+  { link: 'https://github.com/sjdonado', icon: GithubIcon },
+  { link: 'https://dev.to/sjdonado', icon: RssIcon },
+  { link: 'https://linkedin.com/in/sjdonado', icon: LinkedinIcon },
+  { link: 'https://stackoverflow.com/users/8108856/juan-rodriguez', icon: LayersIcon },
+  { link: 'https://vsco.co/sjdonado/gallery', icon: CameraIcon },
+];
 
 const Header: Component = () => {
   return (
@@ -29,6 +47,13 @@ const Header: Component = () => {
             return <span>{segment}</span>;
           })}
         </p>
+        <div class="mt-4 flex flex-row gap-4">
+          {socialMedia.map(({ link, icon: Icon }) => (
+            <a class="link" href={link} target="_blank">
+              <Icon class="size-6" />
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
