@@ -1,4 +1,4 @@
-import type { Component } from 'solid-js';
+import { For, type Component } from 'solid-js';
 
 import {
   CameraIcon,
@@ -48,11 +48,13 @@ const Header: Component = () => {
           })}
         </p>
         <div class="mt-4 flex flex-row gap-4">
-          {socialMedia.map(({ link, icon: Icon }) => (
-            <a class="link" href={link} target="_blank">
-              <Icon class="size-6" />
-            </a>
-          ))}
+          <For each={socialMedia}>
+            {({ link, icon: Icon }) => (
+              <a class="link" href={link} target="_blank">
+                <Icon class="size-6" />
+              </a>
+            )}
+          </For>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { type Component } from 'solid-js';
+import { For, type Component } from 'solid-js';
 import { HashRouter, Navigate, Route } from '@solidjs/router';
 
 import Header from './sections/Header';
@@ -31,9 +31,9 @@ const App: Component = () => {
         )}
       >
         <Route path="/" component={() => <Navigate href="/articles" />} />
-        {ROUTES.map(route => (
-          <Route path={route.href} component={route.component} />
-        ))}
+        <For each={ROUTES}>
+          {route => <Route path={route.href} component={route.component} />}
+        </For>
       </HashRouter>
     </div>
   );
