@@ -4,7 +4,7 @@ import { articles } from '../data.json';
 
 const Articles: Component = () => {
   return (
-    <section class="flex flex-col gap-8">
+    <section class="flex flex-col gap-8 lg:min-h-[29rem]">
       <div class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
         <For each={articles.items}>
           {article => (
