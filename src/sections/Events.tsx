@@ -11,8 +11,8 @@ const Events = () => {
 
   const breakpoints = createMasonryBreakpoints(() => [
     { query: '(min-width: 768px) ', columns: 3 },
-    { query: '(min-width: 425px) and (max-width: 768px)', columns: 2 },
-    { query: '(max-width: 425px)', columns: 1 },
+    { query: '(min-width: 430px) and (max-width: 768px)', columns: 2 },
+    { query: '(max-width: 430px)', columns: 1 },
   ]);
 
   const handleImageLoad = () => {

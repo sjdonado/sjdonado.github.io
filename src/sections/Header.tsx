@@ -24,18 +24,20 @@ const Header: Component = () => {
   return (
     <section class="flex flex-row flex-wrap justify-center gap-4 md:gap-12">
       <div class="avatar">
-        <div class="w-64 rounded-lg">
+        <div class="w-32 rounded-lg md:w-64">
           <img
             src="https://avatars.githubusercontent.com/u/27580836"
             alt="Juan Rodriguez Donado"
           />
         </div>
       </div>
-      <div class="flex max-w-xl flex-col justify-start md:justify-center">
-        <div class="badge badge-outline">{header.subtitle}</div>
-        <h1 class="text-5xl font-bold">{header.title}</h1>
-        <h4 class="mt-2 text-gray-500">{header.username}</h4>
-        <p class="mt-4 text-justify">
+      <div class="flex max-w-xl flex-col justify-start gap-4 md:justify-center">
+        <div>
+          <div class="badge badge-outline">{header.subtitle}</div>
+          <h1 class="text-3xl font-bold md:text-5xl">{header.title}</h1>
+          <h4 class="mt-2 text-gray-500">{header.username}</h4>
+        </div>
+        <p class="text-justify text-sm md:text-base">
           {header.description.split(/(https?:\/\/\S+)/g).map(segment => {
             if (/https?:\/\/\S+/.test(segment)) {
               return (
@@ -52,7 +54,7 @@ const Header: Component = () => {
             return <span>{segment}</span>;
           })}
         </p>
-        <div class="mt-4 flex flex-row gap-4">
+        <div class="flex flex-row gap-4">
           <For each={socialMedia}>
             {({ link, icon: Icon }) => (
               <a class="link" href={link} target="_blank" rel="noopener noreferrer">
