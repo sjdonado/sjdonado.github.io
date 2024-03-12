@@ -4,13 +4,13 @@ import { Mason, createMasonryBreakpoints } from 'solid-mason';
 
 import { events } from '../data.json';
 
-const breakpoints = createMasonryBreakpoints(() => [
-  { query: '(min-width: 768px) ', columns: 3 },
-  { query: '(min-width: 425px) and (max-width: 768px)', columns: 2 },
-  { query: '(max-width: 425px)', columns: 1 },
-]);
-
 const Events: Component = () => {
+  const breakpoints = createMasonryBreakpoints(() => [
+    { query: '(min-width: 768px) ', columns: 3 },
+    { query: '(min-width: 425px) and (max-width: 768px)', columns: 2 },
+    { query: '(max-width: 425px)', columns: 1 },
+  ]);
+
   return (
     <section class="flex flex-col gap-8">
       <Mason as="div" items={events.items} columns={breakpoints()}>
