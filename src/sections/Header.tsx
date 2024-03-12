@@ -39,7 +39,12 @@ const Header: Component = () => {
           {header.description.split(/(https?:\/\/\S+)/g).map(segment => {
             if (/https?:\/\/\S+/.test(segment)) {
               return (
-                <a class="underline" href={segment} target="_blank">
+                <a
+                  class="underline"
+                  href={segment}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {segment}
                 </a>
               );
@@ -50,7 +55,7 @@ const Header: Component = () => {
         <div class="mt-4 flex flex-row gap-4">
           <For each={socialMedia}>
             {({ link, icon: Icon }) => (
-              <a class="link" href={link} target="_blank">
+              <a class="link" href={link} target="_blank" rel="noopener noreferrer">
                 <Icon class="size-6" />
               </a>
             )}

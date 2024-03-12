@@ -16,7 +16,12 @@ const Projects: Component = () => {
               </div>
               <div class="flex max-w-[300px] flex-col justify-center gap-2">
                 <h3 class="text-xl font-semibold">
-                  <a href={project.link} class="link" target="_blank">
+                  <a
+                    href={project.link}
+                    class="link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {project.title}
                   </a>
                 </h3>

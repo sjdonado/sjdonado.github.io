@@ -11,7 +11,12 @@ const Slides: Component = () => {
             <li class="flex flex-col justify-center gap-1 p-4">
               <span class="text-xs text-gray-500">{slide.date}</span>
               <h3 class="text-xl font-semibold">
-                <a href={slide.link} class="link" target="_blank">
+                <a
+                  href={slide.link}
+                  class="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {slide.title}
                 </a>
               </h3>

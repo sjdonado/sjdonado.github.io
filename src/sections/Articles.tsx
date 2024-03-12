@@ -19,7 +19,12 @@ const Articles: Component = () => {
                 </div>
                 <div class="flex max-w-[340px] flex-col justify-center gap-1">
                   <p class="line-clamp-4 text-sm text-gray-500">{article.summary}</p>
-                  <a class="link text-sm" href={article.link} target="_blank">
+                  <a
+                    class="link text-sm"
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Read article
                   </a>
                 </div>
