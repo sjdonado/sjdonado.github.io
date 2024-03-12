@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For } from 'solid-js';
+import { createEffect, createSignal } from 'solid-js';
 
 import { events } from '../data.json';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
@@ -41,20 +41,18 @@ const Events = () => {
           )}
         </Mason>
       ) : (
-        <div class="flex flex-wrap items-center justify-center gap-8">
-          <For each={source()}>
-            {event => (
-              <div class="skeleton h-40 w-64">
-                <img
-                  class="hidden"
-                  src={event.image}
-                  alt={event.name}
-                  onLoad={handleImageLoad}
-                />
-              </div>
-            )}
-          </For>
-        </div>
+        <Mason as="div" items={source()} columns={breakpoints()}>
+          {event => (
+            <div class="skeleton mx-auto my-2 h-40 w-64 max-w-xs overflow-hidden rounded-lg">
+              <img
+                class="hidden"
+                src={event.image}
+                alt={event.name}
+                onLoad={handleImageLoad}
+              />
+            </div>
+          )}
+        </Mason>
       )}
     </section>
   );
