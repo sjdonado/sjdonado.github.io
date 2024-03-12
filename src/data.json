@@ -32,7 +32,7 @@
     ]
   },
   "articles": {
-    "title": "Last Articles",
+    "title": "Articles",
     "items": [
       {
         "title": "HTMX with Bun: A Real World App",
@@ -58,7 +58,7 @@
     ]
   },
   "projects": {
-    "title": "Open Source Projects",
+    "title": "Projects",
     "items": [
       {
         "title": "Remix Dashboard",
@@ -243,6 +243,7 @@
       },
       {
         "title": "Energy balanced optimum path determination based on graph theory for WSNs",
+        "date": "May 1, 2021",
         "summary": "Highlights energy-efficient routing strategies in wireless sensor networks using graph theory, aiming to enhance network longevity and performance.",
         "link": "https://slides.com/sjdonado/energy-balanced-optimum-path-determination-based-on-graph-theory-for-wsns"
       },
