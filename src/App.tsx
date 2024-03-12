@@ -19,7 +19,7 @@ export const ROUTES = [
 
 const App: Component = () => {
   return (
-    <div class="mx-auto flex h-dvh max-w-5xl flex-col gap-16 px-6 py-12">
+    <div class="mx-auto flex h-dvh max-w-5xl flex-col gap-12 px-6 py-12">
       <HashRouter
         root={props => (
           <>
