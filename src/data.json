@@ -180,56 +180,81 @@
     "title": "Slides",
     "items": [
       {
-        "link": "https://slides.com/sjdonado/software-engineering-in-a-nutshel",
-        "name": "Software Engineering in a Nutshell"
+        "title": "Software Engineering in a Nutshell",
+        "date": "Feb 9, 2023",
+        "summary": "Present an overview of software engineering, exploring its definition, processes, and industry insights, including problem-solving strategies, principles like DRY, KISS, and SOLID, and a glimpse into the tech industry's major companies and job landscape, designed for a seminar at Universidad del Norte.",
+        "link": "https://slides.com/sjdonado/software-engineering-in-a-nutshel"
       },
       {
-        "link": "https://slides.com/sjdonado/swe-abroad",
-        "name": "Software Engineering abroad"
+        "title": "Software Engineering abroad",
+        "date": "Oct 12, 2022",
+        "summary": "Explores the opportunities and challenges of pursuing a software engineering career internationally, including insights on cultural adaptation, job search strategies, and the impact of relocation on professional growth.",
+        "link": "https://slides.com/sjdonado/swe-abroad"
       },
       {
         "link": "https://slides.com/sjdonado/wrf-baq-05km",
-        "name": "WRF BAQ 0.5km Forecast"
+        "date": "May 7, 2022",
+        "summary": "Delves into the specifics of using the Weather Research and Forecasting (WRF) model for high-resolution (0.5km) weather prediction in Barranquilla, demonstrating the application of advanced meteorological modeling for local weather forecasting.",
+        "title": "WRF BAQ 0.5km Forecast"
       },
       {
-        "link": "https://slides.com/sjdonado/adr",
-        "name": "ADR"
+        "title": "ADR",
+        "date": "Jan 12, 2022",
+        "summary": "Focuses on the importance of documenting architectural decisions in software development projects, highlighting the benefits of ADRs in improving project understanding, decision-making transparency, and long-term maintenance.",
+        "link": "https://slides.com/sjdonado/adr"
       },
       {
-        "link": "https://slides.com/sjdonado/bellman-ford",
-        "name": "Bellman-Ford"
+        "title": "Bellman-Ford",
+        "date": "Nov 30, 2021",
+        "summary": "Elaborates on the Bellman-Ford algorithm's ability to find shortest paths in weighted graphs, uniquely handling negative weights unlike Dijkstra's algorithm.",
+        "link": "https://slides.com/sjdonado/bellman-ford"
       },
       {
         "link": "https://slides.com/sjdonado/backend-un",
-        "name": "DLLO. APLICACIONES WEB BACKEND"
+        "date": "Oct 30, 2021",
+        "summary": "Covers an introduction to backend development for web applications, focusing on practical tools and skills necessary for modern development. It includes setting up development environments, basics of Unix shell, navigation, file manipulation, permissions, managing Docker containers, Git basics, GitHub flow, and the integration of Azure and Visual Studio Code for cloud-based development environments.",
+        "title": "DLLO. APLICACIONES WEB BACKEND"
       },
       {
-        "link": "https://slides.com/sjdonado/energy-balanced-optimum-path-determination-based-on-graph-theory-for-wsns",
-        "name": "Energy balanced optimum path determination based on graph theory for WSNs"
+        "title": "Energy balanced optimum path determination based on graph theory for WSNs",
+        "summary": "Highlights energy-efficient routing strategies in wireless sensor networks using graph theory, aiming to enhance network longevity and performance.",
+        "link": "https://slides.com/sjdonado/energy-balanced-optimum-path-determination-based-on-graph-theory-for-wsns"
       },
       {
-        "link": "https://slides.com/sjdonado/generic-types-traits-and-lifetimes",
-        "name": "Generic Types, Traits, and Lifetimes"
+        "title": "Generic Types, Traits, and Lifetimes",
+        "date": "Apr 27, 2021",
+        "summary": "Introduces Rust's features for code abstraction and safety, including generic data types for function and struct definitions, traits akin to interfaces for shared behavior, and lifetimes to ensure reference validity.",
+        "link": "https://slides.com/sjdonado/generic-types-traits-and-lifetimes"
       },
       {
-        "link": "https://slides.com/sjdonado/how-to-develop-inside-a-container-using-vscode",
-        "name": "How to develop inside a container using VSCode"
+        "title": "How to develop inside a container using VSCode",
+        "date": "Sep 16, 2020",
+        "summary": "Explains the advantages of using Visual Studio Code to develop software directly inside Docker containers, leveraging the Remote - Containers extension for an isolated and consistent development environment.",
+        "link": "https://slides.com/sjdonado/how-to-develop-inside-a-container-using-vscode"
       },
       {
-        "link": "https://slides.com/sjdonado/docker",
-        "name": "Docker"
+        "title": "Docker",
+        "date": "Aug 28, 2020",
+        "summary": "offers an in-depth look at Docker, highlighting its role in providing platform-as-a-service solutions through OS-level virtualization to package software in containers, making development workflows more efficient and scalable",
+        "link": "https://slides.com/sjdonado/docker"
       },
       {
-        "link": "https://slides.com/donado.coploy-to-heroku-with-github-actions",
-        "name": "Deploy to heroku with Github actions"
+        "title": "Deploy to heroku with Github actions",
+        "date": "May 28, 2020",
+        "summary": "Explains how to automate deployments to Heroku using GitHub Actions, showcasing the integration for efficient and streamlined deployment workflows.",
+        "link": "https://slides.com/sjdonado/deploy-to-heroku-with-github-actions"
       },
       {
-        "link": "https://slides.com/sjdonado/xp-kanban",
-        "name": "XP, Kanban, TDD"
+        "title": "XP, Kanban, TDD",
+        "date": "Aug 18, 2019",
+        "summary": "Offers an overview of agile methodologies including Extreme Programming (XP) for rapid development cycles, Kanban for visual workflow management, and Test-Driven Development (TDD) emphasizing testing before code implementation.",
+        "link": "https://slides.com/sjdonado/xp-kanban"
       },
       {
-        "link": "https://slides.com/sjdonado/web-scraping",
-        "name": "Web scraping"
+        "title": "Web scraping",
+        "date": "Jun 14, 2018",
+        "summary": "Introduces web scraping as the process of extracting content and data from websites using bots, covering tools, libraries, and methods to effectively gather data, as well as strategies to protect against unwanted scraping.",
+        "link": "https://slides.com/sjdonado/web-scraping"
       }
     ]
   }
