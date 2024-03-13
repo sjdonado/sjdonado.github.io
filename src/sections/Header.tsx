@@ -22,7 +22,7 @@ const Header: Component = () => {
         <div>
           <div class="badge badge-outline">{header.subtitle}</div>
           <h1 class="text-3xl font-bold md:text-5xl">{header.title}</h1>
-          <h4 class="mt-2 text-gray-500">{header.username}</h4>
+          <h2 class="mt-2 text-gray-500">{header.username}</h2>
         </div>
         <p class="text-justify text-sm md:text-base">
           {header.description.split(/(https?:\/\/\S+)/g).map(segment => {
@@ -49,6 +49,7 @@ const Header: Component = () => {
                 href={socialMedia.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={socialMedia.icon}
               >
                 <i data-lucide={socialMedia.icon} class="size-6" />
               </a>
