@@ -4,7 +4,7 @@ import { A } from '@solidjs/router';
 const Tabs: Component<{ routes: { path: string; title: string }[] }> = props => {
   return (
     <>
-      <div role="tablist" class="tabs tabs-lifted md:tabs-lg">
+      <div role="tablist" class="tabs tabs-lifted">
         <For each={props.routes}>
           {route => (
             <A

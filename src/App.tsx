@@ -31,7 +31,7 @@ const routes = sections.map(section => ({
 
 const App: Component = () => {
   return (
-    <div class="mx-auto flex h-dvh max-w-5xl flex-col gap-12 px-6 py-12">
+    <div class="mx-auto flex h-dvh max-w-5xl flex-col gap-9 px-6 py-12">
       <Header />
       <HashRouter
         root={props => (
