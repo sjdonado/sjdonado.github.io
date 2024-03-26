@@ -24,23 +24,8 @@ const Header: Component = () => {
           <h1 class="text-3xl font-bold md:text-5xl">{header.title}</h1>
           <h2 class="mt-2 text-gray-500">{header.username}</h2>
         </div>
-        <p class="text-justify text-sm md:text-base">
-          {header.description.split(/(https?:\/\/\S+)/g).map(segment => {
-            if (/https?:\/\/\S+/.test(segment)) {
-              return (
-                <a
-                  class="underline"
-                  href={segment}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {segment}
-                </a>
-              );
-            }
-            return <span>{segment}</span>;
-          })}
-        </p>
+        <p class="text-justify text-sm md:text-base">{header.bio}</p>
+        <p class="text-justify text-sm md:text-base">{header.moreInfo}</p>
         <div class="flex flex-row gap-4">
           <For each={header.socialMedia}>
             {socialMedia => (
