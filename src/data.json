@@ -4,7 +4,7 @@
     "subtitle": "Hello 👋🏽 I'm",
     "username": "@sjdonado",
     "bio": "Senior Software Engineer with 6+ years of experience, M.Sc. in Computer Science, former university lecturer. Background on Web Development, Distributed Systems and Cloud Computing.",
-    "moreInfo": "Check out my posts on Dev.to, OSS contributions on Github, and workshops slides on slides.com.",
+    "moreInfo": "Check out my blog on Hashnode, OSS contributions on Github, and workshops slides on slides.com.",
     "socialMedia": [
       {
         "link": "mailto:cedar.onyxes0q@icloud.com",
@@ -15,7 +15,7 @@
         "icon": "github"
       },
       {
-        "link": "https://dev.to/sjdonado",
+        "link": "https://blog.donado.co/rss.xml",
         "icon": "rss"
       },
       {
@@ -40,23 +40,23 @@
         {
           "title": "HTMX with Bun: A Real World App",
           "date": "March 5, 2024",
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
-          "description": "Showcases the development of a real-world application using HTMX, Tailwind CSS, and Bun, focusing on creating a service that converts Spotify links into playable previews for users without Spotify, demonstrating the integration of various web technologies for enhancing user experience.",
-          "link": "https://dev.to/sjdonado/htmx-bun-a-real-world-app-2c3a"
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540348890/ba6eee27-951e-4386-b145-24ecdbc88f24.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
+          "description": "Showcases the development of a real-world application using HTMX, Tailwind CSS, and Bun.",
+          "link": "https://blog.donado.co/htmx-with-bun-a-real-world-app"
         },
         {
           "title": "Tower of Hanoi in P5.js + WASM",
           "date": "May 8, 2023",
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
-          "description": "Explores the implementation of the Tower of Hanoi problem using P5.js for animation and Rust compiled to WebAssembly (WASM) to improve the efficiency of the recursive solution, demonstrating significant performance gains over a Vanilla JavaScript implementation.",
-          "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0"
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711538881886/7026bf1a-2b0b-4170-aa8d-fda9644e1606.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
+          "description": "Implementation of the Tower of Hanoi problem using P5.js for animation and Rust compiled to WebAssembly (WASM).",
+          "link": "https://blog.donado.co/tower-of-hanoi-in-p5js-wasm"
         },
         {
           "title": "Self-Hosted Password Manager with Dokku",
           "date": "Apr 19, 2023",
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8lvvnvil0m75nw7yi6iz.jpg",
-          "description": "Details the process of setting up a self-hosted password manager using Dokku and Vaultwarden, an unofficial Bitwarden-compatible server, to enhance privacy and security while managing passwords efficiently.",
-          "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg"
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540581765/5dabc4cc-6cc6-491c-87e7-3e1712fd8ac0.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
+          "description": "Details the process of setting up a self-hosted password manager using Dokku and Vaultwarden.",
+          "link": "https://blog.donado.co/self-hosted-password-manager-with-dokku"
         }
       ]
     },
