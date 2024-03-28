@@ -11,7 +11,7 @@ const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
             <div class="flex flex-row flex-wrap justify-center gap-4 rounded-lg border p-4">
               <div class="avatar m-auto">
                 <div class="h-32 w-64 rounded-lg border sm:h-20 sm:w-32">
-                  <img src={project.image} alt={project.title} />
+                  <img src={project.image} alt={project.title} class="bg-gray-200" />
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2 sm:max-w-[300px]">

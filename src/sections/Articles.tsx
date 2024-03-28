@@ -14,7 +14,7 @@ const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
               <div class="mt-4 flex flex-row gap-4">
                 <div class="avatar mx-auto pt-1">
                   <div class="h-16 rounded-lg">
-                    <img src={article.image} alt={article.title} />
+                    <img src={article.image} alt={article.title} class="bg-gray-200" />
                   </div>
                 </div>
                 <div class="flex max-w-[340px] flex-col justify-center gap-1">
