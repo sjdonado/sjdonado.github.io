@@ -75,7 +75,7 @@
           "title": "Remix Dashboard",
           "link": "https://remix-dashboard.preview.donado.co",
           "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
-          "description": "MVP of a Learning Management System built with remix + vite, drizzle + better-sqlite3, and tailwindcss + daisyui",
+          "description": "MVP of a Learning Management System built with remix + vite, drizzle + better-sqlite3, and tailwindcss + daisyui.",
           "source": "https://github.com/sjdonado/remix-dashboard"
         },
         {
