@@ -15,7 +15,7 @@
         "icon": "github"
       },
       {
-        "link": "https://blog.donado.co/rss.xml",
+        "link": "https://blog.sjdonado.com/rss.xml",
         "icon": "rss"
       },
       {
@@ -42,28 +42,28 @@
           "date": "Apr 2, 2024",
           "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1712053094881/9f76db15-0780-486e-b34f-2acf115ecaf8.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Build a custom 'useFetcherForm' hook to easily handle fetcher requests.",
-          "link": "https://blog.donado.co/validated-forms-with-usefetcher-in-remix"
+          "link": "https://blog.sjdonado.com/validated-forms-with-usefetcher-in-remix"
         },
         {
           "title": "HTMX with Bun: A Real World App",
           "date": "March 5, 2024",
           "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540348890/ba6eee27-951e-4386-b145-24ecdbc88f24.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Showcases the development of a real-world application using HTMX, Tailwind CSS, and Bun.",
-          "link": "https://blog.donado.co/htmx-with-bun-a-real-world-app"
+          "link": "https://blog.sjdonado.com/htmx-with-bun-a-real-world-app"
         },
         {
           "title": "Tower of Hanoi in P5.js + WASM",
           "date": "May 8, 2023",
           "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711538881886/7026bf1a-2b0b-4170-aa8d-fda9644e1606.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Implementation of the Tower of Hanoi problem using P5.js for animation and Rust compiled to WebAssembly (WASM).",
-          "link": "https://blog.donado.co/tower-of-hanoi-in-p5js-wasm"
+          "link": "https://blog.sjdonado.com/tower-of-hanoi-in-p5js-wasm"
         },
         {
           "title": "Self-Hosted Password Manager with Dokku",
           "date": "Apr 19, 2023",
           "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540581765/5dabc4cc-6cc6-491c-87e7-3e1712fd8ac0.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Details the process of setting up a self-hosted password manager using Dokku and Vaultwarden.",
-          "link": "https://blog.donado.co/self-hosted-password-manager-with-dokku"
+          "link": "https://blog.sjdonado.com/self-hosted-password-manager-with-dokku"
         }
       ]
     },
@@ -73,7 +73,7 @@
       "items": [
         {
           "title": "Remix Dashboard",
-          "link": "https://remix-dashboard.preview.donado.co",
+          "link": "https://remix-dashboard.sjdonado.com",
           "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
           "description": "MVP of a Learning Management System built with remix + vite, drizzle + better-sqlite3, and tailwindcss + daisyui.",
           "source": "https://github.com/sjdonado/remix-dashboard"
@@ -87,14 +87,14 @@
         },
         {
           "title": "CS Games",
-          "link": "https://cs-games.donado.co",
+          "link": "https://cs-games.sjdonado.com",
           "image": "https://user-images.githubusercontent.com/27580836/225850771-377dd850-cdc4-4a65-860a-b9ef025c0fb9.png",
           "description": "Computer Science Games powered by P5.js, Rust + wasm-pack and SolidJS.",
           "source": "https://github.com/sjdonado/cs-games"
         },
         {
           "title": "URL Shortener",
-          "link": "https://url-shortener.donado.co",
+          "link": "https://url-shortener.sjdonado.com",
           "image": "https://user-images.githubusercontent.com/27580836/227800665-4ff7e2ae-8189-4593-8961-496b7c9ac861.png",
           "description": "Web application built with Tailwind CSS, Stimulus, and Rails 5, designed to shorten URLs, featuring user authentication, link redirection, click counting, and deployment CI.",
           "source": "https://github.com/sjdonado/url-shortener"
@@ -108,7 +108,7 @@
         },
         {
           "title": "Monocuco",
-          "link": "https://monocuco.donado.co",
+          "link": "https://monocuco.sjdonado.com",
           "image": "https://user-images.githubusercontent.com/27580836/233056568-b9985fb4-27ae-47e5-a663-48d9c1619411.png",
           "description": "Dictionary of slang words and phrases from the Caribbean Region of Colombia.",
           "source": "https://github.com/sjdonado/monocuco"
@@ -122,14 +122,14 @@
         },
         {
           "title": "Donkey Kong: Jumpman",
-          "link": "https://donkeygame.preview.donado.co",
+          "link": "https://donkeygame.sjdonado.com",
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
           "description": "Game developed inspired by classic arcade mechanics, where players navigate challenges and interact in a dynamic environment, enhanced by real-time multiplayer capabilities.",
           "source": "https://github.com/sjdonado/donkeygame"
         },
         {
           "title": "Handwritten Digits Recognition",
-          "link": "https://handwritten-digits-recognition.donado.co",
+          "link": "https://handwritten-digits-recognition.sjdonado.com",
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
           "description": "Application designed to recognize numbers drawn on an HTML5 canvas using a Convolutional Neural Network (CNN), showcasing deep learning techniques to accurately identify handwritten digits.",
           "source": "https://github.com/sjdonado/handwritten-digits-recognition"
