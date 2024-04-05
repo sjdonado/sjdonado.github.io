@@ -8,7 +8,7 @@ const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
       <div class="flex flex-row flex-wrap justify-start gap-4 lg:justify-center">
         <For each={items}>
           {article => (
-            <div class="flex flex-col flex-wrap justify-center rounded-lg border border-base-300 p-4">
+            <div class="flex flex-col flex-wrap justify-center rounded-lg border border-base-content/20 p-4">
               <span class="text-xs text-gray-500">{article.date}</span>
               <h3 class="text-xl font-semibold">{article.title}</h3>
               <div class="mt-4 flex flex-row gap-4">
