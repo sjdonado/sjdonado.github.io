@@ -31,32 +31,34 @@ const routes = sections.map(section => ({
 
 const App: Component = () => {
   return (
-    <div class="mx-auto flex h-dvh max-w-5xl flex-col gap-9 px-6 py-12">
-      <Header />
-      <HashRouter
-        root={props => (
-          <>
-            <Tabs routes={routes} />
-            {props.children}
-          </>
-        )}
-      >
-        <Route path="/" component={() => <Navigate href={routes[0].path} />} />
-        <For each={routes}>
-          {route => (
-            <Route
-              path={route.path}
-              component={() =>
-                componentsBySectionType[route.type as SectionType]({
-                  items: route.items as SectionItem[],
-                })
-              }
-            />
+    <>
+      <main class="min-screen-1 mx-auto flex max-w-5xl flex-col gap-9 p-6">
+        <Header />
+        <HashRouter
+          root={props => (
+            <>
+              <Tabs routes={routes} />
+              {props.children}
+            </>
           )}
-        </For>
-      </HashRouter>
+        >
+          <Route path="/" component={() => <Navigate href={routes[0].path} />} />
+          <For each={routes}>
+            {route => (
+              <Route
+                path={route.path}
+                component={() =>
+                  componentsBySectionType[route.type as SectionType]({
+                    items: route.items as SectionItem[],
+                  })
+                }
+              />
+            )}
+          </For>
+        </HashRouter>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
