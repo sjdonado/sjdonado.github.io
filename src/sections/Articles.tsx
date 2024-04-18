@@ -4,7 +4,7 @@ import type { ArticleItem } from '../@types';
 
 const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
   return (
-    <section class="flex flex-row flex-wrap justify-center gap-4">
+    <section class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
       <For each={items}>
         {article => (
           <div class="flex max-w-md flex-col flex-wrap justify-start rounded-lg border border-base-content/20 p-4">

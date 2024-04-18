@@ -25,9 +25,11 @@ const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
                 </a>
               </h3>
               <p class="line-clamp-4 text-sm text-gray-500">{project.description}</p>
-              <a class="link text-sm" href={project.source} target="_blank">
-                Source code
-              </a>
+              {project.source && (
+                <a class="link text-sm" href={project.source} target="_blank">
+                  Source code
+                </a>
+              )}
             </div>
           </div>
         )}
