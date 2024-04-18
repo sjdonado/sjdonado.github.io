@@ -79,10 +79,16 @@
       "type": "projects",
       "items": [
         {
+          "title": "Spooky Planning",
+          "link": "https://spookyplanning.com",
+          "image": "https://spookyplanning.com/assets/logo-DvPQgP6o.webp",
+          "description": "Intuitive and minimalistic Poker Planning for agile teams. Built with Remix, Drizzle, tailwindcss, Socket.io and Vite."
+        },
+        {
           "title": "Cule Filo",
           "link": "https://culefilo.pages.dev",
           "image": "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fazrc4anaw2nwikjzz9c8.png",
-          "description": "AI powered restaurant search engine, built with Cloudflare Workers, Remix, Vite and Tailwindcss.",
+          "description": "AI powered restaurant search engine. Built with Cloudflare Workers + KV + AI, Remix, Vite and tailwindcss.",
           "source": "https://github.com/sjdonado/culefilo"
         },
         {
