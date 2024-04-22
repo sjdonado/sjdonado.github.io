@@ -79,6 +79,13 @@
       "type": "projects",
       "items": [
         {
+          "title": "EV Charging Simulator",
+          "link": "https://remix-sse-spawn-gcc-simulation.sjdonado.com",
+          "image": "https://remix-sse-spawn-gcc-simulation.sjdonado.com/thumbnail.webp",
+          "description": "Real-time gcc-python simulation via Server-Sent-Events (SSE) powered by Remix.",
+          "source": "https://github.com/sjdonado/remix-sse-spawn-gcc-simulation"
+        },
+        {
           "title": "Spooky Planning",
           "link": "https://spookyplanning.com",
           "image": "https://spookyplanning.com/assets/logo-DvPQgP6o.webp",
