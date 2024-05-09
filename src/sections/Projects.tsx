@@ -15,14 +15,18 @@ const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
             </div>
             <div class="flex flex-col justify-center gap-2 sm:max-w-72">
               <h3 class="text-xl font-semibold">
-                <a
-                  href={project.link}
-                  class="link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.title}
-                </a>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    class="link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
               </h3>
               <p class="line-clamp-4 text-sm text-gray-500">{project.description}</p>
               {project.source && (

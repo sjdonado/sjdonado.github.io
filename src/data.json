@@ -79,17 +79,37 @@
       "type": "projects",
       "items": [
         {
-          "title": "EV Charging Simulator",
-          "link": "https://remix-sse-spawn-gcc-simulation.sjdonado.com",
-          "image": "https://remix-sse-spawn-gcc-simulation.sjdonado.com/thumbnail.webp",
-          "description": "Real-time gcc-python simulation via Server-Sent-Events (SSE) powered by Remix.",
-          "source": "https://github.com/sjdonado/remix-sse-spawn-gcc-simulation"
+          "title": "I Don't Have Spotify",
+          "link": "https://idonthavespotify.donado.co",
+          "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
+          "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more.",
+          "source": "https://github.com/sjdonado/idonthavespotify"
         },
         {
           "title": "Spooky Planning",
           "link": "https://spookyplanning.com",
           "image": "https://spookyplanning.com/assets/logo-DvPQgP6o.webp",
           "description": "Intuitive and minimalistic Poker Planning for agile teams. Built with Remix, Drizzle, tailwindcss, Socket.io and Vite."
+        },
+        {
+          "title": "Monocuco",
+          "link": "https://monocuco.sjdonado.com",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/monocuco.webp?alt=media",
+          "description": "Dictionary of slang words and phrases from the Caribbean Region of Colombia.",
+          "source": "https://github.com/sjdonado/monocuco"
+        },
+        {
+          "title": "Mi Horario UN",
+          "link": "https://mihorarioun.web.app",
+          "image": "https://user-images.githubusercontent.com/27580836/233056842-b706ca7f-fd7d-46bc-bf75-725ced66937d.png",
+          "description": "Web app for students of the Universidad del Norte, manage and import your schedule into Google Calendar.",
+          "source": "https://github.com/sjdonado/mihorario"
+        },
+        {
+          "title": "EV Charging Simulator",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/remix-sse-spawn-gcc-simulation.webp?alt=media",
+          "description": "Real-time gcc-python simulation via Server-Sent-Events (SSE) powered by Remix.",
+          "source": "https://github.com/sjdonado/remix-sse-spawn-gcc-simulation"
         },
         {
           "title": "Cule Filo",
@@ -100,17 +120,9 @@
         },
         {
           "title": "Remix Dashboard",
-          "link": "https://remix-dashboard.sjdonado.com",
           "image": "https://user-images.githubusercontent.com/27580836/287616374-ca338208-4e19-4dd6-984c-72ecf8acc816.png",
           "description": "MVP of a Learning Management System built with remix + vite, drizzle + better-sqlite3, and tailwindcss + daisyui.",
           "source": "https://github.com/sjdonado/remix-dashboard"
-        },
-        {
-          "title": "I Don't Have Spotify",
-          "link": "https://idonthavespotify.donado.co",
-          "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
-          "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more.",
-          "source": "https://github.com/sjdonado/idonthavespotify"
         },
         {
           "title": "CS Games",
@@ -134,18 +146,11 @@
           "source": "https://github.com/AML-CS/wrf-baq-0.5km"
         },
         {
-          "title": "Monocuco",
-          "link": "https://monocuco.sjdonado.com",
-          "image": "https://user-images.githubusercontent.com/27580836/233056568-b9985fb4-27ae-47e5-a663-48d9c1619411.png",
-          "description": "Dictionary of slang words and phrases from the Caribbean Region of Colombia.",
-          "source": "https://github.com/sjdonado/monocuco"
-        },
-        {
-          "title": "Mi Horario UN",
-          "link": "https://mihorarioun.web.app",
-          "image": "https://user-images.githubusercontent.com/27580836/233056842-b706ca7f-fd7d-46bc-bf75-725ced66937d.png",
-          "description": "Web app for students of the Universidad del Norte, manage and import your schedule into Google Calendar.",
-          "source": "https://github.com/sjdonado/mihorario"
+          "title": "Handwritten Digits Recognition",
+          "link": "https://handwritten-digits-recognition.sjdonado.com",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
+          "description": "Application designed to recognize numbers drawn on an HTML5 canvas using a Convolutional Neural Network (CNN), showcasing deep learning techniques to accurately identify handwritten digits.",
+          "source": "https://github.com/sjdonado/handwritten-digits-recognition"
         },
         {
           "title": "Donkey Kong: Jumpman",
@@ -153,13 +158,6 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/donkeygame.jpeg?alt=media",
           "description": "Game developed inspired by classic arcade mechanics, where players navigate challenges and interact in a dynamic environment, enhanced by real-time multiplayer capabilities.",
           "source": "https://github.com/sjdonado/donkeygame"
-        },
-        {
-          "title": "Handwritten Digits Recognition",
-          "link": "https://handwritten-digits-recognition.sjdonado.com",
-          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/handwritten-digits-recognition.png?alt=media",
-          "description": "Application designed to recognize numbers drawn on an HTML5 canvas using a Convolutional Neural Network (CNN), showcasing deep learning techniques to accurately identify handwritten digits.",
-          "source": "https://github.com/sjdonado/handwritten-digits-recognition"
         }
       ]
     },

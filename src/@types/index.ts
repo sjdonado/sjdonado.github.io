@@ -8,7 +8,7 @@ export type ArticleItem = {
 
 export type ProjectItem = {
   title: string;
-  link: string;
+  link?: string;
   image: string;
   description: string;
   source: string;
