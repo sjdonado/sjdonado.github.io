@@ -6,9 +6,9 @@ import { SectionItem, SectionType } from './@types';
 import Header from './sections/Header';
 import Footer from './sections/Footer';
 
-const Articles = lazy(() => import('./sections/Articles'));
+const Posts = lazy(() => import('./sections/Posts'));
 const Projects = lazy(() => import('./sections/Projects'));
-const Events = lazy(() => import('./sections/Events'));
+const Social = lazy(() => import('./sections/Social'));
 const Slides = lazy(() => import('./sections/Slides'));
 
 import Tabs from './components/Tabs';
@@ -16,9 +16,9 @@ import Tabs from './components/Tabs';
 import { sections } from './data.json';
 
 const componentsBySectionType = {
-  articles: Articles,
+  posts: Posts,
   projects: Projects,
-  events: Events,
+  social: Social,
   slides: Slides,
 };
 

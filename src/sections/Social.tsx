@@ -1,9 +1,9 @@
 import { Component, createEffect, createSignal } from 'solid-js';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
 
-import type { EventItem } from '../@types';
+import type { SocialItem } from '../@types';
 
-const Events: Component<{ items: EventItem[] }> = ({ items }) => {
+const Social: Component<{ items: SocialItem[] }> = ({ items }) => {
   const [source] = createSignal(items);
   const [loadedImages, setLoadedImages] = createSignal(0);
 
@@ -29,25 +29,25 @@ const Events: Component<{ items: EventItem[] }> = ({ items }) => {
     <section class="flex flex-col gap-8">
       {allImagesLoaded() ? (
         <Mason as="div" items={source()} columns={breakpoints()}>
-          {event => (
+          {social => (
             <div class="relative mx-auto my-2 max-w-xs overflow-hidden rounded-lg bg-no-repeat">
-              <img class="max-w-xs" src={event.image} alt={event.title} />
+              <img class="max-w-xs" src={social.image} alt={social.title} />
               <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gray-900/80 p-2 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-                <span class="px-2 text-center">{event.title}</span>
-                <span class="text-center text-xs">{event.date}</span>
-                <p class="text-center text-sm">{event.description}</p>
+                <span class="px-2 text-center">{social.title}</span>
+                <span class="text-center text-xs">{social.date}</span>
+                <p class="text-center text-sm">{social.description}</p>
               </div>
             </div>
           )}
         </Mason>
       ) : (
         <Mason as="div" items={source()} columns={breakpoints()}>
-          {event => (
+          {social => (
             <div class="skeleton mx-auto my-2 h-40 w-64 max-w-xs overflow-hidden rounded-lg">
               <img
                 class="hidden"
-                src={event.image}
-                alt={event.title}
+                src={social.image}
+                alt={social.title}
                 onLoad={handleImageLoad}
               />
             </div>
@@ -58,4 +58,4 @@ const Events: Component<{ items: EventItem[] }> = ({ items }) => {
   );
 };
 
-export default Events;
+export default Social;

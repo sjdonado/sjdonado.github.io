@@ -1,4 +1,4 @@
-export type ArticleItem = {
+export type PostItem = {
   title: string;
   date: string;
   image: string;
@@ -14,7 +14,7 @@ export type ProjectItem = {
   source: string;
 };
 
-export type EventItem = {
+export type SocialItem = {
   title: string;
   date: string;
   description: string;
@@ -29,5 +29,5 @@ export type SlideItem = {
   image: string;
 };
 
-export type SectionType = 'articles' | 'projects' | 'events' | 'slides';
-export type SectionItem = ArticleItem & ProjectItem & EventItem & SlideItem;
+export type SectionType = 'posts' | 'projects' | 'social' | 'slides';
+export type SectionItem = PostItem & ProjectItem & SocialItem & SlideItem;
