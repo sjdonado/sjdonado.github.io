@@ -9,7 +9,9 @@ const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
         {article => (
           <div class="flex max-w-md flex-col flex-wrap justify-start rounded-lg border border-base-content/20 p-4">
             <span class="text-xs text-gray-500">{article.date}</span>
-            <h3 class="text-xl font-semibold">{article.title}</h3>
+            <a class="link" href={article.link} target="_blank" rel="noopener noreferrer">
+              <h3 class="text-xl font-semibold">{article.title}</h3>
+            </a>
             <div class="mt-4 flex flex-row gap-4">
               <div class="avatar mx-auto pt-1">
                 <div class="size-16 rounded-lg">
@@ -18,14 +20,6 @@ const Articles: Component<{ items: ArticleItem[] }> = ({ items }) => {
               </div>
               <div class="flex max-w-[340px] flex-col justify-center gap-1">
                 <p class="line-clamp-4 text-sm text-gray-500">{article.description}</p>
-                <a
-                  class="link text-sm"
-                  href={article.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read article
-                </a>
               </div>
             </div>
           </div>
