@@ -35,40 +35,35 @@
   "sections": [
     {
       "title": "Posts",
-      "type": "articles",
+      "type": "posts",
       "items": [
         {
           "title": "Fast, Intuitive, Smart: Restaurant search engine with Cloudflare AI",
           "date": "Apr 13, 2024",
-          "image": "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fazrc4anaw2nwikjzz9c8.png",
           "description": "Craving your favorite meal? Our AI-powered search engine makes it easy to find the top 3 restaurants serving it near you.",
           "link": "https://dev.to/sjdonado/fast-intuitive-smart-restaurant-search-engine-with-cloudflare-ai-3m64"
         },
         {
           "title": "Validated forms with useFetcher in Remix",
           "date": "Apr 2, 2024",
-          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1712053094881/9f76db15-0780-486e-b34f-2acf115ecaf8.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Build a custom 'useFetcherForm' hook to easily handle fetcher requests.",
           "link": "https://dev.to/sjdonado/validated-forms-with-usefetcher-in-remix-1ghb"
         },
         {
           "title": "HTMX with Bun: A Real World App",
           "date": "March 5, 2024",
-          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540348890/ba6eee27-951e-4386-b145-24ecdbc88f24.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Showcases the development of a real-world application using HTMX, Tailwind CSS, and Bun.",
           "link": "https://dev.to/sjdonado/htmx-bun-a-real-world-app-2c3a"
         },
         {
           "title": "Tower of Hanoi in P5.js + WASM",
           "date": "May 8, 2023",
-          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711538881886/7026bf1a-2b0b-4170-aa8d-fda9644e1606.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Implementation of the Tower of Hanoi problem using P5.js for animation and Rust compiled to WebAssembly (WASM).",
           "link": "https://dev.to/sjdonado/tower-of-hanoi-in-p5js-wasm-4kn0"
         },
         {
           "title": "Self-Hosted Password Manager with Dokku",
           "date": "Apr 19, 2023",
-          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1711540581765/5dabc4cc-6cc6-491c-87e7-3e1712fd8ac0.png?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp",
           "description": "Details the process of setting up a self-hosted password manager using Dokku and Vaultwarden.",
           "link": "https://dev.to/sjdonado/self-hosted-password-manager-with-dokku-2fjg"
         }
@@ -88,8 +83,15 @@
         {
           "title": "Spooky Planning",
           "link": "https://spookyplanning.com",
-          "image": "https://spookyplanning.com/assets/logo-DvPQgP6o.webp",
-          "description": "Intuitive and minimalistic Poker Planning for agile teams. Built with Remix, Drizzle, tailwindcss, Socket.io and Vite."
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/spooky-planner.webp?alt=media",
+          "description": "Intuitive and minimalistic Poker Planning for agile teams.",
+          "source": "https://github.com/sjdonado/spooky-planning"
+        },
+        {
+          "title": "Bit",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/bit.webp?alt=media",
+          "description": "Blazing-fast, featherweight, and hassle-free self-hosted URL shortener.",
+          "source": "https://github.com/sjdonado/bit"
         },
         {
           "title": "Monocuco",
@@ -132,13 +134,6 @@
           "source": "https://github.com/sjdonado/cs-games"
         },
         {
-          "title": "URL Shortener",
-          "link": "https://url-shortener.sjdonado.com",
-          "image": "https://user-images.githubusercontent.com/27580836/227800665-4ff7e2ae-8189-4593-8961-496b7c9ac861.png",
-          "description": "Web application built with Tailwind CSS, Stimulus, and Rails 5, designed to shorten URLs, featuring user authentication, link redirection, click counting, and deployment CI.",
-          "source": "https://github.com/sjdonado/url-shortener"
-        },
-        {
           "title": "WRF BAQ 0.5km Forecast",
           "link": "https://aml-cs.github.io/wrf-baq-0.5km",
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/wrf-baq-0.5km.png?alt=media",
@@ -162,8 +157,8 @@
       ]
     },
     {
-      "title": "Talks",
-      "type": "events",
+      "title": "Social",
+      "type": "social",
       "items": [
         {
           "title": "ACM Uninorte Talk",
