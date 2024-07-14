@@ -76,14 +76,14 @@
         {
           "title": "I Don't Have Spotify",
           "link": "https://idonthavespotify.donado.co",
-          "image": "https://user-images.githubusercontent.com/27580836/232951519-e536c69d-0207-4c40-806c-5772f62f1377.png",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/idonthavespotify.webp?alt=media",
           "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more.",
           "source": "https://github.com/sjdonado/idonthavespotify"
         },
         {
           "title": "Spooky Planning",
           "link": "https://spookyplanning.com",
-          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/spooky-planner.webp?alt=media",
+          "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/spooky-planning.webp?alt=media",
           "description": "Intuitive and minimalistic Poker Planning for agile teams.",
           "source": "https://github.com/sjdonado/spooky-planning"
         },

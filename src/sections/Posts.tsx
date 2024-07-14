@@ -7,7 +7,7 @@ const Posts: Component<{ items: PostItem[] }> = ({ items }) => {
     <section class="flex flex-col flex-wrap justify-center gap-4 lg:justify-start [&>div:not(:last-child)]:border-b">
       <For each={items}>
         {article => (
-          <div class="flex flex-col justify-start p-4 border-base-content/20">
+          <div class="flex flex-col justify-start border-base-content/20 p-4">
             <span class="text-xs text-gray-500">{article.date}</span>
             <a class="link" href={article.link} target="_blank" rel="noopener noreferrer">
               <h3 class="text-xl font-semibold">{article.title}</h3>
