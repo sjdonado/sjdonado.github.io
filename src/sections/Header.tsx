@@ -25,7 +25,6 @@ const Header: Component = () => {
           <h2 class="mt-2 text-gray-500">{header.username}</h2>
         </div>
         <p class="text-justify text-sm md:text-base">{header.bio}</p>
-        <p class="text-justify text-sm md:text-base">{header.moreInfo}</p>
         <div class="flex flex-row gap-4">
           <For each={header.socialMedia}>
             {socialMedia => (

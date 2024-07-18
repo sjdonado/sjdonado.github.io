@@ -4,7 +4,6 @@
     "subtitle": "Hello 👋🏽 I'm",
     "username": "@sjdonado",
     "bio": "Senior Software Engineer with 6+ years of experience, M.Sc. in Computer Science, former university lecturer. Background on Web Development, Distributed Systems and Cloud Computing.",
-    "moreInfo": "Check out my blog on Dev.to, OSS contributions on Github, and workshops slides on slides.com.",
     "socialMedia": [
       {
         "link": "mailto:cedar.onyxes0q@icloud.com",
@@ -15,12 +14,16 @@
         "icon": "github"
       },
       {
-        "link": "https://dev.to/sjdonado",
+        "link": "https://dev.to/feed/sjdonado",
         "icon": "rss"
       },
       {
         "link": "https://linkedin.com/in/sjdonado",
         "icon": "linkedin"
+      },
+      {
+        "link": "https://slides.com/sjdonado",
+        "icon": "presentation"
       },
       {
         "link": "https://stackoverflow.com/users/8108856/juan-rodriguez",
@@ -77,7 +80,7 @@
           "title": "I Don't Have Spotify",
           "link": "https://idonthavespotify.donado.co",
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/idonthavespotify.webp?alt=media",
-          "description": "Find Spotify content on YouTube, Deezer, Apple Music, Tidal, SoundCloud and more.",
+          "description": "Effortlessly convert Spotify links to your preferred streaming service.",
           "source": "https://github.com/sjdonado/idonthavespotify"
         },
         {
