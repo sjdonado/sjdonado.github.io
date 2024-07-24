@@ -41,6 +41,12 @@
       "type": "posts",
       "items": [
         {
+          "title": "Building a Fast and Compact SQLite Cache Store",
+          "date": "Jul 24, 2024",
+          "description": "Discover why bun:sqlite, combined with Msgpackr serialization, offers an efficient solution for building fast and compact cache stores.",
+          "link": "https://dev.to/sjdonado/building-a-fast-and-compact-sqlite-cache-store-2h9g"
+        },
+        {
           "title": "Fast, Intuitive, Smart: Restaurant search engine with Cloudflare AI",
           "date": "Apr 13, 2024",
           "description": "Craving your favorite meal? Our AI-powered search engine makes it easy to find the top 3 restaurants serving it near you.",
