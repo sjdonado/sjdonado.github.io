@@ -3,7 +3,7 @@
     "title": "Juan Rodriguez Donado",
     "subtitle": "Hello 👋🏽 I'm",
     "username": "@sjdonado",
-    "bio": "Senior Software Engineer with 6+ years of experience, M.Sc. in Computer Science, former university lecturer. Background on Web Development, Distributed Systems and Cloud Computing.",
+    "bio": "Software Engineer, M.Sc. in Computer Science, former university lecturer. Background on Web Development, Distributed Systems and Cloud Computing.",
     "socialMedia": [
       {
         "link": "mailto:cedar.onyxes0q@icloud.com",
@@ -86,8 +86,7 @@
           "title": "I Don't Have Spotify",
           "link": "https://idonthavespotify.donado.co",
           "image": "https://firebasestorage.googleapis.com/v0/b/rule-of-thumb-1c13c.appspot.com/o/idonthavespotify.webp?alt=media",
-          "description": "Effortlessly convert Spotify links to your preferred streaming service.",
-          "source": "https://github.com/sjdonado/idonthavespotify"
+          "description": "Effortlessly convert Spotify links to your preferred streaming service."
         },
         {
           "title": "Spooky Planning",
