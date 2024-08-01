@@ -9,22 +9,11 @@ const Header: Component = () => {
   });
 
   return (
-    <section class="flex flex-row flex-wrap justify-center gap-4 md:mt-8 md:gap-12">
-      <div class="avatar">
-        <div class="size-32 rounded-lg md:size-48">
-          <img
-            src="https://avatars.githubusercontent.com/u/27580836"
-            alt="Juan Rodriguez Donado"
-          />
-        </div>
-      </div>
-      <div class="flex max-w-xl flex-col justify-start gap-4 md:justify-center">
-        <div>
-          <div class="badge badge-outline">{header.subtitle}</div>
-          <h1 class="text-3xl font-bold md:text-4xl">{header.title}</h1>
-          <h2 class="text-gray-500">{header.username}</h2>
-        </div>
-        <p class="text-justify text-sm md:text-base">{header.bio}</p>
+    <section class="flex flex-col justify-center gap-4 md:justify-center">
+      <div class="m-auto flex flex-col">
+        <div class="badge badge-outline">{header.subtitle}</div>
+        <h1 class="text-3xl font-bold md:text-4xl">{header.title}</h1>
+        <h2 class="text-gray-500">{header.username}</h2>
         <div class="mt-2 flex flex-row gap-4">
           <For each={header.socialMedia}>
             {socialMedia => (
@@ -41,6 +30,7 @@ const Header: Component = () => {
           </For>
         </div>
       </div>
+      <p class="text-justify text-base">{header.bio}</p>
     </section>
   );
 };
