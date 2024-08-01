@@ -30,7 +30,7 @@ const Header: Component = () => {
           </For>
         </div>
       </div>
-      <p class="text-justify text-base">{header.bio}</p>
+      <p class="text-justify text-sm md:text-base">{header.bio}</p>
     </section>
   );
 };
