@@ -1,7 +1,9 @@
 import { Component, For } from 'solid-js';
 import { A } from '@solidjs/router';
 
-const Tabs: Component<{ routes: { path: string; title: string }[] }> = props => {
+import { CustomRoute } from '../@types';
+
+const Tabs: Component<{ routes: CustomRoute[] }> = props => {
   return (
     <>
       <div role="tablist" class="tabs tabs-lifted">
@@ -9,11 +11,14 @@ const Tabs: Component<{ routes: { path: string; title: string }[] }> = props => 
           {route => (
             <A
               role="tab"
-              class="tab font-semibold"
+              class="tab relative flex gap-2 font-semibold"
               activeClass="tab-active"
               href={route.path}
             >
               {route.title}
+              <span class="rounded-full bg-gray-900 px-1 text-xs text-white">
+                {route.items.length}
+              </span>
             </A>
           )}
         </For>

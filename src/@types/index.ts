@@ -31,3 +31,10 @@ export type SlideItem = {
 
 export type SectionType = 'posts' | 'projects' | 'social' | 'slides';
 export type SectionItem = PostItem & ProjectItem & SocialItem & SlideItem;
+
+export type CustomRoute = {
+  title: string;
+  path: string;
+  type: SectionType;
+  items: SectionItem[];
+};

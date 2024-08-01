@@ -1,7 +1,7 @@
 import { For, lazy, type Component } from 'solid-js';
 import { HashRouter, Navigate, Route } from '@solidjs/router';
 
-import { SectionItem, SectionType } from './@types';
+import { CustomRoute } from './@types';
 
 import Header from './sections/Header';
 import Footer from './sections/Footer';
@@ -22,12 +22,15 @@ const componentsBySectionType = {
   slides: Slides,
 };
 
-const routes = sections.map(section => ({
-  title: section.title,
-  path: `/${section.type}`,
-  type: section.type,
-  items: section.items,
-}));
+const routes = sections.map(
+  section =>
+    ({
+      title: section.title,
+      path: `/${section.type}`,
+      type: section.type,
+      items: section.items,
+    }) as CustomRoute
+);
 
 const App: Component = () => {
   return (
@@ -48,8 +51,8 @@ const App: Component = () => {
               <Route
                 path={route.path}
                 component={() =>
-                  componentsBySectionType[route.type as SectionType]({
-                    items: route.items as SectionItem[],
+                  componentsBySectionType[route.type]({
+                    items: route.items,
                   })
                 }
               />
