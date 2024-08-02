@@ -1,12 +1,12 @@
-import { For, type Component } from 'solid-js';
+import { For } from 'solid-js';
 
 import { SlideItem } from '../@types';
 
-const Slides: Component<{ items: SlideItem[] }> = ({ items }) => {
+export default function Slides(props: { items: SlideItem[] }) {
   return (
     <section class="flex flex-col gap-8">
       <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">
-        <For each={items}>
+        <For each={props.items}>
           {slide => (
             <li>
               <hr />
@@ -45,6 +45,4 @@ const Slides: Component<{ items: SlideItem[] }> = ({ items }) => {
       </ul>
     </section>
   );
-};
-
-export default Slides;
+}

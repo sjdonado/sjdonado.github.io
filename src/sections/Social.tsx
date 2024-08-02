@@ -1,10 +1,10 @@
-import { Component, createEffect, createSignal } from 'solid-js';
+import { createEffect, createSignal } from 'solid-js';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
 
 import type { SocialItem } from '../@types';
 
-const Social: Component<{ items: SocialItem[] }> = ({ items }) => {
-  const [source] = createSignal(items);
+export default function Social(props: { items: SocialItem[] }) {
+  const [source] = createSignal(props.items);
   const [loadedImages, setLoadedImages] = createSignal(0);
 
   const [allImagesLoaded, setAllImagesLoaded] = createSignal(false);
@@ -56,6 +56,4 @@ const Social: Component<{ items: SocialItem[] }> = ({ items }) => {
       )}
     </section>
   );
-};
-
-export default Social;
+}

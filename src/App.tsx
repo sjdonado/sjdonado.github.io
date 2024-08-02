@@ -13,7 +13,7 @@ const Slides = lazy(() => import('./sections/Slides'));
 
 import Tabs from './components/Tabs';
 
-import { sections } from './data.json';
+import { header, sections } from './data.json';
 
 const componentsBySectionType = {
   posts: Posts,
@@ -36,7 +36,7 @@ const App: Component = () => {
   return (
     <>
       <main class="min-screen-1 mx-auto flex max-w-5xl flex-col gap-9 p-6">
-        <Header />
+        <Header header={header} />
         <HashRouter
           root={props => (
             <>

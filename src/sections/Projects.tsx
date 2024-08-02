@@ -1,11 +1,11 @@
-import { For, type Component } from 'solid-js';
+import { For } from 'solid-js';
 
 import { ProjectItem } from '../@types';
 
-const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
+export default function Projects(props: { items: ProjectItem[] }) {
   return (
     <section class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
-      <For each={items}>
+      <For each={props.items}>
         {project => (
           <div class="flex flex-wrap justify-center gap-4 rounded-lg border border-base-content/20 p-4">
             <div class="avatar m-auto">
@@ -40,6 +40,4 @@ const Projects: Component<{ items: ProjectItem[] }> = ({ items }) => {
       </For>
     </section>
   );
-};
-
-export default Projects;
+}

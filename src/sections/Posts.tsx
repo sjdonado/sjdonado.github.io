@@ -1,11 +1,11 @@
-import { For, type Component } from 'solid-js';
+import { For } from 'solid-js';
 
-import type { PostItem } from '../@types';
+import { PostItem } from '../@types';
 
-const Posts: Component<{ items: PostItem[] }> = ({ items }) => {
+export default function Posts(props: { items: PostItem[] }) {
   return (
     <section class="flex flex-col flex-wrap justify-center gap-4 lg:justify-start [&>div:not(:last-child)]:border-b">
-      <For each={items}>
+      <For each={props.items}>
         {article => (
           <div class="flex flex-col justify-start border-base-content/20 p-4">
             <span class="text-xs text-gray-500">{article.date}</span>
@@ -20,6 +20,4 @@ const Posts: Component<{ items: PostItem[] }> = ({ items }) => {
       </For>
     </section>
   );
-};
-
-export default Posts;
+}

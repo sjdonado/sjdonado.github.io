@@ -1,3 +1,14 @@
+export type Header = {
+  title: string;
+  subtitle: string;
+  username: string;
+  bio: string;
+  socialMedia: {
+    link: string;
+    icon: string;
+  }[];
+};
+
 export type PostItem = {
   title: string;
   date: string;
