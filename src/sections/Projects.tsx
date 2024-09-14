@@ -1,19 +1,21 @@
 import { For } from 'solid-js';
 
-import { ProjectItem } from '../schemas';
+import { Data } from '../schemas';
 
-export default function Projects(props: { items: ProjectItem[] }) {
+export default function Projects(props: {
+  items: Data['sections']['projects']['items'];
+}) {
   return (
-    <section class="flex flex-row flex-wrap justify-center gap-4 lg:justify-start">
+    <section class="flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-start">
       <For each={props.items}>
         {project => (
-          <div class="flex flex-wrap justify-center gap-4 rounded-lg border border-base-content/20 p-4">
+          <div class="mx-auto flex flex-wrap gap-4 rounded-lg border border-base-content/20 p-4">
             <div class="avatar m-auto">
               <div class="h-32 w-64 rounded-lg border sm:h-20 sm:w-32">
                 <img src={project.image} alt={project.title} class="bg-gray-200" />
               </div>
             </div>
-            <div class="flex flex-col justify-center gap-2 sm:max-w-72">
+            <div class="flex flex-col justify-center gap-2 sm:max-w-56">
               <h3 class="text-xl font-semibold">
                 {project.link ? (
                   <a

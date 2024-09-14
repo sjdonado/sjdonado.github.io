@@ -1,9 +1,9 @@
 import { createEffect, createSignal } from 'solid-js';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
 
-import { SocialItem } from '../schemas';
+import { Data } from '../schemas';
 
-export default function Social(props: { items: SocialItem[] }) {
+export default function Social(props: { items: Data['sections']['social']['items'] }) {
   const [source] = createSignal(props.items);
   const [loadedImages, setLoadedImages] = createSignal(0);
 

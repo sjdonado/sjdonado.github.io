@@ -1,8 +1,8 @@
 import { For } from 'solid-js';
 
-import { PostItem } from '../schemas';
+import { Data } from '../schemas';
 
-export default function Posts(props: { items: PostItem[] }) {
+export default function Posts(props: { items: Data['sections']['posts']['items'] }) {
   return (
     <section class="flex flex-col flex-wrap justify-center gap-4 lg:justify-start [&>div:not(:last-child)]:border-b">
       <For each={props.items}>

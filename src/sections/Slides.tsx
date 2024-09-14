@@ -1,8 +1,8 @@
 import { For } from 'solid-js';
 
-import { SlideItem } from '../schemas';
+import { Data } from '../schemas';
 
-export default function Slides(props: { items: SlideItem[] }) {
+export default function Slides(props: { items: Data['sections']['slides']['items'] }) {
   return (
     <section class="flex flex-col gap-8">
       <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">

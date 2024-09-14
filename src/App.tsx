@@ -23,18 +23,9 @@ export type EnrichedRoute = {
     path: string;
     type: T;
     items: Data['sections'][T]['items'];
+    component: Component;
   };
 }[keyof Data['sections']];
-
-const componentsBySection: Record<
-  keyof Data['sections'],
-  typeof Posts | typeof Projects | typeof Social | typeof Slides
-> = {
-  posts: Posts,
-  projects: Projects,
-  social: Social,
-  slides: Slides,
-} as const;
 
 const routes: EnrichedRoute[] = [
   {
@@ -42,35 +33,39 @@ const routes: EnrichedRoute[] = [
     path: '/posts',
     type: 'posts',
     items: parsedData.sections.posts.items,
+    component: () => <Posts items={parsedData.sections.posts.items} />,
   },
   {
     title: parsedData.sections.projects.title,
     path: '/projects',
     type: 'projects',
     items: parsedData.sections.projects.items,
+    component: () => <Projects items={parsedData.sections.projects.items} />,
   },
   {
     title: parsedData.sections.social.title,
     path: '/social',
     type: 'social',
     items: parsedData.sections.social.items,
+    component: () => <Social items={parsedData.sections.social.items} />,
   },
   {
     title: parsedData.sections.slides.title,
     path: '/slides',
     type: 'slides',
     items: parsedData.sections.slides.items,
+    component: () => <Slides items={parsedData.sections.slides.items} />,
   },
 ];
 
 const App: Component = () => {
   createEffect(() => {
-    Promise.all(Object.values(componentsBySection).map(component => component.preload()));
+    Promise.all([Posts, Projects, Social, Slides].map(component => component.preload()));
   });
 
   return (
     <div class="dark:bg-black">
-      <main class="min-screen-1 mx-auto flex max-w-4xl flex-col gap-9 p-6">
+      <main class="min-screen-1 mx-auto flex max-w-md flex-col gap-9 p-6 sm:max-w-4xl">
         <Header header={parsedData.header} />
         <HashRouter
           root={props => (
@@ -82,15 +77,7 @@ const App: Component = () => {
         >
           <Route path="/" component={() => <Navigate href={routes[0].path} />} />
           <For each={routes}>
-            {route => (
-              <Route
-                path={route.path}
-                component={() => {
-                  const Component = componentsBySection[route.type];
-                  return <Component items={route.items} />;
-                }}
-              />
-            )}
+            {route => <Route path={route.path} component={route.component} />}
           </For>
         </HashRouter>
       </main>
