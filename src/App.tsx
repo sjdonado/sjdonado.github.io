@@ -1,8 +1,6 @@
 import { For, createEffect, lazy, type Component } from 'solid-js';
 import { HashRouter, Navigate, Route } from '@solidjs/router';
 
-import { CustomRoute } from './@types';
-
 import Header from './sections/Header';
 import Footer from './sections/Footer';
 
@@ -13,34 +11,67 @@ const Slides = lazy(() => import('./sections/Slides'));
 
 import Tabs from './components/Tabs';
 
-import { header, sections } from './data.json';
+import { Data, dataSchema } from './schemas';
 
-const componentsBySectionType = {
+import data from './data.json';
+
+const parsedData = dataSchema.parse(data);
+
+export type EnrichedRoute = {
+  [T in keyof Data['sections']]: {
+    title: string;
+    path: string;
+    type: T;
+    items: Data['sections'][T]['items'];
+  };
+}[keyof Data['sections']];
+
+const componentsBySection: Record<
+  keyof Data['sections'],
+  typeof Posts | typeof Projects | typeof Social | typeof Slides
+> = {
   posts: Posts,
   projects: Projects,
   social: Social,
   slides: Slides,
-};
+} as const;
 
-const routes = sections.map(
-  section =>
-    ({
-      title: section.title,
-      path: `/${section.type}`,
-      type: section.type,
-      items: section.items,
-    }) as CustomRoute
-);
+const routes: EnrichedRoute[] = [
+  {
+    title: parsedData.sections.posts.title,
+    path: '/posts',
+    type: 'posts',
+    items: parsedData.sections.posts.items,
+  },
+  {
+    title: parsedData.sections.projects.title,
+    path: '/projects',
+    type: 'projects',
+    items: parsedData.sections.projects.items,
+  },
+  {
+    title: parsedData.sections.social.title,
+    path: '/social',
+    type: 'social',
+    items: parsedData.sections.social.items,
+  },
+  {
+    title: parsedData.sections.slides.title,
+    path: '/slides',
+    type: 'slides',
+    items: parsedData.sections.slides.items,
+  },
+];
 
 const App: Component = () => {
   createEffect(() => {
-    Promise.all([Projects, Social, Slides].map(component => component.preload()));
+    Promise.all(Object.values(componentsBySection).map(component => component.preload()));
   });
 
   return (
-    <>
-      <main class="min-screen-1 mx-auto flex max-w-5xl flex-col gap-9 p-6">
-        <Header header={header} />
+    <div class="dark:bg-black">
+      <main class="min-screen-1 mx-auto flex max-w-4xl flex-col gap-9 p-6">
+        <Header header={parsedData.header} />
         <HashRouter
           root={props => (
             <>
@@ -54,18 +85,17 @@ const App: Component = () => {
             {route => (
               <Route
                 path={route.path}
-                component={() =>
-                  componentsBySectionType[route.type]({
-                    items: route.items,
-                  })
-                }
+                component={() => {
+                  const Component = componentsBySection[route.type];
+                  return <Component items={route.items} />;
+                }}
               />
             )}
           </For>
         </HashRouter>
       </main>
-      <Footer />
-    </>
+      <Footer header={parsedData.header} />
+    </div>
   );
 };
 

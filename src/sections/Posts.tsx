@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
 
-import { PostItem } from '../@types';
+import { PostItem } from '../schemas';
 
 export default function Posts(props: { items: PostItem[] }) {
   return (

@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
 
-import { SlideItem } from '../@types';
+import { SlideItem } from '../schemas';
 
 export default function Slides(props: { items: SlideItem[] }) {
   return (

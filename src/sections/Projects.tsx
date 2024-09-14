@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
 
-import { ProjectItem } from '../@types';
+import { ProjectItem } from '../schemas';
 
 export default function Projects(props: { items: ProjectItem[] }) {
   return (

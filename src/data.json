@@ -1,7 +1,6 @@
 {
   "header": {
-    "title": "Juan Sebastian Rodriguez Donado",
-    "subtitle": "Hello 👋🏽 I'm",
+    "title": "Hi, I'm Juan 👋🏽",
     "username": "@sjdonado",
     "bio": "Software Engineer, M.Sc. in Computer Science, former university lecturer. Background on Web Development, Distributed Systems and Cloud Computing.",
     "socialMedia": [
@@ -35,10 +34,9 @@
       }
     ]
   },
-  "sections": [
-    {
+  "sections": {
+    "posts": {
       "title": "Posts",
-      "type": "posts",
       "items": [
         {
           "title": "Building a Fast and Compact SQLite Cache Store",
@@ -78,9 +76,8 @@
         }
       ]
     },
-    {
+    "projects": {
       "title": "Projects",
-      "type": "projects",
       "items": [
         {
           "title": "I Don't Have Spotify",
@@ -163,9 +160,8 @@
         }
       ]
     },
-    {
+    "social": {
       "title": "Social",
-      "type": "social",
       "items": [
         {
           "title": "ACM Uninorte Talk",
@@ -241,9 +237,8 @@
         }
       ]
     },
-    {
+    "slides": {
       "title": "Slides",
-      "type": "slides",
       "items": [
         {
           "title": "Software Engineering in a Nutshell",
@@ -325,5 +320,5 @@
         }
       ]
     }
-  ]
+  }
 }

@@ -1,7 +1,7 @@
 import { createEffect, createSignal } from 'solid-js';
 import { createMasonryBreakpoints, Mason } from 'solid-mason';
 
-import type { SocialItem } from '../@types';
+import { SocialItem } from '../schemas';
 
 export default function Social(props: { items: SocialItem[] }) {
   const [source] = createSignal(props.items);
