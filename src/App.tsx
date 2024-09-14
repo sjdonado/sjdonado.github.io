@@ -1,4 +1,4 @@
-import { For, lazy, type Component } from 'solid-js';
+import { For, createEffect, lazy, type Component } from 'solid-js';
 import { HashRouter, Navigate, Route } from '@solidjs/router';
 
 import { CustomRoute } from './@types';
@@ -33,6 +33,10 @@ const routes = sections.map(
 );
 
 const App: Component = () => {
+  createEffect(() => {
+    Promise.all([Projects, Social, Slides].map(component => component.preload()));
+  });
+
   return (
     <>
       <main class="min-screen-1 mx-auto flex max-w-5xl flex-col gap-9 p-6">
